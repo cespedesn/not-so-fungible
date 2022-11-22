@@ -1,0 +1,2 @@
+class PurchasedNftsController < ApplicationController
+end
