@@ -59,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_202522) do
     t.string "user_fullname"
     t.string "user_name"
     t.string "user_email"
-    t.string "user_password"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

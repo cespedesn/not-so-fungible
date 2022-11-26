@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   get '/me', to: 'users#show'
 
   #route for logging out
-  delete "/logout", to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
 
   get '/login', to: 'users#show'
+
+
 end

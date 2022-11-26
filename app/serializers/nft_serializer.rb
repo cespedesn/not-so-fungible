@@ -1,3 +1,4 @@
 class NftSerializer < ActiveModel::Serializer
-  belongs_to :collection
+  attributes :id, :nft_name, :nft_price, :nft_description, :nft_image
+
 end
