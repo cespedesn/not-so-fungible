@@ -24,7 +24,7 @@ function Login({setCurrentUser}) {
 // Login submission logic 
 
     function onSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
         const user = {
             user_name, 
             password}

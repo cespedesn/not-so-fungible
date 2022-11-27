@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Login from './Login';
 import Navigation from './Navigation';
 import HomePage from './HomePage';
+import Playground from './Playground';
 
 
 function App() {
@@ -28,6 +29,7 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
       <Routes>
         <Route exact path='/' element= { <HomePage /> } />
         <Route path= '/login' element= { <Login /> } />
+        <Route path= '/nftplayground' element= { <Playground /> } />
       </Routes>
     </div>
   );
