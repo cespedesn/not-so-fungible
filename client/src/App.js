@@ -5,6 +5,7 @@ import Login from './Login';
 import Navigation from './Navigation';
 import HomePage from './HomePage';
 import Playground from './Playground';
+import CollectionTable from './CollectionTable';
 
 
 function App() {
@@ -22,14 +23,15 @@ useEffect(() => {
   })
 },[])
 
-if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
+// if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
   return (
     <div className="App">
       <Navigation setCurrentUser={setCurrentUser}/>
       <Routes>
         <Route exact path='/' element= { <HomePage /> } />
-        <Route path= '/login' element= { <Login /> } />
+        {/* <Route path= '/login' element= { <Login /> } /> */}
         <Route path= '/nftplayground' element= { <Playground /> } />
+        <Route path= '/collectiontable' element= { <CollectionTable /> } />
       </Routes>
     </div>
   );

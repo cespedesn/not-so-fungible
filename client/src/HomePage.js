@@ -1,23 +1,40 @@
 import React, { useEffect, useState } from 'react'
+import NftTile from './NftTile'
 
 function HomePage() {
-  const [user, setUser] = useState(null);
-// const [nfts, setNfts] = useState([])
-// const [errors, setErrors] = useState(false)
+  const [user, setUser] = useState(null)
+  const [nfts, setNfts] = useState([])
+  const [errors, setErrors] = useState(false)
+  
 
-//     useEffect(() => {
-//         fetch('/nfts')
-//         .then(res => {
-//             if(res.ok){
-//                 res.json().then((data) => {
-//                     console.log('data', data)
-//                     setNfts(data)
-//                 })
-//             } else {
-//                 res.json().then(data => setErrors(data.error))
-//             }
-//         })
-//     })
+    useEffect(() => {
+        fetch('/nfts')
+        .then(res => {
+            if(res.ok){
+                res.json().then((data) => {
+                    console.log(data)
+                    setNfts(data.slice(0,4))
+                })
+            } else {
+                res.json().then(data => setErrors(data.error))
+            }
+        })
+    })
+    // console.log(nfts)
+    
+
+  const nftsToDisplay = nfts.map((nft) => {
+    return (
+      <NftTile 
+        key={nft.id}
+        nft={nft}
+        name={nft.nft_name}
+        price={nft.nft_price}
+        description={nft.nft_description}
+        image={nft.nft_image}
+      />
+    )
+  })
 
 
 useEffect(() => {
@@ -32,6 +49,7 @@ if (user) {
   return (
     <div>
       <h1>Welcome, {user.user_name}!</h1>
+      <div>{nftsToDisplay}</div>
     </div>
   )
   }else {
