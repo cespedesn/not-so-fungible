@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Signup from './Signup'
+import Carousel from './Carousel';
 import {
     Button,
     Form,
@@ -31,13 +32,13 @@ function Login({setCurrentUser}) {
 
         fetch('/login', {
             method: 'POST',
-            header: {'Content-Type': 'application/json'},
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(user)
         })
         .then(res => {
-            console.log(res)
+            // console.log(res)
             if(res.ok) {
-                res.json.then(user => {
+                res.json().then(user => {
                     setCurrentUser(user)
                     navigate('/')
                 })
@@ -67,6 +68,7 @@ function Login({setCurrentUser}) {
 
   return (
     <div className='form-div'>
+        <Carousel />
         { showForm ?
         <Form 
         className='form'
@@ -80,7 +82,7 @@ function Login({setCurrentUser}) {
                 </Label>
                 <Input
                 id="username"
-                name="name"
+                name="user_name"
                 placeholder="Username"
                 type="name"
                 onChange={handleChange}

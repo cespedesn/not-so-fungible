@@ -5,34 +5,41 @@ import { Card, CardLink, CardText, CardBody,
 
 
 function NftTile({name, price, description, image}) {
+
+    const filename = image.split("/").pop()
+    
   return (
-    <div>
-        <Card style={{width: '18rem'}}>
-            <img
-                alt="Card"
-                src={image}
-            />
-            <CardBody>
-                <CardTitle tag="h5">
-                {name}
-                </CardTitle>
-                <CardText>
-                {description}
-                </CardText>
-            </CardBody>
-            <ListGroup flush>
-                <ListGroupItem>
-                {price}
-                </ListGroupItem>
-            </ListGroup>
-            <CardBody>
-                <CardLink href="Collection">
-                    <Link to = "/collection"> <h5>Collection</h5> </Link>
-                </CardLink>
-            </CardBody>
-        </Card>
+    <div className='collection-div'>
+            <Card 
+            className='card'
+            style={{width: '8rem'}}>
+                <img
+                    alt="Card"
+                    src={`./images/${filename}`}
+                />
+                <CardBody>
+                    <CardTitle tag="h5">
+                    {name}
+                    </CardTitle>
+                    <CardText>
+                    {/* {description} */}
+                    </CardText>
+                </CardBody>
+                <ListGroup flush>
+                    <ListGroupItem>
+                    {price}
+                    </ListGroupItem>
+                </ListGroup>
+                <CardBody>
+                    <CardLink href="Collection">
+                        <Link to = "/collection"> <h5>Collection</h5> </Link>
+                    </CardLink>
+                </CardBody>
+            </Card>
     </div>
   )
 }
 
 export default NftTile
+
+

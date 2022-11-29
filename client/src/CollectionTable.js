@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import { useTable, usePagination } from 'react-table'
-import NFT_DATA from './TableFiles/NFT_DATA.json'
-import { COLUMNS } from './TableFiles/columns'
-import './TableFiles/table.css'
+import NFT_DATA from './NFT_DATA.json'
+import { COLUMNS } from './column'
+import './table.css'
 
 function CollectionTable() {
     const columns = useMemo(() => COLUMNS, [])
@@ -11,8 +11,7 @@ function CollectionTable() {
     const {
         getTableProps, 
         getTableBodyProps, 
-        headerGroups,
-        footerGroups, 
+        headerGroups, 
         page, 
         nextPage,
         previousPage,
@@ -58,15 +57,6 @@ function CollectionTable() {
                     })}
                     
                 </tbody>
-                <tfoot>
-                    {footerGroups.map(footerGroup => (
-                        <tr {...footerGroup.getFooterGroupProps()}>
-                            {footerGroup.headers.map((column) => (
-                                <td {...column.getFooterProps()}>{column.render('Footer')}</td>
-                            ))}
-                        </tr>
-                    ))}
-                </tfoot>
             </table>
                 <div>
                     <span>

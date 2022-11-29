@@ -90,7 +90,7 @@ function Signup() {
                     </Label>
                     <Input
                     id="username"
-                    name="name"
+                    name="user_name"
                     placeholder="Username"
                     type="name"
                     onChange={handleChange}

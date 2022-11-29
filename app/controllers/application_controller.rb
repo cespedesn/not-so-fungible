@@ -9,9 +9,9 @@ class ApplicationController < ActionController::API
    
 
 # current_user and authorized
-    # def current_user
-    #     user = User.find_by(id: session[:user_id])
-    # end
+    def current_user
+        user = User.find_by(id: session[:user_id])
+    end
 
 
     def authorized

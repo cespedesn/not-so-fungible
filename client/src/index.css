@@ -128,3 +128,23 @@ code {
     opacity: 0;
   }
 }
+
+/* Carousel */
+
+.card-highlight {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 99;
+}
+
+.card-left {
+  transform: translateX(-125%) scale(0.8);
+  transition: 500ms;
+  opacity: 0.3;
+}
+
+.card-right {
+  transform: translateX(125%) scale(0.8);
+  transition: 500ms;
+  opacity: 0.3;
+}

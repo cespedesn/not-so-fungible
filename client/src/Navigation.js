@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Logout from './Logout';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -33,7 +34,7 @@ function Navigation({setCurrentUser}) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href='/nftplayground'>Create an NFT!</NavLink>
             </NavItem>
             <NavItem>
               <NavLink >
@@ -45,7 +46,7 @@ function Navigation({setCurrentUser}) {
                 Options
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem>Option 1</DropdownItem>
+                <DropdownItem><NavLink href='/collectiontable'>NFT Collections</NavLink></DropdownItem>
                 <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>Reset</DropdownItem>
