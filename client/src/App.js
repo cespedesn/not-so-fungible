@@ -6,9 +6,10 @@ import Navigation from './Navigation';
 import HomePage from './HomePage';
 import Playground from './Playground';
 import CollectionTable from './CollectionTable';
+import Wallet from './Wallet';
 
 
-function App() {
+function App({user}) {
 const [currentUser, setCurrentUser] = useState(null)
 
 
@@ -32,6 +33,7 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
         <Route path= '/login' element= { <Login /> } />
         <Route path= '/nftplayground' element= { <Playground /> } />
         <Route path= '/collectiontable' element= { <CollectionTable /> } />
+        <Route path= '/' element= { <Navigation /> } />
       </Routes>
     </div>
   );

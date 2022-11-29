@@ -9,7 +9,7 @@ function Playground() {
 
     // for api key
     const configuration = new Configuration({
-        apiKey: import.meta.env.VITE.Open_AI_Key,
+        apiKey: process.env.REACT_APP_API_Key,
     })
 
     // asign configuration variable to openai to createImage
@@ -25,7 +25,7 @@ function Playground() {
             //size of image
             size: "1024x1024"
           });
-
+          console.log(res)
     // loading state to let user know that image is loading
           setNftLoading(false)
           setNftResult(res.data.data[0].url)
@@ -35,37 +35,55 @@ function Playground() {
     const handleChange = (e) => {
         setPrompt(e.target.value)
     } 
+    
   return (
     <div className='pg-main'>
-        {nftLoading ? (
-            <>
-                <h3>Loading Nft...</h3>
-                <div className='1ds-ripple'>
-                    <div></div>
-                    <div></div>
-                </div>
-            </>
-        ) : (
-            <>
-                <h3> Generate you own very NFT! </h3>
-                <textarea 
-                    className='pg-input'
-                    onChange={handleChange}
-                    placeholder= {example}
-                    rows= '10'
-                    cols= '30'
-                />
-                <button onClick={generateNft}> Generate </button>
+        <h3>Generate you own very NFT!</h3>
+        <textarea 
+            className='pg-input'
+            onChange={handleChange}
+            placeholder= {example}
+            rows= '10'
+            cols= '20'
+        />
 
-                {nftResult.length > 0 ? (
-                    <img className= 'nft-image'
-                    src= {nftResult} 
-                    alt= 'Nft Result'/>
-                ) : (<> </>) }
-            </>
-        )}
+            <button 
+            className='generate-btn'
+            onClick={generateNft}> Generate </button>
+            
     </div>
   );
 }
 
 export default Playground
+
+
+// {nftLoading ? (
+//     <>
+//         <h3>Loading Nft...</h3>
+//         <div className='1ds-ripple'>
+//             <div></div>
+//             <div></div>
+//         </div>
+//     </>
+// ) : (
+//     <>
+//         <h3> Generate you own very NFT! </h3>
+//         <textarea 
+//             className='pg-input'
+//             onChange={handleChange}
+//             placeholder= {example}
+//             rows= '10'
+//             cols= '30'
+//         />
+//         <button 
+//         className='generate-btn'
+//         onClick={generateNft}> Generate </button>
+
+//         {/* {nftResult.length > 0 ? ( */}
+//             <img className= 'nft-image'
+//             src= {nftResult} 
+//             alt= 'Nft Result'/>
+//         {/* ) : (<> </>) } */}
+//     </>
+// )}

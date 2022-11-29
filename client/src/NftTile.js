@@ -16,6 +16,7 @@ function NftTile({name, price, description, image}) {
                 <img
                     alt="Card"
                     src={`./images/${filename}`}
+                    loading="lazy"
                 />
                 <CardBody>
                     <CardTitle tag="h5">
