@@ -21,17 +21,16 @@ function Signup() {
         
     })
 
-    const {user_fullname, user_name, user_email, password} = loginData
+    const {user_fullname, user_name, email, password} = loginData
 
     function onSubmit(e) {
         e.preventDefault()
         const user = {
             user_fullname,
             user_name,
-            user_email,
+            email,
             password
         }
-
         fetch('/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
@@ -75,7 +74,7 @@ function Signup() {
                     </Label>
                     <Input
                     id="fullname"
-                    name="user_fullname"
+                    name="name"
                     placeholder="Full Name"
                     type="name"
                     onChange={handleChange}
@@ -107,7 +106,7 @@ function Signup() {
                     </Label>
                     <Input
                     id="email"
-                    name="user_email"
+                    name="email"
                     placeholder="Email"
                     type="email"
                     onChange={handleChange}

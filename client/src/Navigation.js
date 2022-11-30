@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Logout from './Logout';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -53,7 +54,7 @@ function Navigation({setCurrentUser}) {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText></NavbarText>
+          <NavbarText>Simple Text</NavbarText>
         </Collapse>
       </Navbar>
     </div>

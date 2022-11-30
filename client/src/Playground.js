@@ -11,7 +11,7 @@ function Playground() {
 
     // for api key
     const configuration = new Configuration({
-        apiKey: process.env.REACT_APP_API_Key,
+        apiKey: import.meta.env.VITE.Open_AI_Key,
     })
 
     // asign configuration variable to openai to createImage
@@ -27,7 +27,7 @@ function Playground() {
             //size of image
             size: "1024x1024"
           });
-          console.log(res)
+
     // loading state to let user know that image is loading
           setNftLoading(false)
           setNftResult(res.data.data[0].url)
@@ -37,7 +37,6 @@ function Playground() {
     const handleChange = (e) => {
         setPrompt(e.target.value)
     } 
-    
   return (
     <div className='pg-main'>
         <Card inverse>

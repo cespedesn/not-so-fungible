@@ -10,7 +10,7 @@ import CollectionTable from './CollectionTable';
 import Wallet from './Wallet';
 
 
-function App({user}) {
+function App() {
 const [currentUser, setCurrentUser] = useState(null)
 
 

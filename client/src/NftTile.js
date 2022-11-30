@@ -6,7 +6,7 @@ import { Card, CardLink, CardText, CardBody,
 
 function NftTile({name, price, description, image}) {
 
-    // const filename = image.split("/").pop()
+    const filename = image.split("/").pop()
     
   return (
     <div className='collection-div'>
@@ -16,7 +16,7 @@ function NftTile({name, price, description, image}) {
                 <img
                     className='nft-tiles'
                     alt="Card"
-                    // src={`./images/${filename}`}
+                    src={`./images/${filename}`}
                     loading="lazy"
                 />
                 <CardBody>

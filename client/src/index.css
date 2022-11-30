@@ -25,19 +25,18 @@ code {
 
 /* Both login and signup forms*/
 .form {
-  margin-top: 100px;
   border-radius: 20px;
   border: solid 2px yellow;
   animation: animated-border 1.5s infinite;
-  display:flex;
+  display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 40%;
 }
 
 .form-div {
   padding-top: 100px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -142,57 +141,21 @@ code {
 
 /* Carousel */
 
-.carousel-parent {
-  display: flex;
-  
-}
-
-.carousel {
-  width: 50%;
-  height: 50%;
-  position: relative;
-  
-}
-
-.tiles {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  object-fit: cover;
-  cursor: pointer;
-  z-index: 0;
-  opacity: 0;
-  transition: 800ms;
-}
-
-.tile-highlight {
-  fill-opacity: 1;
+.card-highlight {
+  opacity: 1;
   transform: scale(1);
   z-index: 99;
-  width: 100px;
-  height: 100px;
-  transition: 1000ms;
-  border-radius: 15px;
-  zoom: 150%;
-  margin: auto;
 }
 
-.tile-left {
-  transform: translateX(-125%) scale(0.4);
-  transition: 800ms;
+.card-left {
+  transform: translateX(-125%) scale(0.8);
+  transition: 500ms;
   opacity: 0.3;
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  margin: auto;
 }
 
-.tile-far-left {
-  transform: translateX(-130%) scale(0.8);
-  transition: 800ms;
+.card-right {
+  transform: translateX(125%) scale(0.8);
+  transition: 500ms;
   opacity: 0.3;
   width: 120px;
   height: 120px;
