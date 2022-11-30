@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import NftTile from './NftTile'
+import Slider from './Slider'
 
 
 function HomePage() {
@@ -47,7 +48,7 @@ function HomePage() {
 
                 })
             } else {
-                res.json().then(data => setErrors(data.error))
+                res.json().then(data => setErrors(data.errors))
             }
         })
     }, [])
@@ -264,6 +265,7 @@ if (user) {
   return (
     <div>
       <h1>Welcome, {user.user_name}!</h1>
+      <Slider />
       <Container >
         <Col>
           <Row sm="5">

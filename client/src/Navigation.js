@@ -28,28 +28,28 @@ function Navigation({setCurrentUser}) {
   return (
     <div>
       <Navbar >
-        <NavbarBrand href="/">Not So FUNgible</NavbarBrand>
+        <NavbarBrand href="/">[not so] FUNgible</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href='/nftplayground'>Create an NFT!</NavLink>
+              <NavLink href='/collections'>View Collections</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink >
-                <Logout setCurrentUser={setCurrentUser}/>
+              <NavLink href='/nftplayground'>
+              Create an NFT
               </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                More
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem><NavLink href='/collectiontable'>NFT Collections</NavLink></DropdownItem>
+                <DropdownItem><NavLink href='/collectiontable'>Collection Ratings</NavLink></DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem><NavLink href='/wallet'>My Wallet</NavLink></DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem><Logout setCurrentUser={setCurrentUser}/></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>

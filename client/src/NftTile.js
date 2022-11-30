@@ -1,21 +1,22 @@
 import React from 'react'
 import { Card, CardLink, CardText, CardBody,
   CardTitle, ListGroup, ListGroupItem } from 'reactstrap';
-  import { Link } from'react-router-dom';
+
 
 
 function NftTile({name, price, description, image}) {
 
-    const filename = image.split("/").pop()
+    // const filename = image.split("/").pop()
     
   return (
     <div className='collection-div'>
             <Card 
             className='card'
-            style={{width: '8rem'}}>
+            style={{width: '12rem'}}>
                 <img
+                    className='nft-tiles'
                     alt="Card"
-                    src={`./images/${filename}`}
+                    // src={`./images/${filename}`}
                     loading="lazy"
                 />
                 <CardBody>
@@ -32,8 +33,8 @@ function NftTile({name, price, description, image}) {
                     </ListGroupItem>
                 </ListGroup>
                 <CardBody>
-                    <CardLink href="Collection">
-                        <Link to = "/collection"> <h5>Collection</h5> </Link>
+                    <CardLink href="/collections">
+                        <h6>Collection</h6>
                     </CardLink>
                 </CardBody>
             </Card>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Configuration, OpenAIApi } from 'openai'
+import {Card, CardImg, CardImgOverlay, CardText, CardTitle} from 'reactstrap'
+import Nsfmap from './Nsfmap.png'
 
 function Playground() {
     const [prompt, setPrompt] = useState('')
@@ -38,18 +40,38 @@ function Playground() {
     
   return (
     <div className='pg-main'>
-        <h3>Generate you own very NFT!</h3>
-        <textarea 
-            className='pg-input'
-            onChange={handleChange}
-            placeholder= {example}
-            rows= '10'
-            cols= '20'
-        />
-
-            <button 
-            className='generate-btn'
-            onClick={generateNft}> Generate </button>
+        <Card inverse>
+            <CardImg
+            alt="nsfmap"
+            src={Nsfmap}
+            style={{
+                height: 570
+            }}
+            width="80%"
+            />
+            <CardImgOverlay>
+            <CardTitle tag="h5">
+            <h3>Generate you own very NFT!</h3>
+            </CardTitle>
+            <CardText>
+            <textarea 
+                    className='pg-input'
+                    onChange={handleChange}
+                    placeholder= {example}
+                    rows= '2'
+                    cols= '2'
+                />
+            </CardText>
+            <CardText>
+                <small className="text-muted">
+                <button 
+                    className='generate-btn'
+                    onClick={generateNft}> Generate </button>
+                    
+                </small>
+            </CardText>
+            </CardImgOverlay>
+        </Card>
             
     </div>
   );
@@ -87,3 +109,4 @@ export default Playground
 //         {/* ) : (<> </>) } */}
 //     </>
 // )}
+

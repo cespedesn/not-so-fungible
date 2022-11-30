@@ -82,20 +82,22 @@ function CollectionTable() {
                             </option>
                         ))}
                     </select>
-                    <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
-                        {'<<'}
-                    </button>
-                   
-                    <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-                        Previous
-                    </button>
-                    <button onClick={() => nextPage()} disabled={!canNextPage}>
-                        Next
-                    </button>
+                    <div className='table-btn-div'>
+                        <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
+                            {'<<'}
+                        </button>
+                    
+                        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+                            Previous
+                        </button>
+                        <button onClick={() => nextPage()} disabled={!canNextPage}>
+                            Next
+                        </button>
 
-                    <button onClick={() => gotoPage(pageCount -1)} disabled={!canNextPage}>
-                        {'>>'}
-                    </button>
+                        <button onClick={() => gotoPage(pageCount -1)} disabled={!canNextPage}>
+                            {'>>'}
+                        </button>
+                    </div>
                 </div>
         </>
     )
