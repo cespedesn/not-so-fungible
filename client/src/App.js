@@ -7,7 +7,6 @@ import HomePage from './HomePage';
 import Playground from './Playground';
 import Collections from './Collections';
 import CollectionTable from './CollectionTable';
-import Wallet from './Wallet';
 
 
 function App() {
@@ -34,9 +33,6 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
         <Route path= '/login' element= { <Login /> } />
         <Route path= '/nftplayground' element= { <Playground /> } />
         <Route path= '/collectiontable' element= { <CollectionTable /> } />
-        <Route path= '/collections' element= { <Collections /> } />
-        <Route path= '/' element= { <Navigation /> } />
-        <Route path= '/wallet' element= { <Wallet /> } />
       </Routes>
     </div>
   );

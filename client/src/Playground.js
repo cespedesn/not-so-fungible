@@ -39,73 +39,35 @@ function Playground() {
     } 
   return (
     <div className='pg-main'>
-        <Card inverse>
-            <CardImg
-            alt="nsfmap"
-            src={Nsfmap}
-            style={{
-                height: 570
-            }}
-            width="80%"
-            />
-            <CardImgOverlay>
-            <CardTitle tag="h5">
-            <h3>Generate you own very NFT!</h3>
-            </CardTitle>
-            <CardText>
-            <textarea 
+        {nftLoading ? (
+            <>
+                <h3>Loading Nft...</h3>
+                <div className='1ds-ripple'>
+                    <div></div>
+                    <div></div>
+                </div>
+            </>
+        ) : (
+            <>
+                <h3> Generate you own very NFT! </h3>
+                <textarea 
                     className='pg-input'
                     onChange={handleChange}
                     placeholder= {example}
-                    rows= '2'
-                    cols= '2'
+                    rows= '10'
+                    cols= '30'
                 />
-            </CardText>
-            <CardText>
-                <small className="text-muted">
-                <button 
-                    className='generate-btn'
-                    onClick={generateNft}> Generate </button>
-                    
-                </small>
-            </CardText>
-            </CardImgOverlay>
-        </Card>
-            
+                <button onClick={generateNft}> Generate </button>
+
+                {nftResult.length > 0 ? (
+                    <img className= 'nft-image'
+                    src= {nftResult} 
+                    alt= 'Nft Result'/>
+                ) : (<> </>) }
+            </>
+        )}
     </div>
   );
 }
 
 export default Playground
-
-
-// {nftLoading ? (
-//     <>
-//         <h3>Loading Nft...</h3>
-//         <div className='1ds-ripple'>
-//             <div></div>
-//             <div></div>
-//         </div>
-//     </>
-// ) : (
-//     <>
-//         <h3> Generate you own very NFT! </h3>
-//         <textarea 
-//             className='pg-input'
-//             onChange={handleChange}
-//             placeholder= {example}
-//             rows= '10'
-//             cols= '30'
-//         />
-//         <button 
-//         className='generate-btn'
-//         onClick={generateNft}> Generate </button>
-
-//         {/* {nftResult.length > 0 ? ( */}
-//             <img className= 'nft-image'
-//             src= {nftResult} 
-//             alt= 'Nft Result'/>
-//         {/* ) : (<> </>) } */}
-//     </>
-// )}
-

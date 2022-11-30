@@ -46,9 +46,8 @@ function Navigation({setCurrentUser}) {
                 More
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem><NavLink href='/collectiontable'>Collection Ratings</NavLink></DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem><NavLink href='/wallet'>My Wallet</NavLink></DropdownItem>
+                <DropdownItem><NavLink href='/collectiontable'>NFT Collections</NavLink></DropdownItem>
+                <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem><Logout setCurrentUser={setCurrentUser}/></DropdownItem>
               </DropdownMenu>

@@ -71,18 +71,9 @@ code {
 }
 
 .pg-input {
-  height: 100px;
-  width: 400px;
-  margin: auto;
-  border-radius: 10px;
-}
-
-.generate-btn {
-  width: 30%;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  height: 20px;
+  width: 300px;
+  margin: 20px;
 }
 
 .nft-image{
@@ -157,53 +148,4 @@ code {
   transform: translateX(125%) scale(0.8);
   transition: 500ms;
   opacity: 0.3;
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  margin: auto;
-}
-
-.tile-right {
-  transform: translateX(125%) scale(0.4);
-  transition: 800ms;
-  opacity: 0.3;
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  margin: auto;
-  
-}
-.tile-far-right {
-  transform: translateX(130%) scale(0.8);
-  transition: 800ms;
-  opacity: 0.3;
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  margin: auto;
-}
-
-
-.welcome-div {
-  display: flex;
-}
-
-.welcome {
-  text-align: end;
-}
-
-/* Cards */
-
-.card{
-  /* border-radius: 100px; */
-}
-
-.nft-tiles {
-  border-radius: 6px;
-}
-
-/* Wallet */
-
-.wallet-div {
-  margin: auto;
 }
