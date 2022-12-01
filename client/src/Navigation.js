@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Logout from './Logout';
-import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -27,9 +26,10 @@ function Navigation({setCurrentUser}) {
 
 
   return (
-    <div>
+    <div className='nav-parent'>
+      <div >
       <Navbar >
-        <NavbarBrand href="/">[not so] FUNgible</NavbarBrand>
+        <NavbarBrand  href="/">[not so] FUNgible</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
@@ -46,16 +46,17 @@ function Navigation({setCurrentUser}) {
                 More
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem><NavLink href='/collectiontable'>NFT Collections</NavLink></DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem><NavLink href='/collectiontable'>Collection Ratings</NavLink></DropdownItem>
+                <DropdownItem><NavLink href= '/wallet'>My Wallet</NavLink></DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem><Logout setCurrentUser={setCurrentUser}/></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>nsFUN</NavbarText>
         </Collapse>
       </Navbar>
+      </div>
     </div>
   )
 }

@@ -47,6 +47,6 @@ group :development do
   # gem "spring"
 end
 
-gem 'vite_rails' # vite_rails_legacy if using Rails 4
+
 
 gem "active_model_serializers", "~> 0.10.13"

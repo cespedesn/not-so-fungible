@@ -268,7 +268,9 @@ if (user) {
       <Slider />
       <Container >
         <Col>
-          <Row sm="5">
+          <Row 
+          className='row'
+          sm="5">
           <h2>Astronuts</h2>{ansToDisplay}
           </Row>
          

@@ -118,7 +118,7 @@ w2 = UserWallet.create(
     wallet_nft_count:0, 
     user_id:u2.id)
 w3 = UserWallet.create(
-    user_wallet_available_funds: "200 schmklz 🪙", 
+    user_wallet_available_funds: "500 schmklz 🪙", 
     wallet_nft_count:0, 
     user_id:u3.id)
 

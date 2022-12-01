@@ -2,7 +2,8 @@ import React from 'react'
 import PurchasedNfts from './PurchasedNfts'
 import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button, NavLink} from 'reactstrap'
 import Schmklz from './Schmklz.png'
-function WalletTile({user_wallet, funds, user_nfts}) {
+
+function WalletTile({name, funds, nft_count, purchased_nfts}) {
   return (
     <div className='wallet-div'>
         <PurchasedNfts />
@@ -19,7 +20,7 @@ function WalletTile({user_wallet, funds, user_nfts}) {
             />
             <CardBody>
                 <CardTitle tag="h5">
-                {user_wallet}
+                {name}
                 </CardTitle>
                 <CardSubtitle
                 className="mb-2 text-muted"
@@ -27,13 +28,13 @@ function WalletTile({user_wallet, funds, user_nfts}) {
                 >
                 {funds}
                 <br/>
-                Nft Count: {user_nfts}
+                Nft Count: {nft_count}
                 </CardSubtitle>
                 <CardText>
                 Redeem your exclusive schmeckle coins here on nsFUNgible!
                 </CardText>
                 <Button>
-                    <NavLink href= '/purchasednfts'>My NFT's</NavLink>
+                    <NavLink href= '/purchasednfts'>{purchased_nfts}</NavLink>
                 </Button>
             </CardBody>
         </Card>

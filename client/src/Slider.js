@@ -39,7 +39,7 @@ function Slider() {
     }, [currentSlide]);
    
   return (
-    <div>
+    <div className='slider-div'>
         <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
         <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
         {SliderImages.map((slide, index) => {
@@ -50,12 +50,11 @@ function Slider() {
           >
             {index === currentSlide && (
               <div>
-                <img src={slide.image} alt="slide" className="image" />
+                <img src={slide.image} alt="slide" className="slider-image" />
                 <div className="content">
                   <h2>{slide.heading}</h2>
                   <p>{slide.desc}</p>
                   <hr />
-                  <button className="--btn --btn-primary">Get Started</button>
                 </div>
               </div>
             )}

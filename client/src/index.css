@@ -71,9 +71,17 @@ code {
 }
 
 .pg-input {
-  height: 20px;
-  width: 300px;
-  margin: 20px;
+  height: 100px;
+  width: 400px;
+  margin: auto;
+
+}
+
+.generate-btn {
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .nft-image{
@@ -132,20 +140,259 @@ code {
 
 /* Carousel */
 
-.card-highlight {
-  opacity: 1;
+.carousel-parent {
+  display: flex;
+
+}
+
+.carousel {
+  width: 50%;
+  height: 50%;
+  position: relative;
+
+}
+
+.tiles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 0;
+  opacity: 0;
+  transition: 800ms;
+}
+
+.tile-highlight {
+  fill-opacity: 1;
   transform: scale(1);
   z-index: 99;
+  width: 100px;
+  height: 100px;
+  transition: 1000ms;
+  border-radius: 15px;
+  zoom: 150%;
+  margin: auto;
 }
 
-.card-left {
-  transform: translateX(-125%) scale(0.8);
-  transition: 500ms;
+.tile-left {
+  transform: translateX(-125%) scale(0.4);
+  transition: 800ms;
   opacity: 0.3;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin: auto;
 }
 
-.card-right {
-  transform: translateX(125%) scale(0.8);
-  transition: 500ms;
+.tile-far-left {
+  transform: translateX(-130%) scale(0.8);
+  transition: 800ms;
   opacity: 0.3;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.tile-right {
+  transform: translateX(125%) scale(0.4);
+  transition: 800ms;
+  opacity: 0.3;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin: auto;
+
+}
+.tile-far-right {
+  transform: translateX(130%) scale(0.8);
+  transition: 800ms;
+  opacity: 0.3;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+
+.welcome-div {
+  display: flex;
+}
+
+.welcome {
+  text-align: end;
+}
+
+/* Collection */
+
+.collection-btn{
+  display: inline-block;
+  height: 30px;
+}
+
+.collection-btn-div {
+  display: inline-flex;
+}
+
+.collection-name {
+  float: left;
+}
+
+.collection-name-div {
+  display: inline-block;
+  float: left;
+}
+
+.nft-tiles {
+  border-radius: 6px;
+}
+.card {
+  margin-bottom: 20px;
+}
+
+.row {
+  padding-top: 5%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+  width: 100%;
+}
+
+/* Nav */
+
+.nav {
+  display: flex;
+  width: 100%
+}
+
+.nav {
+  position: fixed;
+  
+}
+
+
+/* Slider */
+
+.slider-div {
+  display:inline;
+}
+
+.slider-image {
+  width: 20%;
+  height: 20%;
+  border-radius: 10px;
+  position: relative;
+  opacity: .6;
+  
+}
+
+/* .slider-image {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+} */
+
+.slide {
+  /* position: absolute; */
+  top: 10rem;
+  bottom: 15rem;
+  left: 0;
+  width: 20%;
+  /* height: 60%; */
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+  margin: auto;
+}
+
+@media screen and (min-width: 00px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.content {
+  position: absolute;
+  top: 3rem;
+  left: 35rem;
+  opacity: 0;
+  width: 90%;
+  color: #fff;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.3);
+  animation: slide-up 1s ease 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    top: 23rem;
+  }
+  100% {
+    visibility: visible;
+    top: -1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 80%;
+  }
+}
+
+/* .content > * {
+  color: #fff;
+  margin-bottom: 5rem;
+} */
+
+.current .content {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+.arrow {
+  border: 2px solid white;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+}
+.arrow:hover {
+  background-color: #fff;
+  color: #777;
+}
+
+.next {
+  top: 85%;
+  right: 1.5rem;
+}
+.prev {
+  top: 85%;
+  left: 1.5rem;
+}
+
+hr {
+  height: 2px;
+  background: white;
+  width: 50%;
 }

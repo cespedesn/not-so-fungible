@@ -11,7 +11,7 @@ function Playground() {
 
     // for api key
     const configuration = new Configuration({
-        apiKey: import.meta.env.VITE.Open_AI_Key,
+        apiKey: process.env.REACT_APP_API_Key,
     })
 
     // asign configuration variable to openai to createImage
@@ -49,7 +49,7 @@ function Playground() {
             </>
         ) : (
             <>
-                <h3> Generate you own very NFT! </h3>
+                <h3> Generate your very own NFT! </h3>
                 <textarea 
                     className='pg-input'
                     onChange={handleChange}
@@ -57,7 +57,9 @@ function Playground() {
                     rows= '10'
                     cols= '30'
                 />
-                <button onClick={generateNft}> Generate </button>
+                <button 
+                    className='generate-btn'
+                    onClick={generateNft}> Generate </button>
 
                 {nftResult.length > 0 ? (
                     <img className= 'nft-image'
@@ -71,3 +73,35 @@ function Playground() {
 }
 
 export default Playground
+
+
+
+// {nftLoading ? (
+//     <>
+//         <h3>Loading Nft...</h3>
+//         <div className='1ds-ripple'>
+//             <div></div>
+//             <div></div>
+//         </div>
+//     </>
+// ) : (
+//     <>
+//         <h3> Generate you own very NFT! </h3>
+//         <textarea 
+//             className='pg-input'
+//             onChange={handleChange}
+//             placeholder= {example}
+//             rows= '10'
+//             cols= '30'
+//         />
+//         <button 
+//         className='generate-btn'
+//         onClick={generateNft}> Generate </button>
+
+//         {/* {nftResult.length > 0 ? ( */}
+//             <img className= 'nft-image'
+//             src= {nftResult} 
+//             alt= 'Nft Result'/>
+//         {/* ) : (<> </>) } */}
+//     </>
+// )}
