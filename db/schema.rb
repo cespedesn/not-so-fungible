@@ -37,7 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
     t.string "nft_price"
     t.string "nft_description"
     t.string "nft_image"
-    t.string "reviews"
     t.integer "user_id", null: false
     t.integer "user_wallet_id", null: false
     t.datetime "created_at", null: false
@@ -51,8 +50,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
     t.string "review_description"
     t.string "review_rating"
     t.integer "user_id", null: false
+    t.integer "nft_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["nft_id"], name: "index_reviews_on_nft_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -79,6 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
   add_foreign_key "nfts", "collections"
   add_foreign_key "purchased_nfts", "user_wallets"
   add_foreign_key "purchased_nfts", "users"
+  add_foreign_key "reviews", "nfts"
   add_foreign_key "reviews", "users"
   add_foreign_key "user_wallets", "users"
 end

@@ -5,6 +5,7 @@ class CreateReviews < ActiveRecord::Migration[7.0]
       t.string :review_description
       t.string :review_rating
       t.belongs_to :user, null: false, foreign_key: true
+      t.belongs_to :nft, null: false, foreign_key: true
 
       t.timestamps
     end
