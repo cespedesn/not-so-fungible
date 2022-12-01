@@ -14,6 +14,10 @@ class SessionsController < ApplicationController
         end
     end
 
+    # def index
+    #     render json: Session.all
+    # end
+
     def password (new_password)
         salt = BCrypt::Engine::generate_salt
         self.password.digest = BCrypt::Engine::hash_secret(new_password, salt)

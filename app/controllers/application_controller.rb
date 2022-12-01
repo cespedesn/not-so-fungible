@@ -9,9 +9,9 @@ class ApplicationController < ActionController::API
    
 
 # current_user and authorized
-    def current_user
-        user = User.find_by(id: session[:user_id])
-    end
+    # def current_user
+    #     user = User.find_by(id: session[:user_id])
+    # end
 
 
     def authorized
@@ -24,8 +24,8 @@ private
         render json: { error: "#{exception.model} not found" }, status: :not_found
     end
 
-    def render_invalid(exception)
-        render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
+    def render_invalid(invalid)
+        render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
     end
 
     

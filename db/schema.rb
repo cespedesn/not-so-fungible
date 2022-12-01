@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_22_202522) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
   create_table "collections", force: :cascade do |t|
     t.string "collection_name"
     t.string "collection_description"
@@ -37,12 +37,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_202522) do
     t.string "nft_price"
     t.string "nft_description"
     t.string "nft_image"
+    t.string "reviews"
     t.integer "user_id", null: false
     t.integer "user_wallet_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_purchased_nfts_on_user_id"
     t.index ["user_wallet_id"], name: "index_purchased_nfts_on_user_wallet_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "review_title"
+    t.string "review_description"
+    t.string "review_rating"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "user_wallets", force: :cascade do |t|
@@ -68,5 +79,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_202522) do
   add_foreign_key "nfts", "collections"
   add_foreign_key "purchased_nfts", "user_wallets"
   add_foreign_key "purchased_nfts", "users"
+  add_foreign_key "reviews", "users"
   add_foreign_key "user_wallets", "users"
 end

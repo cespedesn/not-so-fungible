@@ -3,6 +3,7 @@ table {
     border-collapse: collapse;
     width: 50%;
     margin: auto;
+    padding-bottom: 15%;
   }
   
   table  td, table  th {
