@@ -9,6 +9,10 @@ import Collections from './Collections';
 import CollectionTable from './CollectionTable';
 import CollectionReview from './CollectionReview';
 import Wallet from './Wallet';
+import Purgatory from './Purgatory';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 
 
 
@@ -17,7 +21,10 @@ import Wallet from './Wallet';
 function App() {
 const [currentUser, setCurrentUser] = useState(null)
 
-
+// For animation. Best to place here in parent level component
+useEffect(() => {
+  AOS.init({duration: 1000})
+}, [])
 
 //For auto login
 useEffect(() => {
@@ -39,8 +46,9 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
         <Route path= '/nftplayground' element= { <Playground /> } />
         <Route path= '/collectiontable' element= { <CollectionTable /> } />
         <Route path= '/collections' element= { <Collections /> } />
-        <Route path= '/collectionreview' element= { <CollectionReview /> } />
+        <Route path= '/collectionreview' element= { <CollectionReview currentUser={currentUser}/> } />
         <Route path= '/wallet' element= { <Wallet /> } />
+        <Route path= '/purgatory' element= { <Purgatory /> } />
       </Routes>
     </div>
   );

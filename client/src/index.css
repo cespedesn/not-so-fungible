@@ -354,7 +354,7 @@ code {
   padding: 3rem;
   background: rgba(0, 0, 0, 0.3);
   animation: slide-up 1s ease 0.5s;
-  animation-delay: 1s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -375,11 +375,6 @@ code {
     width: 80%;
   }
 }
-
-/* .content > * {
-  color: #fff;
-  margin-bottom: 5rem;
-} */
 
 .current .content {
   opacity: 1;
@@ -423,4 +418,17 @@ hr {
 .review-form {
   width: 50%;
   margin: auto;
+}
+
+/* AOS */
+
+
+/* Purgatory */
+
+.purgatory-div {
+  display: flex;
+}
+
+.p {
+  text-align: center;
 }

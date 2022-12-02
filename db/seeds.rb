@@ -122,11 +122,11 @@ w3 = UserWallet.create(
     wallet_nft_count:0, 
     user_id:u3.id)
 
-# puts "🪙 Seeding reviews..."
+puts "🪙 Seeding reviews..."
 
-# r1 = Review.create!(review_title: "Love these baboons", review_collection: c2.id, review_description: "I wanted to support these babies so I had to buy one", review_rating: "⭐⭐⭐⭐")
+r1 = Review.create!(review_title: "Love these baboons", review_description: "I wanted to support these babies so I had to buy one", review_rating: 4, user_id: u1.id, collection_id: c2.id)
 
-# r2 = Review.create!(review_title: "Love Chuck", review_collection: c10.id, review_description: "Chuck Norris is my spirit animal", review_rating: "⭐⭐⭐⭐⭐")
+r2 = Review.create!(review_title: "Love Chuck", review_description: "Chuck Norris is my spirit animal", review_rating: 5, user_id: u1.id, collection_id: c10.id)
 
 puts "🪙 Seeding nfts..."
 

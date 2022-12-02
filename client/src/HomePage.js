@@ -4,6 +4,7 @@ import NftTile from './NftTile'
 import Slider from './Slider'
 
 
+
 function HomePage() {
   const [user, setUser] = useState(null)
   const [errors, setErrors] = useState(false)
@@ -253,6 +254,8 @@ function HomePage() {
   })
 
 
+ 
+
 useEffect(() => {
   fetch("/login").then((res) => {
     if (res.ok) {
@@ -269,64 +272,93 @@ if (user) {
       <Container >
         <Col>
           <Row 
+          data-aos="flip-right"
           className='row'
           sm="5">
-          <h2>Astronuts</h2>{ansToDisplay}
+          <h2 data-aos="fade-down-right" >Astronuts</h2>{ansToDisplay}
           </Row>
          
-          <Row sm="5">
-          <h2>Baby Baboons</h2>{bbsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+          <h2 data-aos="fade-down-right">Baby Baboons</h2>{bbsToDisplay}
           </Row>
           
-          <Row sm="5">
-          <h2>Bob Ross Flossies</h2>{brfsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+          <h2 data-aos="fade-down-right">Bob Ross Flossies</h2>{brfsToDisplay}
           </Row>
           
-          <Row sm="5">
-          <h2>Dance Battle Bears</h2>{dbbsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+          <h2 data-aos="fade-down-right">Dance Battle Bears</h2>{dbbsToDisplay}
           </Row>
         
-          <Row sm="5">
-          <h2>Forest Grumps</h2>{fgsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+          <h2 data-aos="fade-down-right">Forest Grumps</h2>{fgsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>Hot Dawgs</h2>{hdsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">Hot Dawgs</h2>{hdsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>Lonely Lemurs</h2>{llsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">Lonely Lemurs</h2>{llsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>MerMommas</h2>{mmsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">MerMommas</h2>{mmsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>MoMa Meow Meows</h2>{mmmsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">MoMa Meow Meows</h2>{mmmsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>Nunchuck Norris</h2>{nnsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">Nunchuck Norris</h2>{nnsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>One Eyed Frens</h2>{oefsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">One Eyed Frens</h2>{oefsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>Snail Mail</h2>{smsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">Snail Mail</h2>{smsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>Silly Sloths</h2>{sssToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">Silly Sloths</h2>{sssToDisplay}
           </Row>
-          <Row sm="5">
-            <h2>Whos Wise</h2>{wwsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">Whos Wise</h2>{wwsToDisplay}
           </Row>
 
-          <Row sm="5">
-            <h2>Yacht Chimps</h2>{ycsToDisplay}
+          <Row sm="5"
+          data-aos="flip-right"
+          className='row'>
+            <h2 data-aos="fade-down-right">Yacht Chimps</h2>{ycsToDisplay}
           </Row>
 
         </Col>

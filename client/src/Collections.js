@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import CollectionTile from './CollectionTile'
 import { Container, Row, Col } from 'reactstrap'
-import AOS from 'aos'
+// import AOS from 'aos'
+// import 'aos/dist/aos.css'
 
 
 function Collections() {
@@ -270,6 +271,9 @@ function Collections() {
     //     setShowCollection(!showCollection)
     // };
 
+
+   
+    
   return (
     <div>
         <Container>
@@ -279,7 +283,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right" >
                       <div className='collection-name-div'><h2 className='collection-name'>Astronuts</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -296,7 +300,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Baby Baboons</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -313,7 +317,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Bob Ross Flossies</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -329,7 +333,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Dance Battle Bears</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -345,7 +349,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Forest Grumps</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -361,7 +365,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Hot Dawgs</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -377,7 +381,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Lonely Lemurs</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -393,7 +397,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>MerMommas</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -409,7 +413,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>MoMa Meow Meows</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -425,7 +429,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Nunchuck Norris</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -441,7 +445,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>One Eyed Frens</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -457,7 +461,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Snail Mail</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -473,7 +477,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Silly Sloths</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -488,7 +492,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Whos Wise</h2></div>
                       
                       <div className='collection-btn-div'>
@@ -504,7 +508,7 @@ function Collections() {
                 outline
                 style={{ width: '73rem'}}
                 sm="6">
-                    <div>
+                    <div data-aos="zoom-in-right">
                       <div className='collection-name-div'><h2 className='collection-name'>Yacht Chimps</h2></div>
                       
                       <div className='collection-btn-div'>
