@@ -328,6 +328,7 @@ code {
   transform: translateX(-50%);
   transition: all 0.5s ease;
   margin: auto;
+  padding-bottom: 2%;
 }
 
 @media screen and (min-width: 00px) {
@@ -402,11 +403,11 @@ code {
 }
 
 .next {
-  top: 85%;
+  top: 35%;
   right: 1.5rem;
 }
 .prev {
-  top: 85%;
+  top: 35%;
   left: 1.5rem;
 }
 

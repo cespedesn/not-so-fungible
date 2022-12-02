@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     has_one :user_wallet
     has_many :purchased_nfts, through: :user_wallet
+    has_many :reviews
 
     has_secure_password
 

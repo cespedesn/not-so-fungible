@@ -7,7 +7,10 @@ import HomePage from './HomePage';
 import Playground from './Playground';
 import Collections from './Collections';
 import CollectionTable from './CollectionTable';
+import CollectionReview from './CollectionReview';
 import Wallet from './Wallet';
+
+
 
 
 
@@ -36,8 +39,8 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
         <Route path= '/nftplayground' element= { <Playground /> } />
         <Route path= '/collectiontable' element= { <CollectionTable /> } />
         <Route path= '/collections' element= { <Collections /> } />
+        <Route path= '/collectionreview' element= { <CollectionReview /> } />
         <Route path= '/wallet' element= { <Wallet /> } />
-        
       </Routes>
     </div>
   );

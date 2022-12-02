@@ -29,5 +29,10 @@ export const COLUMNS = [
         Footer: 'Rating',
         accessor: "collection_rating",
        
+    },
+    {
+        Header:'Reviews',
+        Footer: 'Reviews',
+        accessor: "reviews",
     }
 ]

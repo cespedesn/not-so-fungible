@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Card, CardLink, CardText, CardBody,
   CardTitle, ListGroup, ListGroupItem } from 'reactstrap';
 
@@ -6,8 +6,10 @@ import { Card, CardLink, CardText, CardBody,
 
 function NftTile({name, price, description, image}) {
 
-    const filename = image.split("/").pop()
-    
+const filename = image.split("/").pop()
+
+
+
   return (
     <div className='collection-div'>
             <Card 
@@ -45,3 +47,29 @@ function NftTile({name, price, description, image}) {
 export default NftTile
 
 
+// const [nft, setNft] = useState({})
+// const {id} = useParams()
+//     useEffect(() => {
+//     fetch(`/nfts/${id}`)
+//     .then((res) => {
+//       if (res.ok) {
+//         res.json()
+//         .then((data) => {
+//             // setNft(data)
+//             console.log(data)
+//         })
+//       }
+//     });
+//   }, []);
+
+  
+
+//     const nftReview = nft?.reviews?.map((review) => {
+//         return (
+//             <NftReviews 
+//                 key={review.id}
+//                 review={review}
+//             />
+//         )
+//     })
+//     console.log(nftReview)

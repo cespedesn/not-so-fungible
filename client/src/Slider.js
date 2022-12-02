@@ -14,29 +14,29 @@ function Slider() {
     let intervalTime = 5000;
   
     const nextSlide = () => {
-      setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
-      console.log("next");
-    };
+      setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1)
+      
+    }
   
     const prevSlide = () => {
-      setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
-      console.log("prev");
-    };
+      setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1)
+      
+    }
   
     function auto() {
-      slideInterval = setInterval(nextSlide, intervalTime);
+      slideInterval = setInterval(nextSlide, intervalTime)
     }
   
     useEffect(() => {
       setCurrentSlide(0);
-    }, []);
+    }, [])
   
     useEffect(() => {
       if (autoScroll) {
-        auto();
+        auto()
       }
       return () => clearInterval(slideInterval);
-    }, [currentSlide]);
+    }, [currentSlide])
    
   return (
     <div className='slider-div'>

@@ -47,13 +47,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "review_title"
+    t.string "review_collection"
     t.string "review_description"
     t.string "review_rating"
     t.integer "user_id", null: false
-    t.integer "nft_id", null: false
+    t.integer "collection_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["nft_id"], name: "index_reviews_on_nft_id"
+    t.index ["collection_id"], name: "index_reviews_on_collection_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -80,7 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
   add_foreign_key "nfts", "collections"
   add_foreign_key "purchased_nfts", "user_wallets"
   add_foreign_key "purchased_nfts", "users"
-  add_foreign_key "reviews", "nfts"
+  add_foreign_key "reviews", "collections"
   add_foreign_key "reviews", "users"
   add_foreign_key "user_wallets", "users"
 end
