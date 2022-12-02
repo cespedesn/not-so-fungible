@@ -271,6 +271,7 @@ code {
 }
 .card {
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .row {
@@ -278,7 +279,7 @@ code {
   margin-top: 70px;
   margin-bottom: 50px;
   border-top: solid 2px black;
-  border-bottom: solid 2px black;
+  /* border-bottom: solid 2px black; */
   width: 100%;
 }
 
@@ -403,11 +404,11 @@ code {
 }
 
 .next {
-  top: 35%;
+  top: 55%;
   right: 1.5rem;
 }
 .prev {
-  top: 35%;
+  top: 55%;
   left: 1.5rem;
 }
 
@@ -415,4 +416,11 @@ hr {
   height: 2px;
   background: white;
   width: 50%;
+}
+
+/* Review Form */
+
+.review-form {
+  width: 50%;
+  margin: auto;
 }

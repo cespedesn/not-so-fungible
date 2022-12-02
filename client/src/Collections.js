@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CollectionTile from './CollectionTile'
 import { Container, Row, Col } from 'reactstrap'
+import AOS from 'aos'
 
 
 function Collections() {
@@ -20,7 +21,21 @@ function Collections() {
     const [sms, setSms] = useState([])
     const [wws, setWws] = useState([])
     const [ycs, setYcs] = useState([])
-    const [showCollection, setShowCollection] = useState(false)
+    const [showAnsCollection, setShowAnsCollection] = useState(false)
+    const [showBbsCollection, setShowBbsCollection] = useState(false)
+    const [showBrfsCollection, setShowBrfsCollection] = useState(false)
+    const [showDbbsCollection, setShowDbbsCollection] = useState(false)
+    const [showFgsCollection, setShowFgsCollection] = useState(false)
+    const [showHdsCollection, setShowHdsCollection] = useState(false)
+    const [showLlsCollection, setShowLlsCollection] = useState(false)
+    const [showMmsCollection, setShowMmsCollection] = useState(false)
+    const [showMmmsCollection, setShowMmmsCollection] = useState(false)
+    const [showNnsCollection, setShowNnsCollection] = useState(false)
+    const [showOefsCollection, setShowOefsCollection] = useState(false)
+    const [showSssCollection, setShowSssCollection] = useState(false)
+    const [showSmsCollection, setShowSmsCollection] = useState(false)
+    const [showWwsCollection, setShowWwsCollection] = useState(false)
+    const [showYcsCollection, setShowYcsCollection] = useState(false)
     
   
       useEffect(() => {
@@ -269,10 +284,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowAnsCollection((showAnsCollection) => !showAnsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {ansToDisplay}
+                    {showAnsCollection && ansToDisplay}
                 </Row>
                 
                 
@@ -286,10 +301,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowBbsCollection((showBbsCollection) => !showBbsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {bbsToDisplay}
+                    {showBbsCollection && bbsToDisplay}
                 </Row>
                 
                 
@@ -303,10 +318,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowBrfsCollection((showBrfsCollection) => !showBrfsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {brfsToDisplay}
+                    {showBrfsCollection && brfsToDisplay}
                 </Row>
                 
                 <Row 
@@ -319,10 +334,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowDbbsCollection((showDbbsCollection) => !showDbbsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {dbbsToDisplay}
+                    {showDbbsCollection && dbbsToDisplay}
                 </Row>
                 
                 <Row 
@@ -335,10 +350,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowFgsCollection((showFgsCollection) => !showFgsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {fgsToDisplay}
+                    {showFgsCollection && fgsToDisplay}
                 </Row>
 
                 <Row 
@@ -351,10 +366,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowHdsCollection((showHdsCollection) => !showHdsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {hdsToDisplay}
+                    {showFgsCollection && fgsToDisplay}
                 </Row>
 
                 <Row 
@@ -367,10 +382,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowLlsCollection((showLlsCollection) => !showLlsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {llsToDisplay}
+                    {showLlsCollection && llsToDisplay}
                 </Row>
 
                 <Row 
@@ -383,10 +398,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowMmsCollection((showMmsCollection) => !showMmsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {mmsToDisplay}
+                    {showMmsCollection && mmsToDisplay}
                 </Row>
 
                 <Row 
@@ -399,10 +414,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowMmmsCollection((showMmmsCollection) => !showMmmsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {mmmsToDisplay}
+                    {showMmmsCollection && mmmsToDisplay}
                 </Row>
 
                 <Row 
@@ -415,10 +430,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowNnsCollection((showNnsCollection) => !showNnsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {nnsToDisplay}
+                    {showNnsCollection && nnsToDisplay}
                 </Row>
 
                 <Row 
@@ -431,10 +446,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowOefsCollection((showOefsCollection) => !showOefsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {oefsToDisplay}
+                    {showOefsCollection && oefsToDisplay}
                 </Row>
 
                 <Row 
@@ -447,10 +462,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowSmsCollection((showSmsCollection) => !showSmsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {smsToDisplay}
+                    {showSmsCollection && smsToDisplay}
                 </Row>
 
                 <Row 
@@ -463,10 +478,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowSssCollection((showSssCollection) => !showSssCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {sssToDisplay}
+                    {showSssCollection && sssToDisplay}
                 </Row>
                 <Row 
                 color='warning'
@@ -478,10 +493,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowWwsCollection((showWwsCollection) => !showWwsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {wwsToDisplay}
+                    {showWwsCollection && wwsToDisplay}
                 </Row>
 
                 <Row 
@@ -494,10 +509,10 @@ function Collections() {
                       
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
-                      onClick={() => setShowCollection((showCollection) => !showCollection)}>Toggle Collection</button>
+                      onClick={() => setShowYcsCollection((showYcsCollection) => !showYcsCollection)}>Toggle Collection</button>
                       </div>
                     </div>
-                    {ycsToDisplay}
+                    {showYcsCollection && ycsToDisplay}
                 </Row>
             </Col>
         </Container>

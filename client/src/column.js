@@ -1,3 +1,5 @@
+
+
 export const COLUMNS = [
     {
         Header:'Collection Name',
@@ -29,10 +31,10 @@ export const COLUMNS = [
         Footer: 'Rating',
         accessor: "collection_rating",
        
-    },
-    {
-        Header:'Reviews',
-        Footer: 'Reviews',
-        accessor: "reviews",
     }
+    // {
+    //     Header:'Reviews',
+    //     Footer: 'Reviews',
+    //     accessor: "reviews",
+    // }
 ]

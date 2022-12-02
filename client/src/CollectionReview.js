@@ -7,8 +7,9 @@ const navigate = useNavigate()
 const [errors, setErrors] = useState(false)
 const [reviews, setReviews] = useState([])
 const [newReview, setNewReview] = useState({
-    title: "",
-    description: "",
+    review_title: "",
+    review_collection: "",
+    review_description: "",
     rating: ""
 })
 
@@ -43,7 +44,9 @@ const handleChange = (e) => {
 
   return (
     <div>
-        <Form onSubmit={handleReview}>
+        <Form 
+        className='review-form'
+        onSubmit={handleReview}>
             <FormGroup>
                 <Label for="review_title">
                 Review Title

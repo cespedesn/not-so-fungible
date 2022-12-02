@@ -10,7 +10,7 @@ function Logout({setCurrentUser}) {
 
   return (
     <div>
-      <button onClick={handleLogout}>Logout</button>
+      <button className='button' onClick={handleLogout}>Logout</button>
     </div>
   )
 }

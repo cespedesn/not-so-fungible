@@ -47,6 +47,7 @@ function Navigation({setCurrentUser}) {
               </DropdownToggle>
               <DropdownMenu end>
                 <DropdownItem><NavLink href='/collectiontable'>Ratings and Reviews</NavLink></DropdownItem>
+                <DropdownItem><NavLink href='/collectionreview'>Leave a Review</NavLink></DropdownItem>
                 <DropdownItem><NavLink href= '/wallet'>My Wallet</NavLink></DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem><Logout setCurrentUser={setCurrentUser}/></DropdownItem>

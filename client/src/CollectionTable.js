@@ -33,7 +33,7 @@ function CollectionTable() {
     const { pageIndex, pageSize } = state
 
     return (
-        <>
+        <div className='table-parent'>
             <table {...getTableProps()}>
                 <thead>
                     {headerGroups.map((headerGroup) => (
@@ -58,7 +58,7 @@ function CollectionTable() {
                     
                 </tbody>
             </table>
-                <div>
+                <div className='table-btn-div'>
                     <span>
                         Page{' '}
                         <strong>
@@ -99,7 +99,7 @@ function CollectionTable() {
                         </button>
                     </div>
                 </div>
-        </>
+        </div>
     )
 }
 
