@@ -7,6 +7,7 @@ const navigate = useNavigate()
 let {id} = useParams()
 const [errors, setErrors] = useState(false)
 const [reviews, setReviews] = useState([])
+const [collections, setCollections] = useState([])
 const [newReview, setNewReview] = useState({
     review_title: "",
     review_description: "",
@@ -15,7 +16,7 @@ const [newReview, setNewReview] = useState({
     user_id: currentUser.id
 })
 
-const [collections, setCollections] = useState([])
+
 // const [selectedCollections, setSelectedCollections] = useState([])
 
 
@@ -29,13 +30,13 @@ useEffect(() => {
 }, [])
 
 
-//Spread reviews and new ones to the list of reviews
+//Spread existing reviews and add new ones to the list 
 function addReview(newReviewObj){
     setReviews( previousReviews => [...previousReviews, newReviewObj])
   }
 
 
-  //Post Review
+//Post Review
 function handleReview(e) {
     e.preventDefault()
     fetch(`/reviews/`, {
@@ -48,7 +49,6 @@ function handleReview(e) {
             res.json().then((review) => {
                 addReview(review)
                 navigate("/collectiontable")
-                console.log("chuck norris rules")
             })
         } else {
             res.json().then(data => setErrors(data.errors))
@@ -57,24 +57,18 @@ function handleReview(e) {
     
 }
 
-//Delete review
-function handleDelete(id) {
-    fetch(`/reviews/${id}`, {
-        method: 'DELETE'
-    })
-}
-
 
 //Handle Change on character inputs
 const handleChange = (e) => {
     setNewReview({...newReview, [e.target.name]: e.target.value})
 }
-
+//Drop down for collection options
 const handleDropDown = (e) => {
     console.log(e.target.value)
     setNewReview({...newReview, collection_id: e.target.value})
-    
 }
+
+
 
   return (
     <div>

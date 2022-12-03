@@ -37,9 +37,9 @@ function Navigation({setCurrentUser}) {
               <NavLink href='/collections'>View Collections</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href='/nftplayground'>
+              {/* <NavLink href='/nftplayground'>
               Create an NFT
-              </NavLink>
+              </NavLink> */}
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>

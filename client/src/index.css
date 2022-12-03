@@ -290,23 +290,26 @@ code {
   width: 100%
 }
 
-.nav {
-  position: fixed;
-  
+.nav-parent {
+  /* position: fixed; */
+  margin-bottom: 50px;
 }
 
 
 /* Slider */
 
 .slider-div {
-  display:inline;
+  display:flex;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 2%;
 }
 
 .slider-image {
   width: 20%;
   height: 20%;
   border-radius: 10px;
-  position: relative;
+  /* position: relative; */
   opacity: .6;
   
 }
@@ -326,13 +329,13 @@ code {
   width: 20%;
   /* height: 60%; */
   opacity: 0;
-  transform: translateX(-50%);
-  transition: all 0.5s ease;
-  margin: auto;
+  transform: translateX(-300%);
+  transition: all 4s ease;
+  margin: 30px auto;
   padding-bottom: 2%;
 }
 
-@media screen and (min-width: 00px) {
+@media screen and (min-width: 100px) {
   .slide img {
     width: 100%;
     height: 100%;
@@ -344,29 +347,29 @@ code {
   transform: translateX(0);
 }
 
-.content {
+/* .content {
   position: absolute;
-  top: 3rem;
+  top: 20rem;
   left: 35rem;
   opacity: 0;
   width: 90%;
   color: #fff;
-  padding: 3rem;
+  padding: 2rem;
   background: rgba(0, 0, 0, 0.3);
-  animation: slide-up 1s ease 0.5s;
-  animation-delay: 2s;
+  animation: slide-up 3s ease 1s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   visibility: hidden;
-}
+} */
 
 @keyframes slide-up {
   0% {
     visibility: visible;
-    top: 23rem;
+    top: 10rem;
   }
   100% {
     visibility: visible;
-    top: -1rem;
+    top: 20rem;
   }
 }
 
@@ -374,6 +377,12 @@ code {
   .content {
     width: 80%;
   }
+}
+
+/*for smoother transition between images*/
+.content > * {
+  /* color: #fff; */
+  margin-bottom: 1rem;
 }
 
 .current .content {
@@ -391,7 +400,7 @@ code {
   width: 4rem;
   border-radius: 50%;
   position: absolute;
-  z-index: 1000;
+  z-index: 999;
 }
 .arrow:hover {
   background-color: #fff;
@@ -420,15 +429,138 @@ hr {
   margin: auto;
 }
 
-/* AOS */
 
 
 /* Purgatory */
 
 .purgatory-div {
   display: flex;
+  flex-direction: column;
 }
 
 .p {
-  text-align: center;
+  flex-direction: column;
+}
+
+.p-slider-image {
+  width: 30%;
+  height: 90vh;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 10px;
+  opacity: .6;
+}
+
+.p-slide {
+  /* position: absolute; */
+  top: 10rem;
+  bottom: 15rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.5s ease;
+  margin: auto;
+  padding-bottom: 1%;
+}
+
+@media screen and (min-width: 600px) {
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-slide img {
+  /* width: 100%; */
+  height: 100%;
+}
+
+.current {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*for upward sliding content*/
+.p-content {
+  position: absolute;
+  top: 23rem;
+  left: 5rem;
+  opacity: 0;
+  width: 30%;
+  color: #fff;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.3);
+  animation: slide-up 3s ease 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@keyframes slide-up {
+  0% {
+    visibility: visible;
+    top: 23rem;
+  }
+  100% {
+    visibility: visible;
+    /*for upward sliding content*/
+    top: 8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .p-content {
+    width: 80%;
+  }
+}
+
+/*for smoother transition between images*/
+.p-content > * {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.current .p-content {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 5s ease;
+}
+
+.p-arrow {
+  border: 2px solid white;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+}
+.p-arrow:hover {
+  background-color: #fff;
+  color: #777;
+}
+
+.next {
+  top: 35%;
+  right: 1.5rem;
+}
+.prev {
+  top: 35%;
+  left: 1.5rem;
+}
+
+hr {
+  height: 2px;
+  background: white;
+  width: 50%;
+}
+
+/* Review List */
+
+.reviewlist-div {
+  display: inline-block;
 }

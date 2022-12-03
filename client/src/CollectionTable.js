@@ -3,6 +3,7 @@ import { useTable, usePagination } from 'react-table'
 import NFT_DATA from './NFT_DATA.json'
 import { COLUMNS } from './column'
 import './table.css'
+import ReviewRender from './ReviewRender'
 
 function CollectionTable() {
     const columns = useMemo(() => COLUMNS, [])
@@ -34,6 +35,7 @@ function CollectionTable() {
 
     return (
         <div className='table-parent'>
+            <h1>Collection Ratings</h1>
             <table {...getTableProps()}>
                 <thead>
                     {headerGroups.map((headerGroup) => (
@@ -99,6 +101,8 @@ function CollectionTable() {
                         </button>
                     </div>
                 </div>
+                <h1>Collection Reviews</h1>
+                <ReviewRender />
         </div>
     )
 }

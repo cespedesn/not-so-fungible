@@ -270,7 +270,7 @@ if (user) {
       <h1>Welcome, {user.user_name}!</h1>
       <Slider />
       <Container >
-        <Col>
+        <Col >
           <Row 
           data-aos="flip-right"
           className='row'
