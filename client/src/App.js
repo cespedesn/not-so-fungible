@@ -12,6 +12,7 @@ import Wallet from './Wallet';
 import Purgatory from './Purgatory';
 import ReviewRender from './ReviewRender';
 import ReviewList from './ReviewList';
+import Footer from './Footer';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -49,10 +50,11 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
         <Route path= '/collectiontable' element= { <CollectionTable /> } />
         <Route path= '/collections' element= { <Collections /> } />
         <Route path= '/collectionreview' element= { <CollectionReview currentUser={currentUser}/> } />
-        <Route path= '/collectiontable' element= { <ReviewRender /> } />
+        <Route path= '/collectiontable' element= { <ReviewRender currentUser={currentUser}/> } />
         <Route path= '/collectiontable' element= { <ReviewList /> } />
         <Route path= '/wallet' element= { <Wallet /> } />
         <Route path= '/purgatory' element= { <Purgatory /> } />
+        <Route path= '/' element= { <Footer /> } />
       </Routes>
     </div>
   );

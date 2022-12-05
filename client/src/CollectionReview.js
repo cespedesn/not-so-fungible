@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { FaStar } from 'react-icons/fa'
 
 function CollectionReview({currentUser}) {
 const navigate = useNavigate()
 let {id} = useParams()
+const [rating, setRating] = useState(false)
+const [hover, setHover] = useState(false)
 const [errors, setErrors] = useState(false)
 const [reviews, setReviews] = useState([])
 const [collections, setCollections] = useState([])
@@ -120,13 +123,30 @@ const handleDropDown = (e) => {
                 />
             </FormGroup>
             <FormGroup>
-            <Input
-                onChange={handleChange}
-                id="review_rating"
-                name="review_rating"
-                placeholder="Review Rating.."
-                type="text"
-                />
+            <div>
+                {[...Array(5)].map((star, i) => {
+                    const rateValue = i + 1;
+                    return(
+                        <label>
+                            <input 
+                            type="radio" 
+                            id="review_rating"
+                            name="review_rating"
+                            value={rateValue}
+                            onChange={handleChange}
+                            onClick={() => setRating(rateValue)}
+                            />
+                            <FaStar 
+                                className='star'
+                                onMouseEnter={() => setHover(rateValue)}
+                                onMouseLeave={() => setHover(false)}
+                                size={20}
+                                color={rateValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
+                            />
+                        </label>
+                    )
+                })}
+            </div>
             </FormGroup>
             <Button>
                 Submit Review
@@ -137,3 +157,12 @@ const handleDropDown = (e) => {
 }
 
 export default CollectionReview
+
+
+{/* <Input
+onChange={handleChange}
+id="review_rating"
+name="review_rating"
+placeholder="Review Rating.."
+type="text"
+/> */}

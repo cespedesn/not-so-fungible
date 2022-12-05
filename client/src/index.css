@@ -1,4 +1,5 @@
 body {
+  background-image: radial-gradient(circle farthest-side, #ffffff, #f3d6c5);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -23,15 +24,25 @@ code {
     monospace;
 }
 
+.logo {
+  opacity: .6;
+  height: 100px;
+  border-radius: 10px;
+}
+
 /* Both login and signup forms*/
 .form {
-  border-radius: 20px;
-  border: solid 2px yellow;
-  animation: animated-border 1.5s infinite;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255)!important;
+  border: solid 2px rgb(241, 214, 214);
+  animation: animated-border 2.5s infinite;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 60px;
 }
 
 .form-div {
@@ -40,6 +51,7 @@ code {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 /* Buttons on forms*/
@@ -278,16 +290,19 @@ code {
   padding-top: 5%;
   margin-top: 70px;
   margin-bottom: 50px;
-  border-top: solid 2px black;
+  border-bottom: solid 2px white;
+  box-shadow: .1px .3px #ee5c5c;
   /* border-bottom: solid 2px black; */
   width: 100%;
 }
 
 /* Nav */
 
+
+
 .nav {
-  display: flex;
-  width: 100%
+  /* display: flex; */
+  width: 100%;
 }
 
 .nav-parent {
@@ -295,6 +310,10 @@ code {
   margin-bottom: 50px;
 }
 
+
+.footer {
+  position: fixed;
+}
 
 /* Slider */
 
@@ -330,9 +349,9 @@ code {
   /* height: 60%; */
   opacity: 0;
   transform: translateX(-300%);
-  transition: all 4s ease;
+  transition: all 3s ease;
   margin: 30px auto;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
 }
 
 @media screen and (min-width: 100px) {
@@ -425,7 +444,7 @@ hr {
 /* Review Form */
 
 .review-form {
-  width: 50%;
+  width: 40%;
   margin: auto;
 }
 
@@ -434,8 +453,15 @@ hr {
 /* Purgatory */
 
 .purgatory-div {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
+  margin-bottom: 100px;
+  background-color: white;
+  border: solid 2px #ee5c5c;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .p {
@@ -559,8 +585,74 @@ hr {
   width: 50%;
 }
 
+
+/* Collection Table */
+.table-parent {
+  display: flex;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+    border: solid 2px white;
+    padding-bottom: 15%;
+  }
+  
+  table  td, table  th {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px ;
+  }
+  
+  table  tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  table  th, tfoot td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #f85c5c;
+    color: white;
+  }
+  
+  .table-btn-div {
+    display: inline-block;
+    padding-bottom: 3%;
+  }
+
 /* Review List */
 
-.reviewlist-div {
+.reviewlist-div{
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
   display: inline-block;
+  scroll-behavior: auto;
+  scroll-behavior: smooth;
+  border: solid 2px white;
+  flex-direction: column;
+  height: 70vh;
+  width: 100%;
+  
+}
+
+.entire-review-div {
+  margin-right: 250px;
+}
+
+.review-tile {
+  margin: auto;
+}
+
+/* Star review */
+
+.star {
+  transition: color 200ms;
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  display: none;
 }

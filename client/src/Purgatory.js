@@ -22,10 +22,10 @@ function Purgatory() {
                 "Tokenizing" these real-world tangible assets makes buying, selling, and trading them more efficient while reducing the probability of fraud.
                 </strong>
             </p>
+            <Link to="/">
+                <button className='button'> Access Granted </button>
+            </Link>
         </div>
-        <Link to="/">
-            <button className='button'> Access Granted </button>
-        </Link>
     </div>
   )
 }

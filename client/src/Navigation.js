@@ -28,7 +28,7 @@ function Navigation({setCurrentUser}) {
   return (
     <div className='nav-parent'>
       <div >
-      <Navbar >
+      <Navbar>
         <NavbarBrand  href="/">[not so] FUNgible</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -46,7 +46,7 @@ function Navigation({setCurrentUser}) {
                 More
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem><NavLink href='/collectiontable'>Ratings and Reviews</NavLink></DropdownItem>
+                <DropdownItem><NavLink href='/collectiontable'>Description | Ratings | Reviews</NavLink></DropdownItem>
                 <DropdownItem><NavLink href='/collectionreview'>Leave a Review</NavLink></DropdownItem>
                 <DropdownItem><NavLink href= '/wallet'>My Wallet</NavLink></DropdownItem>
                 <DropdownItem divider />

@@ -2,12 +2,13 @@ import React from 'react'
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { FaTrashAlt } from 'react-icons/fa'
 
-function ReviewList({user, title, description, rating, handleDelete}) {
+function ReviewList({user, title, description, rating, handleDelete, editReview}) {
    
 
   return (
-    <div className='reviewlist-div'>
+    <div >
         <Card
+            className='review-tile'
             body
             style={{
                 width: '18rem'
@@ -17,7 +18,7 @@ function ReviewList({user, title, description, rating, handleDelete}) {
                 alt="Sample"
                 src="https://picsum.photos/300/200"
             />
-            <CardBody>
+            <CardBody >
                 <CardTitle tag="h5">
                     {title}
                 </CardTitle>

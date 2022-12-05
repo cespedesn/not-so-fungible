@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ClipLoader from "react-spinners/ClipLoader";
 import { Container, Row, Col } from 'reactstrap'
 import NftTile from './NftTile'
 import Slider from './Slider'
@@ -8,6 +9,7 @@ import Slider from './Slider'
 function HomePage() {
   const [user, setUser] = useState(null)
   const [errors, setErrors] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [ans, setAns] = useState([])
   const [bbs, setBbs] = useState([])
   const [brfs, setBrfs] = useState([])
@@ -31,6 +33,7 @@ function HomePage() {
             if(res.ok){
                 res.json().then((data) => {
                     // console.log(data)
+                    setLoading(data)
                     setAns(data.slice(0,4))
                     setBbs(data.slice(25,29))
                     setBrfs(data.slice(33,37))
@@ -363,7 +366,6 @@ if (user) {
 
         </Col>
       </Container>
-      
     </div>
   )
   }else {

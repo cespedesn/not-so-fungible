@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import CollectionTile from './CollectionTile'
 import { Container, Row, Col } from 'reactstrap'
-// import AOS from 'aos'
-// import 'aos/dist/aos.css'
-
+import ClipLoader from "react-spinners/ClipLoader";
 
 function Collections() {
     const [errors, setErrors] = useState(false)
+    const [loading, setLoading] = useState(false)
     const [ans, setAns] = useState([])
     const [bbs, setBbs] = useState([])
     const [brfs, setBrfs] = useState([])
@@ -45,6 +44,11 @@ function Collections() {
               if(res.ok){
                   res.json().then((data) => {
                       // console.log(data)
+                      setLoading(true)
+                      setTimeout(() => {
+                        setLoading(data)
+                      }, 2000)
+                      
                       setAns(data.slice(0,15))
                       setBbs(data.slice(16,32))
                       setBrfs(data.slice(32,48))
@@ -276,6 +280,7 @@ function Collections() {
     
   return (
     <div>
+      {loading ? 
         <Container>
             <Col>
                 <Row className='row'
@@ -520,7 +525,13 @@ function Collections() {
                 </Row>
             </Col>
         </Container>
-        
+        : <ClipLoader
+        color={'#36d7b7'}
+        loading={loading}
+        size={150}
+        // aria-label="Loading Spinner"
+        // data-testid="loader"
+      /> }
     </div>
   )
 }
