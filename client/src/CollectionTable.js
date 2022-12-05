@@ -26,7 +26,7 @@ function CollectionTable() {
     } = useTable({
         columns,
         data,
-        // initialState: { pageIndex: 2}
+        initialState: { pageSize: 5}
     }, usePagination)
 
 
@@ -34,7 +34,7 @@ function CollectionTable() {
 
     return (
         <div className='table-parent'>
-            <div>
+            <div className='table-uncle'>
                 <h3>Collection Ratings</h3>
                 <table {...getTableProps()}>
                     <thead>

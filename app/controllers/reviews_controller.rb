@@ -9,7 +9,6 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        
         review = Review.create!(review_params)
         if review.valid?
             render json: review, status: :created

@@ -3,6 +3,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import {Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { FaStar } from 'react-icons/fa'
 
+
+
 function CollectionReview({currentUser}) {
 const navigate = useNavigate()
 let {id} = useParams()
@@ -20,9 +22,7 @@ const [newReview, setNewReview] = useState({
 })
 
 
-// const [selectedCollections, setSelectedCollections] = useState([])
-
-
+//UseEffect for getting collection from options
 useEffect(() => {
     fetch('/collections')
     .then(res => {
@@ -59,6 +59,7 @@ function handleReview(e) {
     })
     
 }
+
 
 
 //Handle Change on character inputs
@@ -104,6 +105,7 @@ const handleDropDown = (e) => {
                             <option 
                             value={collection.id}>
                                 {collection.collection_name}
+                                {collection.collection_image}
                             </option>
                         )
                     })}
@@ -123,7 +125,7 @@ const handleDropDown = (e) => {
                 />
             </FormGroup>
             <FormGroup>
-            <div>
+            {<div>
                 {[...Array(5)].map((star, i) => {
                     const rateValue = i + 1;
                     return(
@@ -143,10 +145,11 @@ const handleDropDown = (e) => {
                                 size={20}
                                 color={rateValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
                             />
+                            
                         </label>
                     )
                 })}
-            </div>
+            </div>}
             </FormGroup>
             <Button>
                 Submit Review
@@ -166,3 +169,5 @@ name="review_rating"
 placeholder="Review Rating.."
 type="text"
 /> */}
+
+

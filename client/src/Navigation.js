@@ -29,12 +29,12 @@ function Navigation({setCurrentUser}) {
     <div className='nav-parent'>
       <div >
       <Navbar>
-        <NavbarBrand  href="/">[not so] FUNgible</NavbarBrand>
+        <NavbarBrand color='white' href="/">[not so] FUNgible</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
+          <Nav className="main-nav" navbar>
             <NavItem>
-              <NavLink href='/collections'>View Collections</NavLink>
+              <NavLink className='nav-text' href='/collections'>View Collections</NavLink>
             </NavItem>
             <NavItem>
               {/* <NavLink href='/nftplayground'>
@@ -42,7 +42,7 @@ function Navigation({setCurrentUser}) {
               </NavLink> */}
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle className='nav-text' nav caret>
                 More
               </DropdownToggle>
               <DropdownMenu end>
@@ -54,7 +54,7 @@ function Navigation({setCurrentUser}) {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>nsFUN</NavbarText>
+          {/* <NavbarText>nsFUN</NavbarText> */}
         </Collapse>
       </Navbar>
       </div>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Configuration, OpenAIApi } from 'openai'
-import {Card, CardImg, CardImgOverlay, CardText, CardTitle} from 'reactstrap'
-import Nsfmap from './Nsfmap.png'
+
 
 function Playground() {
     const [prompt, setPrompt] = useState('')
@@ -42,10 +41,6 @@ function Playground() {
         {nftLoading ? (
             <>
                 <h3>Loading Nft...</h3>
-                <div className='1ds-ripple'>
-                    <div></div>
-                    <div></div>
-                </div>
             </>
         ) : (
             <>

@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import ReviewList from './ReviewList'
 
 function ReviewRender() {
+const navigate = useNavigate()
 const [reviewList, setReviewList] = useState([])
+const [userEdit, setUserEdit] = useState([])
 const [errors, setErrors] = useState(false)
+// const [newReview, setNewReview] = useState({
+//     review_title: "",
+//     review_description: "",
+//     rating: "",
+//     collection_id: "",
+//     user_id: currentUser.id
+// })
 
 useEffect(() => {
     fetch('/reviews')
@@ -11,6 +21,7 @@ useEffect(() => {
         if(res.ok) {
             res.json().then((data) => {
                 setReviewList(data)
+                console.log(data)
             })
         } else {
             res.json().then(data => setErrors(data.errors))
@@ -18,13 +29,34 @@ useEffect(() => {
     })
 }, [])
 
-  //Delete review
+//Delete review
   function handleDelete(id) {
     fetch(`/reviews/${id}`, {
         method: 'DELETE'
+    }).then( () => {
+        const updatedReviews = reviewList.filter(review => review.id !== id)
+        setReviewList(updatedReviews)
     })
-    console.log(id)
 }
+
+
+//Update review
+// function editReview(e) {
+//     e.preventDefault()
+//     fetch(`/reviews/${id}`, {
+//         method: 'PATCH',
+//         headers: {'Content-Type': 'application/json'},
+//         body: JSON.stringify(newReview)
+//     }).then(() => {
+//         const reviewEdit = userEdit.map((edit) => {
+//             return (
+//                 setUserEdit(reviewEdit)
+//             )
+//         })
+//     })
+//     navigate('/collectiontable')
+// }
+
 
 //Review map
 const reviewsToDisplay = reviewList.map((review) => {
@@ -35,7 +67,9 @@ const reviewsToDisplay = reviewList.map((review) => {
                 title={review.review_title}
                 description={review.review_description}
                 rating={review.review_rating}
+                id={review.id}
                 handleDelete={handleDelete}
+                // editReview={editReview}
             />
     )
 })
@@ -43,6 +77,7 @@ const reviewsToDisplay = reviewList.map((review) => {
 
   return (
     <div className='reviewlist-div' >
+        <div className='reviews-header'><strong>Reviews</strong></div>
         {reviewsToDisplay}
     </div>
   )
@@ -50,12 +85,3 @@ const reviewsToDisplay = reviewList.map((review) => {
 
 export default ReviewRender
 
-// function editReview(e) {
-//     e.preventDefault()
-//     fetch(`/reviews/${id}`, {
-//         method: 'PATCH',
-//         headers: {'Content-Type': 'application/json'},
-//         body: JSON.stringify(newReview)
-//     })
-//     navigate('/collectiontable')
-// }
