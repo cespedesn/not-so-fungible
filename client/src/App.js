@@ -13,6 +13,7 @@ import Wallet from './Wallet';
 import Purgatory from './Purgatory';
 import ReviewRender from './ReviewRender';
 import ReviewList from './ReviewList';
+import Waitlist from './Waitlist';
 import Footer from './Footer';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -60,6 +61,7 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
           <Route path= '/collectiontable' element= { <ReviewList /> } />
           <Route path= '/wallet' element= { <Wallet /> } />
           <Route path= '/purgatory' element= { <Purgatory /> } />
+          <Route path= '/waitlist' element= { <Waitlist /> } />
           <Route path= '/' element= { <Footer /> } />
         </Routes>
       </div>

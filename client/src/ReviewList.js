@@ -3,9 +3,9 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { FaTrashAlt } from 'react-icons/fa'
 import { FaEdit } from 'react-icons/fa'
 
-function ReviewList({user, title, description, rating, handleDelete, editReview, id}) {
+function ReviewList({user, title, description, rating, handleDelete, editReview, id, review}) {
    
-
+console.log(review, "bieeeetch")
   return (
     <div >
         <Card
@@ -36,9 +36,10 @@ function ReviewList({user, title, description, rating, handleDelete, editReview,
                     {rating}
                 </CardText>
                 <CardText>
+                    {user.id === review.user_id && (
                     <button onClick={() => handleDelete(id)}>
                         <FaTrashAlt />
-                    </button>
+                    </button>)}
                 </CardText>
                 <CardText>
                     {/* <button onClick={() => handleEdit(id)}>

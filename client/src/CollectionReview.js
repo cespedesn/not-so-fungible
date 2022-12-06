@@ -35,7 +35,7 @@ useEffect(() => {
 
 //Spread existing reviews and add new ones to the list 
 function addReview(newReviewObj){
-    setReviews( previousReviews => [...previousReviews, newReviewObj])
+    setReviews( previousReviews => [newReviewObj, ...previousReviews ])
   }
 
 

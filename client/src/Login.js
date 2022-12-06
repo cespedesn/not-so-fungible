@@ -122,7 +122,7 @@ function Login({setCurrentUser}) {
             onClick= {loginForm}>Login Form</button>
         {/* {errors?errors.map(e => <div> {e[0]+':'+ e[1]} </div>) : null} */}
         <br/>
-        <Signup />
+        <Signup setCurrentUser={setCurrentUser}/>
 
     </div>
   )

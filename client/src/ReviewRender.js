@@ -63,6 +63,7 @@ const reviewsToDisplay = reviewList.map((review) => {
     return (
             <ReviewList 
                 key={review.id}
+                review={review}
                 user={review.user.user_name}
                 title={review.review_title}
                 description={review.review_description}
