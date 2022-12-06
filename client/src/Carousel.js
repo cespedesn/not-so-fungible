@@ -93,7 +93,7 @@ function Carousel() {
         <div>
           <img 
           className='logo'
-          src='https://previews.dropbox.com/p/thumb/ABuCs0DSAR-jXXE-U-yaQm5bb5zIQ8gwMnVniTUzHbwmOQwHzCGvOZ6T0MWLTUx2122tppSCjci6oX_MGvclspDVlU1DxMGckCjwhhW0J6oRKZalQ5SvavXKHm-zDwkj5g6wSMq_q_H0yYHnsFRX3kJ1mGMDSnw0RVhDnFwiS8U8lUziYp6fUSAbve62wn0IN4IGkkpmUJJ3HXaw6IMMJjN7IFdQ3pN4oIq1C-JYxr6ZCXa3hGXj_N75IIxl4TLSfAvpEuFJRqfa0Trdg1XvZPf4mwqMVDo1D61-Wr_uyBpwFa6zUGaK2j9wMt3Kk2Y0-i7tQa2NqvU0nHVVzNLuc4DRz-LTxYdycvV_NS8CCevPOIcXJKDuLTeFgZtCiEXaWrw/p.png' alt='[not so] FUNgible'/>
+          src='https://previews.dropbox.com/p/thumb/ABu77kNauS5YjjRicRN3moKjKkYUeaxJ5l57xhuT95gieUAvh8VhwTyJ8iG6hkZEAf8yVJvk_EbjkXy7bT6Cc-r8YvFDYksJLUyVQgvTNuKLUEmsmQjf56LoLH5Tt-YC6n69uAUc6tyctOc-Qpj7J-mb0KEAe-ls2_g2HbCnIeB0t4coXDPqPojsQbHTHbhUjHMvg8JJms8ZxWh8FJZoOOlcR4En8rU8lt_8MekAlmuwLVINxYO7kydTplE5PvFUmxud_EB7m1gCaxNxSMuc7d9j_LJHii7hZbY_s3bS8PYZv5dU8Az4-es60fj5BB20dQzvMNIVqnAvCS5FpTOazrS0ejaDboDFJBC0Zbf_vo3fjHCeD_s1D08LzDueTvq7HFA/p.png' alt='[not so] FUNgible'/>
         </div>
     </div>
   )

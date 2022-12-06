@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import ClipLoader from "react-spinners/ClipLoader";
 import { Container, Row, Col } from 'reactstrap'
+import { Link } from 'react-router-dom'
 import NftTile from './NftTile'
 import Slider from './Slider'
 
 
 
+
 function HomePage() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(false)
   const [errors, setErrors] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [topCollection, setTopCollection] = useState([])
   const [ans, setAns] = useState([])
   const [bbs, setBbs] = useState([])
   const [brfs, setBrfs] = useState([])
@@ -257,7 +260,6 @@ function HomePage() {
   })
 
 
- 
 
 useEffect(() => {
   fetch("/login").then((res) => {
@@ -269,84 +271,90 @@ useEffect(() => {
 
 if (user) {
   return (
-    <div>
+    <div className="homepage-div">
       <h1>Welcome, {user.user_name}!</h1>
       <Slider />
+      <div className='top-collection-btn-div'>
+        <Link to="/topcollections">
+          <button className='button'>View Top Collections</button>
+        </Link>
+      </div>
       <Container >
         <Col >
+        <br/>
           <Row 
+          sm="5"
           data-aos="flip-right"
-          className='row'
-          sm="5">
+          className='row'>
           <h2 data-aos="fade-down-right" >Astronuts</h2>{ansToDisplay}
           </Row>
-         
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-          <h2 data-aos="fade-down-right">Baby Baboons</h2>{bbsToDisplay}
+          <h2 data-aos="fade-down-left">Baby Baboons</h2>{bbsToDisplay}
           </Row>
-          
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
           <h2 data-aos="fade-down-right">Bob Ross Flossies</h2>{brfsToDisplay}
           </Row>
-          
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-          <h2 data-aos="fade-down-right">Dance Battle Bears</h2>{dbbsToDisplay}
+          <h2 data-aos="fade-down-left">Dance Battle Bears</h2>{dbbsToDisplay}
           </Row>
-        
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
           <h2 data-aos="fade-down-right">Forest Grumps</h2>{fgsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">Hot Dawgs</h2>{hdsToDisplay}
+            <h2 data-aos="fade-down-left">Hot Dawgs</h2>{hdsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
             <h2 data-aos="fade-down-right">Lonely Lemurs</h2>{llsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">MerMommas</h2>{mmsToDisplay}
+            <h2 data-aos="fade-down-left">MerMommas</h2>{mmsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
             <h2 data-aos="fade-down-right">MoMa Meow Meows</h2>{mmmsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">Nunchuck Norris</h2>{nnsToDisplay}
+            <h2 data-aos="fade-down-left">Nunchuck Norris</h2>{nnsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
             <h2 data-aos="fade-down-right">One Eyed Frens</h2>{oefsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">Snail Mail</h2>{smsToDisplay}
+            <h2 data-aos="fade-down-left">Snail Mail</h2>{smsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
@@ -355,15 +363,15 @@ if (user) {
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">Whos Wise</h2>{wwsToDisplay}
+            <h2 data-aos="fade-down-left">Whos Wise</h2>{wwsToDisplay}
           </Row>
-
+          <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
             <h2 data-aos="fade-down-right">Yacht Chimps</h2>{ycsToDisplay}
           </Row>
-
+          <br/>
         </Col>
       </Container>
     </div>

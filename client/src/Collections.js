@@ -271,10 +271,6 @@ function Collections() {
       )
     })
 
-    // const toggleCollection = () => {
-    //     setShowCollection(!showCollection)
-    // };
-
 
    
     
@@ -282,6 +278,7 @@ function Collections() {
     <div>
       {loading ? 
         <Container>
+          <h1>All Collections</h1>
             <Col>
                 <Row className='row'
                 color='warning'
@@ -289,8 +286,9 @@ function Collections() {
                 style={{ width: '73rem'}}
                 sm="6">
                     <div data-aos="zoom-in-right" >
-                      <div className='collection-name-div'><h2 className='collection-name'>Astronuts</h2></div>
-                      
+                      <div className='collection-name-div'><h2 className='collection-name'>Astronuts</h2>
+                    
+                      </div>
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"
                       onClick={() => setShowAnsCollection((showAnsCollection) => !showAnsCollection)}>Toggle Collection</button>

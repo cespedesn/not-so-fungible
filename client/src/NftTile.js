@@ -4,8 +4,7 @@ import { Card, CardLink, CardText, CardBody,
 
 
 
-function NftTile({name, price, description, image}) {
-
+function NftTile({name, price, image}) {
 const filename = image.split("/").pop()
 
 

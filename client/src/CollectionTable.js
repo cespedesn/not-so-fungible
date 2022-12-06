@@ -35,7 +35,7 @@ function CollectionTable() {
     return (
         <div className='table-parent'>
             <div className='table-uncle'>
-                <h3>Collection Ratings</h3>
+                <h1>Collection Ratings</h1>
                 <table {...getTableProps()}>
                     <thead>
                         {headerGroups.map((headerGroup) => (
@@ -103,8 +103,12 @@ function CollectionTable() {
                     </div>
                 </div>
                 <div className='entire-review-div'>
-                <h3>Collection Reviews</h3>
-                <ReviewRender />
+                <div>
+                    <h1>Reviews</h1>
+                </div>
+                <div className='review-render'>
+                    <ReviewRender />
+                </div>
             </div>
         </div>
     )

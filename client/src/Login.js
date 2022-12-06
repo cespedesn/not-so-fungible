@@ -12,7 +12,7 @@ import {
 
 function Login({setCurrentUser}) {
     const navigate = useNavigate()
-    const [showForm, setShowForm] = useState(false)
+    const [showForm, setShowForm] = useState(true)
     const [passwordShown, setPasswordShown] = useState(false)
     const [errors, setErrors] = useState([])
     const [loginData, setLoginData] = useState({

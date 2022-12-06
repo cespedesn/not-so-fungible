@@ -1,9 +1,10 @@
 import './App.css';
-import { useState, useEffect } from "react"
+import { useState, useEffect, createContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Login from './Login';
 import Navigation from './Navigation';
 import HomePage from './HomePage';
+import TopCollections from './TopCollections';
 import Playground from './Playground';
 import Collections from './Collections';
 import CollectionTable from './CollectionTable';
@@ -16,13 +17,16 @@ import Footer from './Footer';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-
-
-
-
+export const ThemeContext = createContext(false)
 
 function App() {
 const [currentUser, setCurrentUser] = useState(null)
+const [theme, setTheme] = useState('light')
+
+
+const toggleTheme = () => {
+  setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"))
+}
 
 // For animation. Best to place here in parent level component
 useEffect(() => {
@@ -41,22 +45,25 @@ useEffect(() => {
 
 if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
   return (
-    <div className="App">
-      <Navigation setCurrentUser={setCurrentUser}/>
-      <Routes>
-        <Route exact path='/' element= { <HomePage /> } />
-        <Route path= '/login' element= { <Login /> } />
-        <Route path= '/nftplayground' element= { <Playground /> } />
-        <Route path= '/collectiontable' element= { <CollectionTable /> } />
-        <Route path= '/collections' element= { <Collections /> } />
-        <Route path= '/collectionreview' element= { <CollectionReview currentUser={currentUser}/> } />
-        <Route path= '/collectiontable' element= { <ReviewRender currentUser={currentUser}/> } />
-        <Route path= '/collectiontable' element= { <ReviewList /> } />
-        <Route path= '/wallet' element= { <Wallet /> } />
-        <Route path= '/purgatory' element= { <Purgatory /> } />
-        <Route path= '/' element= { <Footer /> } />
-      </Routes>
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="App" id={theme}>
+        <Navigation setCurrentUser={setCurrentUser}/>
+        <Routes>
+          <Route exact path='/' element= { <HomePage /> } />
+          <Route exact path='/topcollections' element= { <TopCollections /> } />
+          <Route path= '/login' element= { <Login /> } />
+          <Route path= '/nftplayground' element= { <Playground /> } />
+          <Route path= '/collectiontable' element= { <CollectionTable /> } />
+          <Route path= '/collections' element= { <Collections /> } />
+          <Route path= '/collectionreview' element= { <CollectionReview currentUser={currentUser}/> } />
+          <Route path= '/collectiontable' element= { <ReviewRender currentUser={currentUser}/> } />
+          <Route path= '/collectiontable' element= { <ReviewList /> } />
+          <Route path= '/wallet' element= { <Wallet /> } />
+          <Route path= '/purgatory' element= { <Purgatory /> } />
+          <Route path= '/' element= { <Footer /> } />
+        </Routes>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
