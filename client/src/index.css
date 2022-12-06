@@ -227,6 +227,14 @@ code {
 
 /* Collection */
 
+.collectionsquilt{
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  opacity: .6;
+  border-bottom: solid 3px white;
+}
+
 .collection-btn{
   display: inline-block;
   width: 150px;
@@ -336,7 +344,15 @@ code {
   display:flex;
   margin-left: 95px;
   margin-right: 95px;
+  margin-bottom: 20px;
   padding-top: 2%;
+  padding-bottom: -2%;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-style: double;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  opacity: .9;
 }
 
 .slider-image {
@@ -344,7 +360,7 @@ code {
   height: 20%;
   border-radius: 10px;
   opacity: .6;
-  
+  z-index: 1;
 }
 
 /* .slider-image {
@@ -360,8 +376,8 @@ code {
   bottom: 15rem;
   width: 20%;
   opacity: 0;
-  transform: translateX(-900%);
-  transition: all .5s ease;
+  transform: translateX(10%);
+  transition: all 1s ease;
   margin: 30px auto;
   padding-bottom: 3%;
 }

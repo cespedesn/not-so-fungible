@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import CollectionTile from './CollectionTile'
 import { Container, Row, Col } from 'reactstrap'
+import CollectionsQuilt from './CollectionsQuilt'
 import ClipLoader from "react-spinners/ClipLoader";
 
 function Collections() {
     const [errors, setErrors] = useState(false)
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [ans, setAns] = useState([])
     const [bbs, setBbs] = useState([])
     const [brfs, setBrfs] = useState([])
@@ -276,9 +277,17 @@ function Collections() {
     
   return (
     <div>
-      {loading ? 
+      {/* <ClipLoader
+        color={'#36d7b7'}
+        loading={loading}
+        size={150} /> */}
+      <div>
+        <h1>All Collections</h1>
+      </div>
+        <div>
+          <CollectionsQuilt />
+        </div>
         <Container>
-          <h1>All Collections</h1>
             <Col>
                 <Row className='row'
                 color='warning'
@@ -522,14 +531,7 @@ function Collections() {
                     {showYcsCollection && ycsToDisplay}
                 </Row>
             </Col>
-        </Container>
-        : <ClipLoader
-        color={'#36d7b7'}
-        loading={loading}
-        size={150}
-        // aria-label="Loading Spinner"
-        // data-testid="loader"
-      /> }
+        </Container> 
     </div>
   )
 }

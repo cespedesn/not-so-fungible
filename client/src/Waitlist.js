@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Confetti from 'react-confetti'
-// import useWindowSize from 'react-use/lib/useWindowSize'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
 function Waitlist() {
-// const { width, height } = useWindowSize()
 const [modal, setModal] = useState(false);
-const toggle = () => setModal(!modal);
 const [btn, setBtn] = useState(false)
 const [dimension, setDimension] = useState({
   width: window.innerWidth,
@@ -26,6 +23,14 @@ useEffect(() => {
     window.removeEventListener('resize', detectSize)
   }
 }, [])
+
+
+const toggle = () => setModal(!modal);
+
+
+const confettiToggle = () => {
+  setBtn(!btn)
+}
   return (
     <div>
         <Button 
@@ -44,13 +49,13 @@ useEffect(() => {
             Don't waste any time and join today!
         </ModalBody>
         <ModalFooter>
-            <Button color="primary" onClick={() => setBtn(!btn) && {toggle}}>
+            <Button color="primary" onClick={confettiToggle}>
             Join waitlist
             </Button>{' '}
             {btn && <Confetti  
               width={dimension.width} 
               height={dimension.height}
-              tweenDuration={1000}
+              tweenDuration={500}
             />}
             <Button color="secondary" onClick={toggle}>
             Cancel

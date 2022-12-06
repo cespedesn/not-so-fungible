@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ReviewList from './ReviewList'
 
-function ReviewRender() {
+function ReviewRender({currentUser}) {
 const navigate = useNavigate()
 const [reviewList, setReviewList] = useState([])
 const [userEdit, setUserEdit] = useState([])

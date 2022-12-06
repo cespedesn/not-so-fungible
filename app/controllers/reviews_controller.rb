@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+    skip_before_action :authorized, only: [:index] 
+
     def index
         render json: Review.all, status: :ok
     end
@@ -20,6 +22,7 @@ class ReviewsController < ApplicationController
     def update
         review = Review.find(params[:id])
         review.update!(review_params)
+        render json: review, status: :ok
     end
 
     def destroy 

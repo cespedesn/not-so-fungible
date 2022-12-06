@@ -1,4 +1,5 @@
 import React from 'react'
+import Waitlist from './Waitlist'
 import { Card, CardLink, CardText, CardBody,
     CardTitle, ListGroup, ListGroupItem } from 'reactstrap';
 
@@ -29,6 +30,7 @@ const filename = image.split("/").pop()
                     <CardLink href="/collections">
                         <h6>Collection</h6>
                     </CardLink>
+                    <Waitlist />
                 </CardBody>
             </Card>
     </div>
