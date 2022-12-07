@@ -14,7 +14,7 @@ const filename = image.split("/").pop()
     <div className='collection-div'>
             <Card 
             className='card'
-            style={{width: '12rem'}}>
+            style={{width: '10rem'}}>
                 <img
                     className='nft-tiles'
                     alt="Card"

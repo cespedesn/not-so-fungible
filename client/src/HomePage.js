@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 import ClipLoader from "react-spinners/ClipLoader";
 import { Container, Row, Col } from 'reactstrap'
 import { Link } from 'react-router-dom'
@@ -37,21 +39,21 @@ function HomePage() {
                 res.json().then((data) => {
                     // console.log(data)
                     setLoading(data)
-                    setAns(data.slice(0,4))
-                    setBbs(data.slice(25,29))
-                    setBrfs(data.slice(33,37))
-                    setDbbs(data.slice(52,56))
-                    setFgs(data.slice(66,70))
-                    setHds(data.slice(80,84))
-                    setLls(data.slice(106,110))
-                    setMms(data.slice(120,124))
-                    setMmms(data.slice(128,132))
-                    setNns(data.slice(144,148))
-                    setOefs(data.slice(166,170))
-                    setSss(data.slice(176,180))
-                    setSms(data.slice(193,197))
-                    setWws(data.slice(210,214))
-                    setYcs(data.slice(225,229))
+                    setAns(data.slice(0,5))
+                    setBbs(data.slice(25,30))
+                    setBrfs(data.slice(33,38))
+                    setDbbs(data.slice(52,57))
+                    setFgs(data.slice(66,71))
+                    setHds(data.slice(80,85))
+                    setLls(data.slice(106,111))
+                    setMms(data.slice(120,125))
+                    setMmms(data.slice(128,133))
+                    setNns(data.slice(144,149))
+                    setOefs(data.slice(166,171))
+                    setSss(data.slice(176,181))
+                    setSms(data.slice(193,198))
+                    setWws(data.slice(210,215))
+                    setYcs(data.slice(225,230))
 
                 })
             } else {
@@ -286,90 +288,150 @@ if (user) {
           sm="5"
           data-aos="flip-right"
           className='row'>
-          <h2 data-aos="fade-down-right" >Astronuts</h2>{ansToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/a15.png" />
+              <h3 className="nft-name-a"
+              data-aos="fade-down-right" >Astronuts</h3>{ansToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-          <h2 data-aos="fade-down-left">Baby Baboons</h2>{bbsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/bb2.png" />
+              <h3 className="nft-name-bb" 
+              data-aos="fade-down-left">Baby Baboons</h3>{bbsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-          <h2 data-aos="fade-down-right">Bob Ross Flossies</h2>{brfsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/brf12.png" />
+              <h3 className="nft-name-brf" 
+              data-aos="fade-down-right">Bob Ross Flossies</h3>{brfsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-          <h2 data-aos="fade-down-left">Dance Battle Bears</h2>{dbbsToDisplay}
+          <Stack direction="row">
+            <Avatar alt="Remy Sharp" src="./images/dbb3.png" />
+            <h3 className="nft-name"
+            data-aos="fade-down-left">Dance Battle Bears</h3>{dbbsToDisplay}
+          </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-          <h2 data-aos="fade-down-right">Forest Grumps</h2>{fgsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/fg3.png" />
+              <h3 className="nft-name-fg"
+              data-aos="fade-down-right">Forest Grumps</h3>{fgsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-left">Hot Dawgs</h2>{hdsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/hd1.png" />
+              <h3 className="nft-name"
+              data-aos="fade-down-left">Hot Dawgs</h3>{hdsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">Lonely Lemurs</h2>{llsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/ll14.png" />
+              <h3 className="nft-name"
+              data-aos="fade-down-right">Lonely Lemurs</h3>{llsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-left">MerMommas</h2>{mmsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/mm9.png" />
+              <h3 className="nft-name-mm"
+              data-aos="fade-down-left">MerMommas</h3>{mmsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">MoMa Meow Meows</h2>{mmmsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/mmm1.png" />
+              <h3 className="nft-name"
+              data-aos="fade-down-right">MoMa Meow Meows</h3>{mmmsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-left">Nunchuck Norris</h2>{nnsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/nn5.png" />
+              <h3 className="nft-name-nn"
+              data-aos="fade-down-left">Nunchuck Norris</h3>{nnsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">One Eyed Frens</h2>{oefsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/oef8.png" />
+              <h3 className="nft-name-oef"
+              data-aos="fade-down-right">One Eyed Frens</h3>{oefsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-left">Snail Mail</h2>{smsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/sm1.png" />
+              <h3 className="nft-name-sm"
+              data-aos="fade-down-left">Snail Mail</h3>{smsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">Silly Sloths</h2>{sssToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/ss14.png" />
+              <h3 className="nft-name-ss"
+              data-aos="fade-down-right">Silly Sloths</h3>{sssToDisplay}
+            </Stack>
           </Row>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-left">Whos Wise</h2>{wwsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/ww1.png" />
+              <h3 className="nft-name-ww"
+              data-aos="fade-down-left">Whos Wise</h3>{wwsToDisplay}
+            </Stack>
           </Row>
           <br/>
           <Row sm="5"
           data-aos="flip-right"
           className='row'>
-            <h2 data-aos="fade-down-right">Yacht Chimps</h2>{ycsToDisplay}
+            <Stack direction="row">
+              <Avatar alt="Remy Sharp" src="./images/yc9.png" />
+              <h3 className="nft-name"
+              data-aos="fade-down-right">Yacht Chimps</h3>{ycsToDisplay}
+            </Stack>
           </Row>
           <br/>
         </Col>

@@ -288,6 +288,50 @@ code {
   margin-top: 20px;
 }
 
+.nft-name {
+  margin-right: 190px;
+}
+
+.nft-name-a {
+  margin-right: 150px;
+}
+
+.nft-name-bb{
+  margin-right: 160px;
+}
+
+.nft-name-brf{
+  margin-right: 175px;
+}
+
+.nft-name-fg {
+  margin-right: 170px;
+}
+
+.nft-name-mm {
+  margin-right: 115px;
+}
+
+.nft-name-nn {
+  margin-right: 165px;
+}
+
+.nft-name-oef {
+  margin-right: 220px;
+}
+
+.nft-name-sm {
+  margin-right: 220px;
+}
+
+.nft-name-ss {
+  margin-right: 200px;
+}
+
+.nft-name-ww {
+  margin-right: 210px;
+}
+
 .row {
   padding-top: 5%;
   margin-top: 70px;
@@ -296,6 +340,7 @@ code {
   box-shadow: .1px .3px #ee5c5c;
   /* border-bottom: solid 2px black; */
   width: 100%;
+  
 }
 
 /* Nav */

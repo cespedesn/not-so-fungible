@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import TopTile from './TopTile'
 import TopQuilt from './TopQuilt'
-
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 function TopCollections() {
     const [loading, setLoading] = useState(false)
@@ -20,11 +21,11 @@ function TopCollections() {
                 res.json().then((data) => {
                     // console.log(data)
                     setLoading(data)
-                    setBbs(data.slice(25,29))
-                    setDbbs(data.slice(52,56))
-                    setNns(data.slice(144,148))
-                    setSss(data.slice(176,180))
-                    setYcs(data.slice(225,229))
+                    setBbs(data.slice(25,30))
+                    setDbbs(data.slice(52,57))
+                    setNns(data.slice(144,149))
+                    setSss(data.slice(176,181))
+                    setYcs(data.slice(225,230))
 
                 })
             } else {
@@ -117,35 +118,55 @@ function TopCollections() {
                 sm="5"
                 data-aos="flip-right"
                 className='row'>
-                <h2 data-aos="fade-down-right">Yacht Chimps</h2>{ycsToDisplay}
+                  <Stack direction="row">
+                    <Avatar alt="Remy Sharp" src="./images/yc9.png" />
+                    <h3 className="nft-name-a"
+                    data-aos="fade-down-right">Yacht Chimps</h3>{ycsToDisplay}
+                  </Stack>
                 </Row>
                 <br/>
                 <Row 
                 sm="5"
                 data-aos="flip-left"
                 className='row'>
-                <h2 data-aos="fade-down-right">Baby Baboons</h2>{bbsToDisplay}
+                  <Stack direction="row">
+                    <Avatar alt="Remy Sharp" src="./images/bb2.png" />
+                    <h3 className="nft-name-bb" 
+                    data-aos="fade-down-right">Baby Baboons</h3>{bbsToDisplay}
+                  </Stack>
                 </Row>
                 <br/>
                 <Row 
                 sm="5"
                 data-aos="flip-right"
                 className='row'>
-                <h2 data-aos="fade-down-right">Nunchuck Norris</h2>{nnsToDisplay}
+                  <Stack direction="row">
+                    <Avatar alt="Remy Sharp" src="./images/nn5.png" />
+                    <h3 className="nft-name-nn"
+                    data-aos="fade-down-right">Nunchuck Norris</h3>{nnsToDisplay}
+                  </Stack>
                 </Row>
                 <br/>
                 <Row 
                 sm="5"
                 data-aos="flip-left"
                 className='row'>
-                <h2 data-aos="fade-down-right">Silly Sloths</h2>{sssToDisplay}
+                  <Stack direction="row">
+                    <Avatar alt="Remy Sharp" src="./images/ss14.png" />
+                    <h3 className="nft-name-ss"
+                    data-aos="fade-down-right">Silly Sloths</h3>{sssToDisplay}
+                  </Stack>
                 </Row>
                 <br/>
                 <Row 
                 sm="5"
                 data-aos="flip-right"
                 className='row'>
-                <h2 data-aos="fade-down-right">Dance Battle Bears</h2>{dbbsToDisplay}
+                  <Stack direction="row">
+                    <Avatar alt="Remy Sharp" src="./images/dbb3.png" />
+                    <h3 className="nft-name"
+                    data-aos="fade-down-right">Dance Battle Bears</h3>{dbbsToDisplay}
+                  </Stack>
                 </Row>
             </Col>
         </Container>
