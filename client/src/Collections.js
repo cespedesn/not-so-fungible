@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import CollectionTile from './CollectionTile'
 import { Container, Row, Col } from 'reactstrap'
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 import CollectionsQuilt from './CollectionsQuilt'
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -281,7 +283,7 @@ function Collections() {
         color={'#36d7b7'}
         loading={loading}
         size={150} /> */}
-    
+        <CollectionsQuilt />
         <Container>
             <Col>
                 <Row className='row'
@@ -291,7 +293,7 @@ function Collections() {
                 sm="6">
                     <div data-aos="zoom-in-right" >
                       <div className='collection-name-div'><h2 className='collection-name'>Astronuts</h2>
-                    
+                  
                       </div>
                       <div className='collection-btn-div'>
                       <button className= "collection-btn"

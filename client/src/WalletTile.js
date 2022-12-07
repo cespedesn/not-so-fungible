@@ -6,7 +6,8 @@ import Schmklz from './Schmklz.png'
 function WalletTile({name, funds, nft_count, purchased_nfts}) {
   return (
     <div className='wallet-div'>
-        <PurchasedNfts />
+        THIS IS A TEST
+        {/* <PurchasedNfts /> */}
         <Card
             color='warning'
             outline

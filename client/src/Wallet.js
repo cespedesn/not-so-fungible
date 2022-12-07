@@ -13,8 +13,8 @@ function Wallet() {
         .then(res => {
             if(res.ok) {
                 res.json().then((data) => {
-                    setUserWallets(data[0])
-                    console.log(data[0])
+                    setUserWallets(data)
+                    console.log(userWallets)
                 })
             } else {
                 res.json().then(data => setErrors(data.errors))
@@ -22,7 +22,7 @@ function Wallet() {
         })
     },[])
 
-    const walletsToDisplay = wallet.map((wallet) => {
+    const walletsToDisplay = userWallets.map((wallet) => {
         return (
             <WalletTile 
                 key={wallet.id}
@@ -35,7 +35,7 @@ function Wallet() {
         )
     })
 
-    console.log(wallet)
+  
   return (
     <div>{walletsToDisplay}</div>
   )

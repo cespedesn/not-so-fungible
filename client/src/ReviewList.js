@@ -1,7 +1,8 @@
 import React from 'react'
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { FaTrashAlt } from 'react-icons/fa'
-import { FaEdit } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
+import Rating from './Rating'
 
 function ReviewList({user, title, description, rating, handleDelete, editReview, id, review}) {
    
@@ -33,7 +34,7 @@ console.log(review, "bieeeetch")
                     {description}
                 </CardText>
                 <CardText>
-                    {rating}
+                    <Rating rating={rating}/>
                 </CardText>
                 <CardText>
                     {user.id === review.user_id && (
