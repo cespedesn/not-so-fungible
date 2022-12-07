@@ -126,7 +126,7 @@ const handleDropDown = (e) => {
             </FormGroup>
             <FormGroup>
             {<div>
-                {[...Array(5)].map((i) => {
+                {[...Array(5)].map((star, i) => {
                     const rateValue = i + 1;
                     return(
                         <label>
@@ -148,7 +148,7 @@ const handleDropDown = (e) => {
                             
                         </label>
                     )
-
+                    
                 })}
             </div>}
             </FormGroup>
