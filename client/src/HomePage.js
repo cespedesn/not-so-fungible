@@ -291,7 +291,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/a15.png" />
+              <Avatar alt="A" src="./images/a15.png" />
               <h3 className="nft-name-a"
               data-aos="fade-down-right" >Astronuts</h3>{ansToDisplay}
             </Stack>
@@ -301,7 +301,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/bb2.png" />
+              <Avatar alt="Bb" src="./images/bb2.png" />
               <h3 className="nft-name-bb" 
               data-aos="fade-down-left">Baby Baboons</h3>{bbsToDisplay}
             </Stack>
@@ -311,7 +311,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/brf12.png" />
+              <Avatar alt="Brf" src="./images/brf12.png" />
               <h3 className="nft-name-brf" 
               data-aos="fade-down-right">Bob Ross Flossies</h3>{brfsToDisplay}
             </Stack>
@@ -321,7 +321,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
           <Stack direction="row">
-            <Avatar alt="Remy Sharp" src="./images/dbb3.png" />
+            <Avatar alt="Dbb" src="./images/dbb3.png" />
             <h3 className="nft-name"
             data-aos="fade-down-left">Dance Battle Bears</h3>{dbbsToDisplay}
           </Stack>
@@ -331,7 +331,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/fg3.png" />
+              <Avatar alt="Fg" src="./images/fg3.png" />
               <h3 className="nft-name-fg"
               data-aos="fade-down-right">Forest Grumps</h3>{fgsToDisplay}
             </Stack>
@@ -341,7 +341,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/hd1.png" />
+              <Avatar alt="Hd" src="./images/hd1.png" />
               <h3 className="nft-name"
               data-aos="fade-down-left">Hot Dawgs</h3>{hdsToDisplay}
             </Stack>
@@ -351,7 +351,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/ll14.png" />
+              <Avatar alt="Ll" src="./images/ll14.png" />
               <h3 className="nft-name"
               data-aos="fade-down-right">Lonely Lemurs</h3>{llsToDisplay}
             </Stack>
@@ -361,7 +361,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/mm9.png" />
+              <Avatar alt="Mm" src="./images/mm9.png" />
               <h3 className="nft-name-mm"
               data-aos="fade-down-left">MerMommas</h3>{mmsToDisplay}
             </Stack>
@@ -371,7 +371,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/mmm1.png" />
+              <Avatar alt="Mmm" src="./images/mmm1.png" />
               <h3 className="nft-name"
               data-aos="fade-down-right">MoMa Meow Meows</h3>{mmmsToDisplay}
             </Stack>
@@ -381,7 +381,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/nn5.png" />
+              <Avatar alt="Nn" src="./images/nn5.png" />
               <h3 className="nft-name-nn"
               data-aos="fade-down-left">Nunchuck Norris</h3>{nnsToDisplay}
             </Stack>
@@ -391,7 +391,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/oef8.png" />
+              <Avatar alt="Oef" src="./images/oef8.png" />
               <h3 className="nft-name-oef"
               data-aos="fade-down-right">One Eyed Frens</h3>{oefsToDisplay}
             </Stack>
@@ -401,7 +401,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/sm1.png" />
+              <Avatar alt="Sm" src="./images/sm1.png" />
               <h3 className="nft-name-sm"
               data-aos="fade-down-left">Snail Mail</h3>{smsToDisplay}
             </Stack>
@@ -411,7 +411,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/ss14.png" />
+              <Avatar alt="Ss" src="./images/ss14.png" />
               <h3 className="nft-name-ss"
               data-aos="fade-down-right">Silly Sloths</h3>{sssToDisplay}
             </Stack>
@@ -420,7 +420,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/ww1.png" />
+              <Avatar alt="Ww" src="./images/ww1.png" />
               <h3 className="nft-name-ww"
               data-aos="fade-down-left">Whos Wise</h3>{wwsToDisplay}
             </Stack>
@@ -430,7 +430,7 @@ if (user) {
           data-aos="flip-right"
           className='row'>
             <Stack direction="row">
-              <Avatar alt="Remy Sharp" src="./images/yc9.png" />
+              <Avatar alt="Yc" src="./images/yc9.png" />
               <h3 className="nft-name"
               data-aos="fade-down-right">Yacht Chimps</h3>{ycsToDisplay}
             </Stack>

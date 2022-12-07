@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { FaTrashAlt } from 'react-icons/fa'
-import { FaStar } from 'react-icons/fa'
+import { FaEdit } from 'react-icons/fa'
 import Rating from './Rating'
+import EditForm from './EditForm'
 
-function ReviewList({user, title, description, rating, handleDelete, editReview, id, review}) {
-   
-console.log(review, "bieeeetch")
+function ReviewList({user, title, description, rating, handleDelete, id, review, reviews, setReviews}) {
+    const navigate = useNavigate()
+    //toggle show 
+    const [showEdit, setShowEdit] = useState(false)
+    const [newReview, setNewReview] = useState({
+        review_title: "",
+        review_description: "",
+        rating: "",
+        collection_id: "",
+        user_id: user.id
+    })
+
   return (
-    <div >
+    <div className='reviewlist-body'>
+        {!showEdit ?
         <Card
             className='review-tile'
             body
@@ -37,18 +49,19 @@ console.log(review, "bieeeetch")
                     <Rating rating={rating}/>
                 </CardText>
                 <CardText>
-                    {user.id === review.user_id && (
+                    {user.id === reviews.user_id && (
                     <button onClick={() => handleDelete(id)}>
                         <FaTrashAlt />
                     </button>)}
                 </CardText>
                 <CardText>
-                    {/* <button onClick={() => handleEdit(id)}>
-                        <FaEdit />
-                    </button> */}
+                    <button onClick={() => setShowEdit(!showEdit)}>
+                        <FaEdit 
+                        />
+                    </button>
                 </CardText>
             </CardBody>
-        </Card>
+        </Card> : <EditForm review={review} currentUser={user} setShowEdit={setShowEdit} showEdit={showEdit} reviews={reviews} setReviews={setReviews}/> }
     </div>
   )
 }

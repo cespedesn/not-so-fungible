@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
 import {Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { useNavigate } from 'react-router-dom'
 import { FaStar } from 'react-icons/fa'
 
+function EditForm({currentUser, review, setShowEdit, reviews, setReviews}) {
+    const navigate = useNavigate()
+    //for useEffect
+    const [collections, setCollections] = useState([])
+    const [rating, setRating] = useState(false)
+    const [hover, setHover] = useState(false)
+    //since review was passed as a prop just plug in the keys 
+    const [newReview, setNewReview] = useState({
+        review_title: review.review_title,
+        review_description: review.review_description,
+        rating: review.review_rating,
+        collection_id: review.collection_id,
+        user_id: currentUser.id,
+        id: review.id
+    })
 
-
-
-function CollectionReview({currentUser}) {
-const navigate = useNavigate()
-let {id} = useParams()
-const [rating, setRating] = useState(false)
-const [hover, setHover] = useState(false)
-const [errors, setErrors] = useState(false)
-const [reviews, setReviews] = useState([])
-const [collections, setCollections] = useState([])
-const [newReview, setNewReview] = useState({
-    review_title: "",
-    review_description: "",
-    rating: "",
-    collection_id: "",
-    user_id: currentUser.id
-})
 
 
 //UseEffect for getting collection from options
@@ -32,37 +30,7 @@ useEffect(() => {
         }
     })
 }, [])
-
-
-//Spread existing reviews and add new ones to the list 
-function addReview(newReviewObj){
-    setReviews( previousReviews => [newReviewObj, ...previousReviews ])
-  }
-
-
-//Post Review
-function handleReview(e) {
-    e.preventDefault()
-    fetch(`/reviews/`, {
-        method: 'POST',
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(newReview)
-    })
-    .then(res => {
-        if(res.ok) {
-            res.json().then((review) => {
-                addReview(review)
-                navigate("/collectiontable")
-            })
-        } else {
-            res.json().then(data => setErrors(data.errors))
-        }
-    })
     
-}
-
-
-
 //Handle Change on character inputs
 const handleChange = (e) => {
     setNewReview({...newReview, [e.target.name]: e.target.value})
@@ -73,13 +41,34 @@ const handleDropDown = (e) => {
     setNewReview({...newReview, collection_id: e.target.value})
 }
 
+// Update review
+function editReview(e) {
+    e.preventDefault()
+    //need id from newReview
+    fetch(`/reviews/${newReview.id}`, {
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(newReview)
+    }).then(res => res.json())
+    .then(data => {
+        const updatedReview = reviews.map((review) => {
+            return (
+                // when data response matches review id, replace with data (which is updated review)
+                data.id === review.id ? data : review
+            )
+        })
+        setReviews(updatedReview)
+        setShowEdit(showEdit => !showEdit)
+    })
+    navigate('/collectiontable')
+}
 
-
+    
   return (
-    <div className='review-form-div'>
+    <div>
         <Form 
         className='review-form'
-        onSubmit={handleReview}>
+        onSubmit={editReview}>
             <FormGroup>
                 <Label 
                 className="review-label"
@@ -88,9 +77,11 @@ const handleDropDown = (e) => {
                 </Label>
                 <Input
                 onChange={handleChange}
+                value={newReview.review_title}
                 id="review_title"
                 name="review_title"
-                placeholder="Review Title.."
+                //removed placeholders since override was an issue
+                // placeholder="Review Title.."
                 type="title"
                 />
                 <Label 
@@ -125,9 +116,11 @@ const handleDropDown = (e) => {
                 </Label>
                 <Input
                 onChange={handleChange}
+                value={newReview.review_description}
                 id="review_description"
                 name="review_description"
-                placeholder="Let the community know what you think!.."
+                //removed placeholders since override was an issue
+                // placeholder="Let the community know what you think!.."
                 type="textarea"
                 />
             </FormGroup>
@@ -160,22 +153,11 @@ const handleDropDown = (e) => {
             </div>}
             </FormGroup>
             <Button>
-                Submit Review
+                Resubmit Review
             </Button>
         </Form>
     </div>
   )
 }
 
-export default CollectionReview
-
-
-{/* <Input
-onChange={handleChange}
-id="review_rating"
-name="review_rating"
-placeholder="Review Rating.."
-type="text"
-/> */}
-
-
+export default EditForm

@@ -29,6 +29,8 @@ const toggleTheme = () => {
   setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"))
 }
 
+
+
 // For animation. Best to place here in parent level component
 useEffect(() => {
   AOS.init({duration: 1000})

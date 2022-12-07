@@ -51,7 +51,7 @@ code {
 
 .network-div {
   border-style: double;
-  background-color: white;
+  background-color: whitesmoke;
   display: flex;
   width: 325px;
 }
@@ -76,7 +76,7 @@ code {
 
 
 #dark {
-  background-image: radial-gradient(circle farthest-side, #ada9b3, #18003f);
+  background-image: radial-gradient(circle farthest-side, #18003f, #18003f);
 }
 
 /* Both login and signup forms*/
@@ -433,6 +433,9 @@ code {
 }
 
 .nav-parent {
+  /* position: sticky; */
+  /* top: 0; */
+  z-index: 1;
   margin-bottom: 50px;
   background-image: radial-gradient(circle farthest-side, #f1dede, #f08f8f);
   /* background-color: #f08f8f; */
@@ -551,6 +554,10 @@ code {
 
 
 /* Review Form */
+
+#dark .review-form-div {
+  background-image: radial-gradient(circle farthest-side, #736483, #18003f);
+}
 
 .review-form {
   width: 40%;
@@ -750,15 +757,26 @@ table {
 
 
 .reviews-header {
-  /* position:fixed; */
-  /* width: 23.3%; */
+  /* position:fixed;
+  width: 23.3%;
+  z-index: 1; */
   color: white;
   font-family: 'Poppins', sans-serif;
   padding-top: 50px;
   padding-bottom: 38px;
   background-color: #ee5c5c;
-  /* z-index: 1; */
+ 
 }
+
+
+.review-tile {
+  margin: auto;
+  margin-top: 10px;
+  /* margin-top: 100px; */
+  
+}
+
+
 
 #dark .reviews-header {
   background-image: radial-gradient(circle farthest-side, #df9292, #3f1111);
@@ -781,16 +799,14 @@ table {
 
 .entire-review-div {
   margin-right: 200px;
+  
 }
 
 #dark .reviewlist-div {
   background-color: #f2f2f2;
 }
 
-.review-tile {
-  margin: auto;
-  margin-top: 10px;
-}
+
 
 /* Star review */
 

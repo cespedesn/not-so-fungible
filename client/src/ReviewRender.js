@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import ReviewList from './ReviewList'
 
 function ReviewRender({currentUser}) {
 const navigate = useNavigate()
-const [reviewList, setReviewList] = useState([])
+let {id} = useParams()
+const [reviews, setReviews] = useState([])
 const [userEdit, setUserEdit] = useState([])
 const [errors, setErrors] = useState(false)
 // const [newReview, setNewReview] = useState({
@@ -20,7 +21,7 @@ useEffect(() => {
     .then(res => {
         if(res.ok) {
             res.json().then((data) => {
-                setReviewList(data)
+                setReviews(data)
                 console.log(data)
             })
         } else {
@@ -34,32 +35,16 @@ useEffect(() => {
     fetch(`/reviews/${id}`, {
         method: 'DELETE'
     }).then( () => {
-        const updatedReviews = reviewList.filter(review => review.id !== id)
-        setReviewList(updatedReviews)
+        const updatedReviews = reviews.filter(review => review.id !== id)
+        setReviews(updatedReviews)
     })
 }
 
 
-//Update review
-// function editReview(e) {
-//     e.preventDefault()
-//     fetch(`/reviews/${id}`, {
-//         method: 'PATCH',
-//         headers: {'Content-Type': 'application/json'},
-//         body: JSON.stringify(newReview)
-//     }).then(() => {
-//         const reviewEdit = userEdit.map((edit) => {
-//             return (
-//                 setUserEdit(reviewEdit)
-//             )
-//         })
-//     })
-//     navigate('/collectiontable')
-// }
 
 
 //Review map
-const reviewsToDisplay = reviewList.map((review) => {
+const reviewsToDisplay = reviews.map((review) => {
     return (
             <ReviewList 
                 key={review.id}
@@ -70,7 +55,9 @@ const reviewsToDisplay = reviewList.map((review) => {
                 rating={review.review_rating}
                 id={review.id}
                 handleDelete={handleDelete}
-                // editReview={editReview}
+                reviews={reviews}
+                setReviews={setReviews}
+                
             />
     )
 })
@@ -79,7 +66,7 @@ const reviewsToDisplay = reviewList.map((review) => {
   return (
     <div className='reviewlist-div' >
         <div className='reviews-header'><strong>Reviews</strong></div>
-        {reviewsToDisplay}
+            {reviewsToDisplay}
     </div>
   )
 }

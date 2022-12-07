@@ -1,7 +1,4 @@
-class ReviewSerializer < ActiveModel::Serializer
+class UserReviewsSerializer < ActiveModel::Serializer
   attributes :id, :review_title, :review_description, :review_rating
   has_one :user
 end
-
-#maybe add :user to attributes 
-
