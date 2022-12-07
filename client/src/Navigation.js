@@ -56,7 +56,13 @@ function Navigation({setCurrentUser}) {
                 <DropdownItem><NavLink href='/collectionreview'><strong>Leave a Review</strong></NavLink></DropdownItem>
                 <DropdownItem><NavLink href= '/wallet'><strong>My Wallet</strong></NavLink></DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem><Logout setCurrentUser={setCurrentUser}/></DropdownItem>
+                <DropdownItem>
+                  <Logout setCurrentUser={setCurrentUser}/>
+                  <br/>
+                  <div className='network-div'>
+                    <h6 className='netowrk'><strong>Built on the Jan-Michael VeChain Network</strong></h6>
+                  </div>
+                </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
@@ -69,6 +75,7 @@ function Navigation({setCurrentUser}) {
                 onChange={toggleTheme}
                 checked={theme === "dark"}
                 />
+                <br/>
             </div>
         </Collapse>
       </Navbar>

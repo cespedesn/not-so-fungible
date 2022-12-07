@@ -61,13 +61,13 @@ function CollectionTable() {
                     </tbody>
                 </table>
                     <div className='table-btn-div'>
-                        <span>
+                        <span className='table-span'>
                             Page{' '}
                             <strong>
                                 {pageIndex + 1} of {pageOptions.length}
                             </strong>{' '}
                         </span>
-                        <span>
+                        <span className='table-span'>
                             | Go to page: {' '}
                             <input type='number' 
                             defaultValue={pageIndex + 1} 

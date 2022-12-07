@@ -274,6 +274,8 @@ useEffect(() => {
 if (user) {
   return (
     <div className="homepage-div">
+      
+      <br/>
       <h1>Welcome, {user.user_name}!</h1>
       <Slider />
       <div className='top-collection-btn-div'>

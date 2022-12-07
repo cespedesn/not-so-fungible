@@ -278,11 +278,14 @@ function Collections() {
    
     
   return (
-    <div>
+    <div className='allcollections-div'>
       {/* <ClipLoader
         color={'#36d7b7'}
         loading={loading}
         size={150} /> */}
+        <div>
+          <h1>All Collections</h1>
+        </div>
         <CollectionsQuilt />
         <Container>
             <Col>

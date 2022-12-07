@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :user_name
       t.string :user_email
       t.string :password_digest
-      
+      t.boolean :redeemed_nft
 
       t.timestamps
     end

@@ -105,7 +105,7 @@ function TopCollections() {
     )
   })
   return (
-    <div>
+    <div className='topcollection-div'>
         <div>
             <h1>Top Collections</h1>
         </div>

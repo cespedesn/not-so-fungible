@@ -58,8 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
   end
 
   create_table "user_wallets", force: :cascade do |t|
-    t.string "user_wallet_available_funds"
-    t.integer "wallet_nft_count"
+    t.boolean "redeemed_nft"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -72,6 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_154052) do
     t.string "user_name"
     t.string "user_email"
     t.string "password_digest"
+    t.boolean "redeemed_nft"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

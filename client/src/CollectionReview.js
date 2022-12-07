@@ -80,7 +80,9 @@ const handleDropDown = (e) => {
         className='review-form'
         onSubmit={handleReview}>
             <FormGroup>
-                <Label for="review_title">
+                <Label 
+                className="review-label"
+                for="review_title">
                 Review Title
                 </Label>
                 <Input
@@ -90,7 +92,9 @@ const handleDropDown = (e) => {
                 placeholder="Review Title.."
                 type="title"
                 />
-                <Label for="review_collection">
+                <Label 
+                className="review-label"
+                for="review_collection">
                 Select Collection
                 </Label>
                 <Input
@@ -113,7 +117,9 @@ const handleDropDown = (e) => {
                 
             </FormGroup>
             <FormGroup>
-                <Label for="review_description">
+                <Label 
+                className="review-label"
+                for="review_description">
                 Review
                 </Label>
                 <Input

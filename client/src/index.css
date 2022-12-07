@@ -8,12 +8,17 @@ body {
   
 }
 
+
 h1{
   font-family: 'Poppins', sans-serif;
   text-shadow: -1px 1px 2px rgb(255, 255, 255),
 				  1px 1px 2px rgb(243, 170, 233),
 				  1px -1px 0 rgb(241, 170, 89),
 				  -1px -1px 0 rgb(0, 0, 0);
+}
+
+#dark h1 {
+  color: white;
 }
 h2{
   font-family: 'Poppins', sans-serif;
@@ -22,6 +27,8 @@ h2{
 h3{
   
 }
+
+
 @keyframes animated-border {
   0% {
     box-shadow: 0 0 0 0 rgba(77, 53, 2, 0.4);
@@ -42,6 +49,18 @@ code {
   border-radius: 10px;
 }
 
+.network-div {
+  border-style: double;
+  background-color: white;
+  display: flex;
+  width: 325px;
+}
+
+.network {
+  margin: auto;
+}
+
+
 /*Theme Toggle*/
 
 .switch{
@@ -54,12 +73,10 @@ code {
   font-family: 'Poppins', sans-serif;
 }
 
-#light {
-  background-image: radial-gradient(circle farthest-side, #ffffff, #f3d6c5);
-}
+
 
 #dark {
-  background-image: url("https://previews.dropbox.com/p/thumb/ABtbXrHBciTyavmpDwkDznw9LgsxTojpUxravgByvvUnH_SowOJg3zxEC1cegg4o__b6SuxUcMAciPzXCf50Ip8SQD9KcdUqnvZKbw-p8odLUP9U67K8MBTeHvQiqOqPSkmavonMt814xoFVqFd6huTEnXyZZzqQW9AHp_5mJIZc_rAQPZVqxSxTZvZk7VBi9TKji9MBdcyGRLuOQvxTm6aR5vy7434GY5CckaIhib9dHYsXs-bLNqqlpVkpclpVqujmBbzceg5LKhJvEGhbqulxooMHGR1fuTW_d4pGTkZiFjfm1-8jFvEKL_YEBQ_aW0MLiFkauk0BdCW3tDaaA8eSJVN63Re2j5kll5qRPpFUuwNWRI2mqKQDFthgBUueEvc/p.png")
+  background-image: radial-gradient(circle farthest-side, #ada9b3, #18003f);
 }
 
 /* Both login and signup forms*/
@@ -227,12 +244,22 @@ code {
 
 /* Collection */
 
+#dark .allcollections-div {
+  background-image: radial-gradient(circle farthest-side, #c1bcc5, #18003f);
+}
+
 .collectionsquilt{
   margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
   opacity: .6;
   border-bottom: solid 3px white;
+  border: solid 3px white;
+}
+
+#dark .collectionsquilt {
+  background-image: radial-gradient(circle farthest-side, #df9292, #3f1111);
+  
 }
 
 .collection-btn{
@@ -266,6 +293,9 @@ code {
 .collection-name {
   float: left;
 }
+#dark .collection-name {
+  color: white;
+}
 
 .collection-name-div {
   display: inline-block;
@@ -275,8 +305,8 @@ code {
 
 #dark .homepage-div {
   /* background-repeat: no-repeat; */
-  background-image: url("https://previews.dropbox.com/p/thumb/ABtbXrHBciTyavmpDwkDznw9LgsxTojpUxravgByvvUnH_SowOJg3zxEC1cegg4o__b6SuxUcMAciPzXCf50Ip8SQD9KcdUqnvZKbw-p8odLUP9U67K8MBTeHvQiqOqPSkmavonMt814xoFVqFd6huTEnXyZZzqQW9AHp_5mJIZc_rAQPZVqxSxTZvZk7VBi9TKji9MBdcyGRLuOQvxTm6aR5vy7434GY5CckaIhib9dHYsXs-bLNqqlpVkpclpVqujmBbzceg5LKhJvEGhbqulxooMHGR1fuTW_d4pGTkZiFjfm1-8jFvEKL_YEBQ_aW0MLiFkauk0BdCW3tDaaA8eSJVN63Re2j5kll5qRPpFUuwNWRI2mqKQDFthgBUueEvc/p.png")
-
+  /* background-image: url("https://previews.dropbox.com/p/thumb/ABtbXrHBciTyavmpDwkDznw9LgsxTojpUxravgByvvUnH_SowOJg3zxEC1cegg4o__b6SuxUcMAciPzXCf50Ip8SQD9KcdUqnvZKbw-p8odLUP9U67K8MBTeHvQiqOqPSkmavonMt814xoFVqFd6huTEnXyZZzqQW9AHp_5mJIZc_rAQPZVqxSxTZvZk7VBi9TKji9MBdcyGRLuOQvxTm6aR5vy7434GY5CckaIhib9dHYsXs-bLNqqlpVkpclpVqujmBbzceg5LKhJvEGhbqulxooMHGR1fuTW_d4pGTkZiFjfm1-8jFvEKL_YEBQ_aW0MLiFkauk0BdCW3tDaaA8eSJVN63Re2j5kll5qRPpFUuwNWRI2mqKQDFthgBUueEvc/p.png") */
+  background-image: radial-gradient(circle farthest-side, #c1bcc5, #18003f);
 }
 
 
@@ -291,45 +321,89 @@ code {
 .nft-name {
   margin-right: 190px;
 }
+#dark .nft-name {
+  color: white;
+}
+
 
 .nft-name-a {
   margin-right: 150px;
+}
+
+#dark .nft-name-a {
+  color: white;
 }
 
 .nft-name-bb{
   margin-right: 160px;
 }
 
+#dark .nft-name-bb {
+  color: white;
+}
+
 .nft-name-brf{
   margin-right: 175px;
+}
+
+#dark .nft-name-brf {
+  color: white;
 }
 
 .nft-name-fg {
   margin-right: 170px;
 }
 
+#dark .nft-name-fg {
+  color: white;
+}
+
 .nft-name-mm {
   margin-right: 115px;
+}
+
+#dark .nft-name-mm {
+  color: white;
 }
 
 .nft-name-nn {
   margin-right: 165px;
 }
 
+#dark .nft-name-nn {
+  color: white;
+}
+
 .nft-name-oef {
   margin-right: 220px;
+}
+
+#dark .nft-name-oef {
+  color: white;
 }
 
 .nft-name-sm {
   margin-right: 220px;
 }
 
+#dark .nft-name-sm {
+  color: white;
+}
+
 .nft-name-ss {
   margin-right: 200px;
 }
 
+#dark .nft-name-ss {
+  color: white;
+}
+
 .nft-name-ww {
   margin-right: 210px;
+}
+
+#dark .nft-name-ww {
+  color: white;
 }
 
 .row {
@@ -352,6 +426,7 @@ code {
 }
 
 
+
 .nav {
   /* display: flex; */
   width: 100%;
@@ -359,19 +434,35 @@ code {
 
 .nav-parent {
   margin-bottom: 50px;
-  background-color: #f08f8f;
+  background-image: radial-gradient(circle farthest-side, #f1dede, #f08f8f);
+  /* background-color: #f08f8f; */
   border-bottom: Solid 1px rgb(255, 0, 255);
   border-style:outset;
   
+}
+
+#dark .nav-parent {
+  margin-bottom: 50px;
+  background-image: radial-gradient(circle farthest-side, #df9292, #3f1111);
+  border-bottom: Solid 1px rgb(255, 255, 255);
+  border-style:double;
 }
 
 .main-nav {
   color: white;
 }
 
+
 .nav-text {
   color: white;
   background-color: white;
+  border-radius: 5px;
+  opacity: .9;
+}
+
+#dark .nav-text {
+  color: black;
+  background-color: rgb(235, 232, 232);
   border-radius: 5px;
   opacity: .9;
 }
@@ -442,7 +533,7 @@ code {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  margin-top: 220px;
+  margin-top: 240px;
 }
 .arrow:hover {
   background-color: #fff;
@@ -466,7 +557,9 @@ code {
   margin: auto;
 }
 
-
+#dark .review-label {
+  color: white;
+}
 
 /* Purgatory */
 
@@ -602,6 +695,10 @@ code {
   display: flex;
 }
 
+#dark .table-parent {
+  background-image: radial-gradient(circle farthest-side, #736483, #18003f);
+}
+
 .table-uncle {
   display:inline-block;
   margin: 0;
@@ -622,9 +719,13 @@ table {
   }
   
   table  tr:nth-child(even){background-color: #f2f2f2;}
+
+  #dark table  tr:nth-child(odd){background-color: #ffffff;}
   
   #customers tr:hover {background-color: #ddd;}
   
+ 
+
   table  th, tfoot td {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -632,17 +733,21 @@ table {
     background-color: #f85c5c;
     color: white;
   }
+
+  #dark table  th, tfoot td {
+    background-image: radial-gradient(circle farthest-side, #df9292, #3f1111);
+  }
   
   .table-btn-div {
     display:inline-block;
     padding-bottom: 3%;
   }
 
+  #dark .table-span {
+    color: white;
+  }
 /* Review List */
 
-.review-render {
-  
-}
 
 .reviews-header {
   /* position:fixed; */
@@ -655,6 +760,11 @@ table {
   /* z-index: 1; */
 }
 
+#dark .reviews-header {
+  background-image: radial-gradient(circle farthest-side, #df9292, #3f1111);
+}
+
+
 .reviewlist-div{
   background-color: transparent;
   overflow-x: hidden;
@@ -666,11 +776,15 @@ table {
   flex-direction: column;
   height: 68.3vh;
   width: 150%;
-  
 }
+
 
 .entire-review-div {
   margin-right: 200px;
+}
+
+#dark .reviewlist-div {
+  background-color: #f2f2f2;
 }
 
 .review-tile {
@@ -698,7 +812,20 @@ input[type='radio'] {
   margin-bottom: 40px;
   opacity: .6;
   border-bottom: solid 3px white;
+  border: solid 3px white;
 }
 
-/* Modal */
+#dark .topquilt {
+  background-image: radial-gradient(circle farthest-side, #df9292, #3f1111);
+}
+
+#dark .topcollection-div {
+  background-image: radial-gradient(circle farthest-side, #736483, #18003f);
+}
+
+/* Wallet */
+
+#dark .wallet-div {
+  background-image: radial-gradient(circle farthest-side, #736483, #18003f);
+}
 

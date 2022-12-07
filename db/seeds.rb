@@ -7,9 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "🪙 Seeding users..."
-u1 = User.create(user_admin: true, user_fullname: "Neftali Cespedes", user_name: "cespedesn", user_email: "cespedesn@gmail.com", password: "nft123")
-u2 = User.create(user_admin: false, user_fullname: "User Two", user_name: "user2", user_email: "user2@gmail.com", password: "user222")
-u3 = User.create(user_admin: false, user_fullname: "User Three", user_name: "user3", user_email: "user3@gmail.com", password: "user333")
+u1 = User.create(user_admin: true, user_fullname: "Neftali Cespedes", user_name: "cespedesn", user_email: "cespedesn@gmail.com", password: "nft123", redeemed_nft: false)
+u2 = User.create(user_admin: false, user_fullname: "User Two", user_name: "user2", user_email: "user2@gmail.com", password: "user222", redeemed_nft: false)
+u3 = User.create(user_admin: false, user_fullname: "User Three", user_name: "user3", user_email: "user3@gmail.com", password: "user333", redeemed_nft: false)
 
 
 
@@ -110,17 +110,11 @@ c15 = Collection.create(
 
 puts "🪙 Seeding user_wallets..."
 w1 = UserWallet.create(
-    user_wallet_available_funds: "3000 schmklz 🪙", 
-    wallet_nft_count:0, 
-    user_id:u1.id)
+    user_id:u1.id, redeemed_nft: false)
 w2 = UserWallet.create(
-    user_wallet_available_funds: "200 schmklz 🪙", 
-    wallet_nft_count:0, 
-    user_id:u2.id)
-w3 = UserWallet.create(
-    user_wallet_available_funds: "500 schmklz 🪙", 
-    wallet_nft_count:0, 
-    user_id:u3.id)
+    user_id:u2.id, redeemed_nft: false)
+w3 = UserWallet.create( 
+    user_id:u3.id, redeemed_nft: false)
 
 puts "🪙 Seeding reviews..."
 

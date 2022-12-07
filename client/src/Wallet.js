@@ -14,7 +14,7 @@ function Wallet() {
             if(res.ok) {
                 res.json().then((data) => {
                     setUserWallets(data)
-                    console.log(userWallets)
+                    console.log(data)
                 })
             } else {
                 res.json().then(data => setErrors(data.errors))
@@ -27,10 +27,8 @@ function Wallet() {
             <WalletTile 
                 key={wallet.id}
                 wallet={wallet}
-                name={wallet.user.user_fullname}
-                funds={wallet.user_wallet_available_funds}
-                nft_count={wallet.user.wallet_nft_count}
-                purchased_nfts={wallet.purchased_nfts}
+                name={wallet.user.user_name}
+                redeemed_nft={wallet.redeemed_nft}
             />
         )
     })
@@ -42,6 +40,39 @@ function Wallet() {
 }
 
 export default Wallet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // useEffect(() => {
 //     if(walletsToDisplay === []) {
