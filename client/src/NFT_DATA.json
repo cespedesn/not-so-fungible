@@ -104,5 +104,12 @@
         "most_popular": "./images/yc8.png",
         "collection_description": "Yacht Chimps have been recognized as the NFT industry most valuable item to date. With perks like exclusive club meetings, yacht parties, free bananas, and more, Yacht Chimps have separated themselves from all other collections. It may cost you a pretty penny but the lifestyle is worth it. Join the community today!",
         "collection_rating": "⭐⭐⭐⭐⭐"
+    },
+    {
+        "id": 15,
+        "collection_name": "Deryb Diaries",
+        "most_popular": "./images/dd4.png",
+        "collection_description": "Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Deryb Diaries community to receive a limited edition 2023 Deryb Diaries Calendar. Join the waitlist today!",
+        "collection_rating": "⭐⭐⭐⭐⭐"
     }
 ]

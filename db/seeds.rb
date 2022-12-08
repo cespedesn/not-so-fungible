@@ -8,7 +8,7 @@
 
 puts "🪙 Seeding users..."
 u1 = User.create(user_admin: true, user_fullname: "Neftali Cespedes", user_name: "cespedesn", user_email: "cespedesn@gmail.com", password: "nft123", redeemed_nft: false)
-u2 = User.create(user_admin: false, user_fullname: "My Wallet", user_name: "new user", user_email: "newuser@gmail.com", password: "nft123", redeemed_nft: false)
+
 
 
 
@@ -117,8 +117,7 @@ c16 = Collection.create(
 puts "🪙 Seeding user_wallet..."
 w1 = UserWallet.create(
     user_id:u1.id, redeemed_nft: false)
-w2 = UserWallet.create(
-    user_id:u2.id, redeemed_nft: false)
+
 
 
 puts "🪙 Seeding reviews..."
@@ -1994,10 +1993,17 @@ nft249 = Nft.create(
     collection_id: c16.id)
 
 nft250 = Nft.create(
-    nft_name:"Derb", 
+    nft_name:"Sheriff Deryf", 
     nft_price:"110 schmklz 🪙", 
     nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
     nft_image:"/images/DerybDiaries/dd11.png",
+    collection_id: c16.id)
+
+nft251 = Nft.create(
+    nft_name:"Derb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd12.png",
     collection_id: c16.id)
 
 

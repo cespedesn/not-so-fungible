@@ -1,6 +1,6 @@
 import React from 'react'
 import Waitlist from './Waitlist'
-import { Card, CardText, CardBody, CardTitle, ListGroup, ListGroupItem } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, ListGroup, ListGroupItem, CardLink } from 'reactstrap';
 
 function CollectionTile({name, image, nft_name, price }) {
 
@@ -31,6 +31,9 @@ function CollectionTile({name, image, nft_name, price }) {
                     </ListGroupItem>
                 </ListGroup>
                 <CardBody>
+                    <CardLink href="collectiontable">
+                        Description
+                    </CardLink>
                     <Waitlist />
                 </CardBody>
             </Card>

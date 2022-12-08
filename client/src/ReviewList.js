@@ -30,7 +30,7 @@ function ReviewList({user, title, description, rating, handleDelete, id, review,
             >
             <img
                 alt="Sample"
-                src="https://previews.dropbox.com/p/thumb/ABv1ti5Ubt1P8FK2q4hB97QR59Q4_LpQBqHPPA4aFUAGji0PXMJE-ghJOm4rpYbuZlEBIlALBify_HW1W3OzyzTcFssmy0bNid-w6DuzsBELplaTLmwmu1wnzq-07Kt46NiqSA6gri6dKxUmlcPmfT-X6QmP9Jsh_y8T97v2KkT9vi_Ytz7y4yNSJ6y3SORmX4TThALIaLrP4hss3t84kCH8MsjH49ETSmwaM15UD3W740GGCIAMQYrNzIa1mzVScLAn2sj1FSpkWtEfOPAiEkXRx2tQj6wyk8Ysp6gj1bFzrJmc4AlLaiJm_-p9lMOBtn9squkCuTyagUYBUa_xGXwqqr-AW-gkR9jwPoDQrLBF42ikQkYgovdYFBI4RS7Njt13O_o9WEm-MoMUlSs148XG/p.png"
+                src="https://previews.dropbox.com/p/thumb/ABsDCKgmUfw8xkcCuFqP8FUm7qvemsKy1MROHuWUMczuEnv2hrH-zE0v2G39qzH1YMC2f9xyMoYuEmTKp2JuNMaA3KP_FuVbXFhncJFePxbSILDgngoUdFkfPco5gMa3CCQ6qID3YREz1dI_AqLm8YQshcq2KL2YwtQZvH3R_5-gP0fqNeBuHVIrw2Ohi0NS2ePfT1AytgciTXfs7TKDDnH8viwy1TQBLKGbIh0pc0SWq8yhibk2ysD8eN6_3EZ3cEp0SJ4tm_SBqnQgTSS86iF4DGnoCRkazIN_xBWuQqu4Tah6j3LdoRjsUuI9pBzE_sQ-4qOkCP4hpY0GZnwSrgrEwOaC0rmfeUhAnTcSfIQuXimUtzHR4dRJSiDFIRtisUh12LztHBdVQ_uJ_rB64Fdg/p.png"
             />
             <CardBody >
                 <CardTitle tag="h5">

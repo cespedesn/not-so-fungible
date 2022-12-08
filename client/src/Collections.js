@@ -69,7 +69,7 @@ function Collections() {
                       setSms(data.slice(192,208))
                       setWws(data.slice(208,224))
                       setYcs(data.slice(224,240))
-                      setDds(data.slice(241,252))
+                      setDds(data.slice(241,253))
   
                   })
               } else {
@@ -303,266 +303,268 @@ function Collections() {
           <h1>All Collections</h1>
         </div>
         <CollectionsQuilt />
-        <Container>
-            <Col>
-                <Row className='row'
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right" >
-                      <div className='collection-name-div'><h2 className='collection-name'>Astronuts</h2>
+        <div >
+          <Container>
+              <Col>
+                  <Row className='row'
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right" >
+                        <div className='collection-name-div'><h2 className='collection-name'>Astronuts</h2>
+                    
+                        </div>
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowAnsCollection((showAnsCollection) => !showAnsCollection)}>Toggle Collection</button>
+                        </div>
+                      </div>
+                      {showAnsCollection && ansToDisplay}
+                  </Row>
                   
+                  
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Baby Baboons</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowBbsCollection((showBbsCollection) => !showBbsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowAnsCollection((showAnsCollection) => !showAnsCollection)}>Toggle Collection</button>
+                      {showBbsCollection && bbsToDisplay}
+                  </Row>
+                  
+                  
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Bob Ross Flossies</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowBrfsCollection((showBrfsCollection) => !showBrfsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showAnsCollection && ansToDisplay}
-                </Row>
-                
-                
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Baby Baboons</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowBbsCollection((showBbsCollection) => !showBbsCollection)}>Toggle Collection</button>
+                      {showBrfsCollection && brfsToDisplay}
+                  </Row>
+                  
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Dance Battle Bears</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowDbbsCollection((showDbbsCollection) => !showDbbsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showBbsCollection && bbsToDisplay}
-                </Row>
-                
-                
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Bob Ross Flossies</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowBrfsCollection((showBrfsCollection) => !showBrfsCollection)}>Toggle Collection</button>
+                      {showDbbsCollection && dbbsToDisplay}
+                  </Row>
+                  
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Forest Grumps</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowFgsCollection((showFgsCollection) => !showFgsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showBrfsCollection && brfsToDisplay}
-                </Row>
-                
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Dance Battle Bears</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowDbbsCollection((showDbbsCollection) => !showDbbsCollection)}>Toggle Collection</button>
-                      </div>
-                    </div>
-                    {showDbbsCollection && dbbsToDisplay}
-                </Row>
-                
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Forest Grumps</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowFgsCollection((showFgsCollection) => !showFgsCollection)}>Toggle Collection</button>
-                      </div>
-                    </div>
-                    {showFgsCollection && fgsToDisplay}
-                </Row>
+                      {showFgsCollection && fgsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Hot Dawgs</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowHdsCollection((showHdsCollection) => !showHdsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Hot Dawgs</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowHdsCollection((showHdsCollection) => !showHdsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showHdsCollection && hdsToDisplay}
-                </Row>
+                      {showHdsCollection && hdsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Lonely Lemurs</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowLlsCollection((showLlsCollection) => !showLlsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Lonely Lemurs</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowLlsCollection((showLlsCollection) => !showLlsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showLlsCollection && llsToDisplay}
-                </Row>
+                      {showLlsCollection && llsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>MerMommas</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowMmsCollection((showMmsCollection) => !showMmsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>MerMommas</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowMmsCollection((showMmsCollection) => !showMmsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showMmsCollection && mmsToDisplay}
-                </Row>
+                      {showMmsCollection && mmsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>MoMa Meow Meows</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowMmmsCollection((showMmmsCollection) => !showMmmsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>MoMa Meow Meows</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowMmmsCollection((showMmmsCollection) => !showMmmsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showMmmsCollection && mmmsToDisplay}
-                </Row>
+                      {showMmmsCollection && mmmsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Nunchuck Norris</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowNnsCollection((showNnsCollection) => !showNnsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Nunchuck Norris</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowNnsCollection((showNnsCollection) => !showNnsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showNnsCollection && nnsToDisplay}
-                </Row>
+                      {showNnsCollection && nnsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>One Eyed Frens</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowOefsCollection((showOefsCollection) => !showOefsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>One Eyed Frens</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowOefsCollection((showOefsCollection) => !showOefsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showOefsCollection && oefsToDisplay}
-                </Row>
+                      {showOefsCollection && oefsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Snail Mail</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowSmsCollection((showSmsCollection) => !showSmsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Snail Mail</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowSmsCollection((showSmsCollection) => !showSmsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showSmsCollection && smsToDisplay}
-                </Row>
+                      {showSmsCollection && smsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Silly Sloths</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowSssCollection((showSssCollection) => !showSssCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Silly Sloths</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowSssCollection((showSssCollection) => !showSssCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showSssCollection && sssToDisplay}
-                </Row>
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Whos Wise</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowWwsCollection((showWwsCollection) => !showWwsCollection)}>Toggle Collection</button>
+                      {showSssCollection && sssToDisplay}
+                  </Row>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Whos Wise</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowWwsCollection((showWwsCollection) => !showWwsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showWwsCollection && wwsToDisplay}
-                </Row>
+                      {showWwsCollection && wwsToDisplay}
+                  </Row>
 
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Yacht Chimps</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowYcsCollection((showYcsCollection) => !showYcsCollection)}>Toggle Collection</button>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Yacht Chimps</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowYcsCollection((showYcsCollection) => !showYcsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showYcsCollection && ycsToDisplay}
-                </Row>
-                <Row 
-                color='warning'
-                outline
-                style={{ width: '73rem'}}
-                sm="6">
-                    <div data-aos="zoom-in-right">
-                      <div className='collection-name-div'><h2 className='collection-name'>Deryb Diaries</h2></div>
-                      
-                      <div className='collection-btn-div'>
-                      <button className= "collection-btn"
-                      onClick={() => setShowDdsCollection((showDdsCollection) => !showDdsCollection)}>Toggle Collection</button>
+                      {showYcsCollection && ycsToDisplay}
+                  </Row>
+                  <Row 
+                  color='warning'
+                  outline
+                  style={{ width: '73rem'}}
+                  sm="6">
+                      <div data-aos="zoom-in-right">
+                        <div className='collection-name-div'><h2 className='collection-name'>Deryb Diaries</h2></div>
+                        
+                        <div className='collection-btn-div'>
+                        <button className= "collection-btn"
+                        onClick={() => setShowDdsCollection((showDdsCollection) => !showDdsCollection)}>Toggle Collection</button>
+                        </div>
                       </div>
-                    </div>
-                    {showDdsCollection && ddsToDisplay}
-                </Row>
-            </Col>
-        </Container> 
+                      {showDdsCollection && ddsToDisplay}
+                  </Row>
+              </Col>
+          </Container> 
+        </div>
     </div>
   )
 }

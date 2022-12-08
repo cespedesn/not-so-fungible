@@ -14,7 +14,7 @@ function Login({setCurrentUser}) {
     const navigate = useNavigate()
     const [showForm, setShowForm] = useState(true)
     const [passwordShown, setPasswordShown] = useState(false)
-    const [errors, setErrors] = useState([])
+    // const [errors, setErrors] = useState([])
     const [loginData, setLoginData] = useState({
         user_name: "",
         password: ""
@@ -32,7 +32,7 @@ function Login({setCurrentUser}) {
 
         fetch('/login', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'},
             body: JSON.stringify(user)
         })
         .then(res => {
@@ -46,8 +46,9 @@ function Login({setCurrentUser}) {
 
             } 
             else {
-                res.json().then(json => setErrors(Object.entries(json.errors)))
+                res.json().then(json => (alert(json.error)))
             }
+           
         })
     }
 // Handle the character change on inputs to form fields

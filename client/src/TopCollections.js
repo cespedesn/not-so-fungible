@@ -134,7 +134,7 @@ function TopCollections() {
                 data-aos="flip-left"
                 className='row'>
                   <Stack direction="row">
-                    <Avatar alt="Dd" src="./images/dd4.png" />
+                    <Avatar alt="Dd" src="./images/dd11.png" />
                     <h3 className="nft-name-a"
                     data-aos="fade-down-right">Deryb Diaries</h3>{ddsToDisplay}
                   </Stack>
