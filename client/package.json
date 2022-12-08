@@ -24,7 +24,6 @@
     "react-star-ratings": "^2.3.0",
     "react-switch": "^7.0.0",
     "react-table": "^7.8.0",
-    "react-twitter-embed": "^4.0.4",
     "reactstrap": "^9.1.5",
     "web-vitals": "^2.1.4"
   },

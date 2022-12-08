@@ -11,6 +11,7 @@ import Slider from './Slider'
 
 
 
+
 function HomePage() {
   const [user, setUser] = useState(false)
   const [errors, setErrors] = useState(false)
@@ -287,6 +288,7 @@ if (user) {
       data-aos="fade-down"
       className='nft-section'>
         <Container >
+          
           <Col >
           <br/>
             <Row 

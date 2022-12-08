@@ -27,7 +27,7 @@ function Wallet() {
             <WalletTile 
                 key={wallet.id}
                 wallet={wallet}
-                name={wallet.user.user_name}
+                name={wallet.user.user_fullname}
                 redeemed_nft={wallet.redeemed_nft}
             />
         )

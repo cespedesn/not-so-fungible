@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "🪙 Seeding users..."
-u1 = User.create(user_admin: true, user_fullname: "Neftali Cespedes", user_name: "cespedesn", user_email: "cespedesn@gmail.com", password: "nft123", redeemed_nft: false)
+u1 = User.create(user_admin: true, user_fullname: "Your Name Here", user_name: "cespedesn", user_email: "cespedesn@gmail.com", password: "nft123", redeemed_nft: false)
 
 
 
