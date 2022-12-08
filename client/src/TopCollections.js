@@ -12,6 +12,7 @@ function TopCollections() {
     const [nns, setNns] = useState([])
     const [bbs, setBbs] = useState([])
     const [dbbs, setDbbs] = useState([])
+    const [dds, setDds] = useState([])
     const [errors, setErrors] = useState(false)
 
     useEffect(() => {
@@ -26,6 +27,7 @@ function TopCollections() {
                     setNns(data.slice(144,149))
                     setSss(data.slice(176,181))
                     setYcs(data.slice(225,230))
+                    setDds(data.slice(241, 246))
 
                 })
             } else {
@@ -104,6 +106,19 @@ function TopCollections() {
       />
     )
   })
+   //Deryb Diaries map
+   const ddsToDisplay = dds.map((nft) => {
+    return (
+      <TopTile 
+        key={nft.id}
+        nft={nft}
+        name={nft.nft_name}
+        price={nft.nft_price}
+        description={nft.nft_description}
+        image={nft.nft_image}
+      />
+    )
+  })
   return (
     <div className='topcollection-div'>
         <div>
@@ -114,6 +129,17 @@ function TopCollections() {
         </div>
         <Container>
             <Col>
+                <Row 
+                sm="5"
+                data-aos="flip-left"
+                className='row'>
+                  <Stack direction="row">
+                    <Avatar alt="Dd" src="./images/dd4.png" />
+                    <h3 className="nft-name-a"
+                    data-aos="fade-down-right">Deryb Diaries</h3>{ddsToDisplay}
+                  </Stack>
+                </Row>
+                <br/>
                 <Row 
                 sm="5"
                 data-aos="flip-right"

@@ -24,6 +24,7 @@ function Collections() {
     const [sms, setSms] = useState([])
     const [wws, setWws] = useState([])
     const [ycs, setYcs] = useState([])
+    const [dds, setDds] = useState([])
     const [showAnsCollection, setShowAnsCollection] = useState(false)
     const [showBbsCollection, setShowBbsCollection] = useState(false)
     const [showBrfsCollection, setShowBrfsCollection] = useState(false)
@@ -39,6 +40,7 @@ function Collections() {
     const [showSmsCollection, setShowSmsCollection] = useState(false)
     const [showWwsCollection, setShowWwsCollection] = useState(false)
     const [showYcsCollection, setShowYcsCollection] = useState(false)
+    const [showDdsCollection, setShowDdsCollection] = useState(false)
     
   
       useEffect(() => {
@@ -67,6 +69,7 @@ function Collections() {
                       setSms(data.slice(192,208))
                       setWws(data.slice(208,224))
                       setYcs(data.slice(224,240))
+                      setDds(data.slice(241,252))
   
                   })
               } else {
@@ -275,6 +278,19 @@ function Collections() {
     })
 
 
+    //Deryb Diaries map
+   const ddsToDisplay = dds.map((nft) => {
+    return (
+      <CollectionTile 
+        key={nft.id}
+        nft={nft}
+        name={nft.nft_name}
+        price={nft.nft_price}
+        description={nft.nft_description}
+        image={nft.nft_image}
+      />
+    )
+  })
    
     
   return (
@@ -529,6 +545,21 @@ function Collections() {
                       </div>
                     </div>
                     {showYcsCollection && ycsToDisplay}
+                </Row>
+                <Row 
+                color='warning'
+                outline
+                style={{ width: '73rem'}}
+                sm="6">
+                    <div data-aos="zoom-in-right">
+                      <div className='collection-name-div'><h2 className='collection-name'>Deryb Diaries</h2></div>
+                      
+                      <div className='collection-btn-div'>
+                      <button className= "collection-btn"
+                      onClick={() => setShowDdsCollection((showDdsCollection) => !showDdsCollection)}>Toggle Collection</button>
+                      </div>
+                    </div>
+                    {showDdsCollection && ddsToDisplay}
                 </Row>
             </Col>
         </Container> 

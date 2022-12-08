@@ -8,8 +8,8 @@
 
 puts "🪙 Seeding users..."
 u1 = User.create(user_admin: true, user_fullname: "Neftali Cespedes", user_name: "cespedesn", user_email: "cespedesn@gmail.com", password: "nft123", redeemed_nft: false)
-u2 = User.create(user_admin: false, user_fullname: "User Two", user_name: "user2", user_email: "user2@gmail.com", password: "user222", redeemed_nft: false)
-u3 = User.create(user_admin: false, user_fullname: "User Three", user_name: "user3", user_email: "user3@gmail.com", password: "user333", redeemed_nft: false)
+u2 = User.create(user_admin: false, user_fullname: "My Wallet", user_name: "new user", user_email: "newuser@gmail.com", password: "nft123", redeemed_nft: false)
+
 
 
 
@@ -106,15 +106,20 @@ c15 = Collection.create(
     collection_rating:"⭐⭐⭐⭐⭐", 
     user_id: u1.id)
 
+c16 = Collection.create(
+    collection_name:"Deryb Diaries", 
+    collection_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    collection_rating:"⭐⭐⭐⭐⭐", 
+    user_id: u1.id)
 
 
-puts "🪙 Seeding user_wallets..."
+
+puts "🪙 Seeding user_wallet..."
 w1 = UserWallet.create(
     user_id:u1.id, redeemed_nft: false)
 w2 = UserWallet.create(
     user_id:u2.id, redeemed_nft: false)
-w3 = UserWallet.create( 
-    user_id:u3.id, redeemed_nft: false)
+
 
 puts "🪙 Seeding reviews..."
 
@@ -1911,6 +1916,90 @@ nft239 = Nft.create(
     nft_description:"Yacht Chimps have been recognized as the NFT industry most valuable item to date. With perks like exclusive club meetings, yacht parties, free bananas, and more, Yacht Chimps have separated themselves from all other collections. It may cost you a pretty penny but the lifestyle is worth it. Join the community today!", 
     nft_image:"/images/YachtChimps/yc16.png", 
     collection_id: c15.id)
+
+
+
+
+
+
+
+
+nft240 = Nft.create(
+    nft_name:"Bikini Bottom Bobs", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd1.png", 
+    collection_id: c16.id)
+nft241 = Nft.create(
+    nft_name:"Deryb Dutton", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd2.png",
+    collection_id: c16.id)
+
+nft242 = Nft.create(
+    nft_name:"Personal Space Deryb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd3.png",
+    collection_id: c16.id)
+
+nft243 = Nft.create(
+    nft_name:"Happy Dutton Deryb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd4.png",
+    collection_id: c16.id)
+
+nft244 = Nft.create(
+    nft_name:"Doodle Deryb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd5.png",
+    collection_id: c16.id)
+
+nft245 = Nft.create(
+    nft_name:"Beaker Deryb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd6.png",
+    collection_id: c16.id)
+
+nft246 = Nft.create(
+    nft_name:"Depleted Deryb",
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd7.png",
+    collection_id: c16.id)
+
+nft247 = Nft.create(
+    nft_name:"Drained Deryb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd8.png",
+    collection_id: c16.id)
+
+nft248 = Nft.create(
+    nft_name:"Tyler Deryb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!",  
+    nft_image:"/images/DerybDiaries/dd9.png",
+    collection_id: c16.id)
+
+nft249 = Nft.create(
+    nft_name:"Dewtawn Deryb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd10.png",
+    collection_id: c16.id)
+
+nft250 = Nft.create(
+    nft_name:"Derb", 
+    nft_price:"110 schmklz 🪙", 
+    nft_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
+    nft_image:"/images/DerybDiaries/dd11.png",
+    collection_id: c16.id)
+
 
 
 
