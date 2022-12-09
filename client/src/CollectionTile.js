@@ -10,7 +10,7 @@ function CollectionTile({name, image, nft_name, price }) {
     <div>
         <Card 
             className='card'
-            style={{width: '12rem'}}>
+            style={{width: '10rem'}}>
                 <img
                     className='nft-tiles'
                     alt="Card"

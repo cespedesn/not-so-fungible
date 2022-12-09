@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   
@@ -248,6 +249,7 @@ code {
 .nft-section {
   border-style: double; 
   margin-top: 100px;
+  margin-bottom: 10%;
   margin: auto;
   padding-top: 10px;
   padding-left: 20px;
@@ -282,12 +284,12 @@ code {
 }
 
 .topcollection-div {
-  padding-bottom: 20px;
+  
 }
 
 .top-collection-btn-div {
   margin-top: 200px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 
@@ -333,7 +335,7 @@ code {
 
 
 .homepage-div {
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 
@@ -341,7 +343,6 @@ code {
   /* background-repeat: no-repeat; */
   /* background-image: url("https://previews.dropbox.com/p/thumb/ABtbXrHBciTyavmpDwkDznw9LgsxTojpUxravgByvvUnH_SowOJg3zxEC1cegg4o__b6SuxUcMAciPzXCf50Ip8SQD9KcdUqnvZKbw-p8odLUP9U67K8MBTeHvQiqOqPSkmavonMt814xoFVqFd6huTEnXyZZzqQW9AHp_5mJIZc_rAQPZVqxSxTZvZk7VBi9TKji9MBdcyGRLuOQvxTm6aR5vy7434GY5CckaIhib9dHYsXs-bLNqqlpVkpclpVqujmBbzceg5LKhJvEGhbqulxooMHGR1fuTW_d4pGTkZiFjfm1-8jFvEKL_YEBQ_aW0MLiFkauk0BdCW3tDaaA8eSJVN63Re2j5kll5qRPpFUuwNWRI2mqKQDFthgBUueEvc/p.png") */
   background-image: radial-gradient(circle farthest-side, #c1bcc5, #18003f);
-  padding-bottom: 20px;
 }
 
 
@@ -564,10 +565,28 @@ code {
   margin-top: 5px;
 }
 
-.footer {
-  position: fixed;
+
+.padding {
+  margin-top: 50px;
 }
 
+.footer {
+  /* display: flex; */
+  /* position: fixed; */
+  /* justify-content: center;
+  align-items: center; */
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  border-top: Solid 1px rgb(255, 0, 255);
+  background-image: radial-gradient(circle farthest-side, #f1dede, #f08f8f);
+}
+
+#dark .footer {
+  bottom: 0;
+  background-image: radial-gradient(circle farthest-side, #df9292, #3f1111);
+  border-bottom: Solid 1px rgb(255, 255, 255);
+}
 
 
 /* Slider */

@@ -39,7 +39,7 @@ function Navigation({setCurrentUser}) {
             
             <h6>Beta access coming 2023</h6>
           </Marquee>
-        </div>
+      </div>
       <div >
       <Navbar >
         

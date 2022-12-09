@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import WalletTile from './WalletTile'
+import Footer from './Footer'
 
 function Wallet() {
     const [userWallets, setUserWallets] = useState([])
@@ -35,7 +36,9 @@ function Wallet() {
 
   
   return (
-    <div>{walletsToDisplay}</div>
+    <div>
+        {walletsToDisplay}
+    </div>
   )
 }
 

@@ -4,6 +4,7 @@ import TopTile from './TopTile'
 import TopQuilt from './TopQuilt'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import Footer from './Footer';
 
 function TopCollections() {
     const [loading, setLoading] = useState(false)
@@ -196,6 +197,7 @@ function TopCollections() {
                 </Row>
             </Col>
         </Container>
+        <Footer />
     </div>
   )
 }

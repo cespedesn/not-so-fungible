@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import NftTile from './NftTile'
 import Slider from './Slider'
+import Footer from './Footer'
 
 
 
@@ -444,6 +445,8 @@ if (user) {
           </Col>
         </Container>
       </div>
+      <div className='padding'></div>
+      <Footer/>
     </div>
   )
   }else {

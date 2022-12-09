@@ -110,6 +110,7 @@ function CollectionTable() {
                     <ReviewRender />
                 </div>
             </div>
+            
         </div>
     )
 }

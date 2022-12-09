@@ -5,6 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import CollectionsQuilt from './CollectionsQuilt'
 import ClipLoader from "react-spinners/ClipLoader";
+import Footer from './Footer';
 
 function Collections() {
     const [errors, setErrors] = useState(false)
@@ -565,6 +566,7 @@ function Collections() {
               </Col>
           </Container> 
         </div>
+        <Footer />
     </div>
   )
 }
