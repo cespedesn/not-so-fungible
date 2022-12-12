@@ -1,6 +1,6 @@
 import React from 'react'
 import Waitlist from './Waitlist'
-import { Card, CardLink, CardText, CardBody,
+import { Card, CardLink, CardBody,
     CardTitle, ListGroup, ListGroupItem } from 'reactstrap';
 
 function TopTile({name, price, image}) {

@@ -32,9 +32,4 @@ export const COLUMNS = [
         accessor: "collection_rating",
        
     }
-    // {
-    //     Header:'Reviews',
-    //     Footer: 'Reviews',
-    //     accessor: "reviews",
-    // }
 ]

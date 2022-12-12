@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { FaStar } from 'react-icons/fa'
 
@@ -8,10 +8,8 @@ import { FaStar } from 'react-icons/fa'
 
 function CollectionReview({currentUser}) {
 const navigate = useNavigate()
-let {id} = useParams()
 const [rating, setRating] = useState(false)
 const [hover, setHover] = useState(false)
-const [errors, setErrors] = useState(false)
 const [reviews, setReviews] = useState([])
 const [collections, setCollections] = useState([])
 const [newReview, setNewReview] = useState({
@@ -43,7 +41,7 @@ function addReview(newReviewObj){
 //Post Review
 function handleReview(e) {
     e.preventDefault()
-    fetch(`/reviews/`, {
+    fetch(`/reviews`, {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(newReview)
@@ -55,12 +53,11 @@ function handleReview(e) {
                 navigate("/collectiontable")
             })
         } else {
-            res.json().then(data => setErrors(data.errors))
+            res.json().then(data => alert(data.errors))
         }
     })
     
 }
-
 
 
 //Handle Change on character inputs
@@ -115,7 +112,6 @@ const handleDropDown = (e) => {
                         )
                     })}
                 </Input>
-                
             </FormGroup>
             <FormGroup>
                 <Label 
@@ -152,10 +148,8 @@ const handleDropDown = (e) => {
                                 size={20}
                                 color={rateValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
                             />
-                            
                         </label>
                     )
-                    
                 })}
             </div>}
             </FormGroup>
@@ -168,14 +162,3 @@ const handleDropDown = (e) => {
 }
 
 export default CollectionReview
-
-
-{/* <Input
-onChange={handleChange}
-id="review_rating"
-name="review_rating"
-placeholder="Review Rating.."
-type="text"
-/> */}
-
-

@@ -1,4 +1,5 @@
 class NftsController < ApplicationController
+
   def index
     render json: Nft.all, status: :ok
   end
@@ -18,4 +19,5 @@ class NftsController < ApplicationController
   def nft_params
     params.permit(:nft_name, :nft_description, :nft_image)
   end
+  
 end

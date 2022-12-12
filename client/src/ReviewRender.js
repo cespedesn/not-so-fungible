@@ -1,20 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
 import ReviewList from './ReviewList'
 
-function ReviewRender({currentUser}) {
-const navigate = useNavigate()
-let {id} = useParams()
+function ReviewRender() {
 const [reviews, setReviews] = useState([])
-const [userEdit, setUserEdit] = useState([])
-const [errors, setErrors] = useState(false)
-// const [newReview, setNewReview] = useState({
-//     review_title: "",
-//     review_description: "",
-//     rating: "",
-//     collection_id: "",
-//     user_id: currentUser.id
-// })
 
 useEffect(() => {
     fetch('/reviews')
@@ -25,10 +13,11 @@ useEffect(() => {
                 console.log(data)
             })
         } else {
-            res.json().then(data => setErrors(data.errors))
+            res.json().then(data => alert(data.errors))
         }
     })
 }, [])
+
 
 //Delete review
   function handleDelete(id) {
@@ -39,8 +28,6 @@ useEffect(() => {
         setReviews(updatedReviews)
     })
 }
-
-
 
 
 //Review map
@@ -57,7 +44,6 @@ const reviewsToDisplay = reviews.map((review) => {
                 handleDelete={handleDelete}
                 reviews={reviews}
                 setReviews={setReviews}
-                
             />
     )
 })

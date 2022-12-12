@@ -3,5 +3,5 @@ class ReviewSerializer < ActiveModel::Serializer
   has_one :user
 end
 
-#maybe add :user to attributes 
+
 

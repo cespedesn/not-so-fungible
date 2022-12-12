@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import ClipLoader from "react-spinners/ClipLoader";
 import { Container, Row, Col } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import NftTile from './NftTile'
@@ -15,9 +14,6 @@ import Footer from './Footer'
 
 function HomePage() {
   const [user, setUser] = useState(false)
-  const [errors, setErrors] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [topCollection, setTopCollection] = useState([])
   const [ans, setAns] = useState([])
   const [bbs, setBbs] = useState([])
   const [brfs, setBrfs] = useState([])
@@ -40,8 +36,6 @@ function HomePage() {
         .then(res => {
             if(res.ok){
                 res.json().then((data) => {
-                    // console.log(data)
-                    setLoading(data)
                     setAns(data.slice(0,5))
                     setBbs(data.slice(25,30))
                     setBrfs(data.slice(33,38))
@@ -60,7 +54,7 @@ function HomePage() {
 
                 })
             } else {
-                res.json().then(data => setErrors(data.errors))
+                res.json().then(data => alert(data.errors))
             }
         })
     }, [])
@@ -294,7 +288,6 @@ if (user) {
           <br/>
             <Row 
             sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="A" src="./images/a15.png" />
@@ -304,7 +297,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Bb" src="./images/bb2.png" />
@@ -314,7 +306,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Brf" src="./images/brf12.png" />
@@ -324,7 +315,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
             <Stack direction="row">
               <Avatar alt="Dbb" src="./images/dbb3.png" />
@@ -334,7 +324,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Fg" src="./images/fg3.png" />
@@ -344,7 +333,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Hd" src="./images/hd1.png" />
@@ -354,7 +342,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Ll" src="./images/ll14.png" />
@@ -364,7 +351,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Mm" src="./images/mm9.png" />
@@ -374,7 +360,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Mmm" src="./images/mmm1.png" />
@@ -384,7 +369,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Nn" src="./images/nn5.png" />
@@ -394,7 +378,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Oef" src="./images/oef8.png" />
@@ -404,7 +387,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Sm" src="./images/sm1.png" />
@@ -414,7 +396,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Ss" src="./images/ss14.png" />
@@ -423,7 +404,6 @@ if (user) {
               </Stack>
             </Row>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Ww" src="./images/ww1.png" />
@@ -433,7 +413,6 @@ if (user) {
             </Row>
             <br/>
             <Row sm="5"
-            // data-aos="flip-right"
             className='row'>
               <Stack direction="row">
                 <Avatar alt="Yc" src="./images/yc9.png" />

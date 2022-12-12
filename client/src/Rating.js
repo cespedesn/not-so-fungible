@@ -18,9 +18,8 @@ function Rating({rating}) {
                                 color= "#ffc107"
                             />
                         </label>
-                    )
-                    
-                })}
+                    ) 
+        })}
     </div>
   )
 }

@@ -70,33 +70,3 @@ function Playground() {
 export default Playground
 
 
-
-// {nftLoading ? (
-//     <>
-//         <h3>Loading Nft...</h3>
-//         <div className='1ds-ripple'>
-//             <div></div>
-//             <div></div>
-//         </div>
-//     </>
-// ) : (
-//     <>
-//         <h3> Generate you own very NFT! </h3>
-//         <textarea 
-//             className='pg-input'
-//             onChange={handleChange}
-//             placeholder= {example}
-//             rows= '10'
-//             cols= '30'
-//         />
-//         <button 
-//         className='generate-btn'
-//         onClick={generateNft}> Generate </button>
-
-//         {/* {nftResult.length > 0 ? ( */}
-//             <img className= 'nft-image'
-//             src= {nftResult} 
-//             alt= 'Nft Result'/>
-//         {/* ) : (<> </>) } */}
-//     </>
-// )}

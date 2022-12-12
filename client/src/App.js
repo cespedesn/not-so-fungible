@@ -24,17 +24,17 @@ function App() {
 const [currentUser, setCurrentUser] = useState(null)
 const [theme, setTheme] = useState('light')
 
-
+//For Darkmode
 const toggleTheme = () => {
   setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"))
 }
 
 
-
-// For animation. Best to place here in parent level component
+//For animation. Best to place here in parent level component
 useEffect(() => {
   AOS.init({duration: 1000})
 }, [])
+
 
 //For auto login
 useEffect(() => {
@@ -47,6 +47,7 @@ useEffect(() => {
 },[])
 
 if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="App" id={theme}>
@@ -59,7 +60,7 @@ if (!currentUser) return <Login setCurrentUser={setCurrentUser}/>
           <Route path= '/collectiontable' element= { <CollectionTable /> } />
           <Route path= '/collections' element= { <Collections /> } />
           <Route path= '/collectionreview' element= { <CollectionReview currentUser={currentUser}/> } />
-          <Route path= '/collectiontable' element= { <ReviewRender currentUser={currentUser}/> } />
+          <Route path= '/collectiontable' element= { <ReviewRender /> } />
           <Route path= '/collectiontable' element= { <ReviewList /> } />
           <Route path= '/wallet' element= { <Wallet /> } />
           <Route path= '/purgatory' element= { <Purgatory /> } />

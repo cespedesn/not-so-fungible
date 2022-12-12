@@ -14,7 +14,6 @@ function Login({setCurrentUser}) {
     const navigate = useNavigate()
     const [showForm, setShowForm] = useState(true)
     const [passwordShown, setPasswordShown] = useState(false)
-    // const [errors, setErrors] = useState([])
     const [loginData, setLoginData] = useState({
         user_name: "",
         password: ""
@@ -22,8 +21,7 @@ function Login({setCurrentUser}) {
 
     const {user_name, password} = loginData
     
-// Login submission logic 
-
+//Login submission logic 
     function onSubmit(e) {
         e.preventDefault();
         const user = {
@@ -32,17 +30,18 @@ function Login({setCurrentUser}) {
 
         fetch('/login', {
             method: 'POST',
-            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'},
+            headers: { 'Accept': 'application/json', 
+            'Content-Type': 'application/json'},
             body: JSON.stringify(user)
         })
         .then(res => {
-            // console.log(res)
             if(res.ok) {
                 res.json().then(user => {
                     setCurrentUser(user)
                     navigate('/purgatory')
                 })
-// Error Handling
+
+//Error Handling
 
             } 
             else {
@@ -51,21 +50,21 @@ function Login({setCurrentUser}) {
            
         })
     }
-// Handle the character change on inputs to form fields
-
+//Handle the character change on inputs to form fields
     const handleChange = (e) => {
         setLoginData({...loginData, [e.target.name]: e.target.value})
       }
-// Hide password characters
 
+//Hide password characters
       const togglePassword = () => {
         setPasswordShown(!passwordShown);
       };
-// Hide form
 
+//Hide form
       const loginForm = () => {
         setShowForm(!showForm)
       }
+
 
   return (
     <div className='form-div'>
@@ -121,10 +120,8 @@ function Login({setCurrentUser}) {
         <button 
             className='button'
             onClick= {loginForm}>Login Form</button>
-        {/* {errors?errors.map(e => <div> {e[0]+':'+ e[1]} </div>) : null} */}
         <br/>
         <Signup setCurrentUser={setCurrentUser}/>
-
     </div>
   )
 }

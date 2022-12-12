@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import CollectionTile from './CollectionTile'
 import { Container, Row, Col } from 'reactstrap'
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 import CollectionsQuilt from './CollectionsQuilt'
-import ClipLoader from "react-spinners/ClipLoader";
 import Footer from './Footer';
 
 function Collections() {
     const [errors, setErrors] = useState(false)
-    const [loading, setLoading] = useState(true)
     const [ans, setAns] = useState([])
     const [bbs, setBbs] = useState([])
     const [brfs, setBrfs] = useState([])
@@ -43,18 +39,12 @@ function Collections() {
     const [showYcsCollection, setShowYcsCollection] = useState(false)
     const [showDdsCollection, setShowDdsCollection] = useState(false)
     
-  
+  //To render all nfts for each collection on page load
       useEffect(() => {
           fetch('/nfts')
           .then(res => {
               if(res.ok){
                   res.json().then((data) => {
-                      // console.log(data)
-                      setLoading(true)
-                      setTimeout(() => {
-                        setLoading(data)
-                      }, 2000)
-                      
                       setAns(data.slice(0,15))
                       setBbs(data.slice(16,32))
                       setBrfs(data.slice(32,48))
@@ -296,10 +286,6 @@ function Collections() {
     
   return (
     <div className='allcollections-div'>
-      {/* <ClipLoader
-        color={'#36d7b7'}
-        loading={loading}
-        size={150} /> */}
         <div>
           <h1>All Collections</h1>
         </div>

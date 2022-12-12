@@ -20,15 +20,10 @@ class UsersController < ApplicationController
     end
   end
 
-  # def user_collection_review
-  #   user = User.find(session[:user_id])
-  #   if user
-  #     user_collection_review = user.
-  #   end
-  # end
   private
 
   def user_params
     params.permit(:user_fullname, :user_name, :email, :password )
   end
+  
 end

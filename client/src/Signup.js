@@ -11,18 +11,17 @@ import {
 function Signup() {
     const navigate = useNavigate()
     const [showForm, setShowForm] = useState(false)
-    const [errors, setErrors] = useState([])
     const [passwordShown, setPasswordShown] = useState(false)
     const [loginData, setLoginData] = useState({
         user_fullname: '',
         user_name: '',
         email: '',
         password: ''
-        
     })
 
     const {user_fullname, user_name, user_email, password} = loginData
 
+//Signup submission logic
     function onSubmit(e) {
         e.preventDefault()
         const user = {
@@ -33,7 +32,8 @@ function Signup() {
         }
         fetch('/users', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 'Accept' : 'application/json',
+            'Content-Type': 'application/json'},
             body: JSON.stringify(user)
         })
         .then(res => {
@@ -42,23 +42,28 @@ function Signup() {
                     navigate('/purgatory')
                 })
             } else {
-                res.json().then(json => setErrors(Object.entries(json.errors)))
+//Error Handling
+                res.json().then(json => (alert(json.errors)))
             }
         })
     }
 
+//Handle the character change on inputs to form fields
     const handleChange = (e) => {
         setLoginData({...loginData, [e.target.name]: e.target.value}) 
     }
 
+//Hide password characters
     const togglePassword = () => {
         setPasswordShown(!passwordShown)
     }
 
-
+//Hide form
     const toggleSignupForm = () => {
       setShowForm(!showForm)
     }
+
+    
   return (
     <div className='form-div'>
         { showForm ?
@@ -145,8 +150,6 @@ function Signup() {
             <button 
             className='button'
             onClick= {toggleSignupForm}>Signup Form</button>
-
-        {errors?errors.map(e => <div> {e[0]+':'+ e[1]} </div>) : null}
     </div>
   )
 }

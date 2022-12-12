@@ -1,4 +1,5 @@
 class UserWalletsController < ApplicationController
+    
     def index
         render json: UserWallet.all, status: :ok
     end

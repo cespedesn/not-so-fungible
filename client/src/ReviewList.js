@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { FaTrashAlt } from 'react-icons/fa'
 import { FaEdit } from 'react-icons/fa'
@@ -7,16 +6,8 @@ import Rating from './Rating'
 import EditForm from './EditForm'
 
 function ReviewList({user, title, description, rating, handleDelete, id, review, reviews, setReviews}) {
-    const navigate = useNavigate()
     //toggle show 
     const [showEdit, setShowEdit] = useState(false)
-    const [newReview, setNewReview] = useState({
-        review_title: "",
-        review_description: "",
-        rating: "",
-        collection_id: "",
-        user_id: user.id
-    })
 
   return (
     <div className='reviewlist-body'>
@@ -61,7 +52,14 @@ function ReviewList({user, title, description, rating, handleDelete, id, review,
                     </button>
                 </CardText>
             </CardBody>
-        </Card> : <EditForm review={review} currentUser={user} setShowEdit={setShowEdit} showEdit={showEdit} reviews={reviews} setReviews={setReviews}/> }
+        </Card> : 
+        <EditForm 
+        review={review} 
+        currentUser={user} 
+        setShowEdit={setShowEdit} 
+        showEdit={showEdit} 
+        reviews={reviews} 
+        setReviews={setReviews}/> }
     </div>
   )
 }

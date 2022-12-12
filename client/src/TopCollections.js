@@ -7,37 +7,34 @@ import Stack from '@mui/material/Stack';
 import Footer from './Footer';
 
 function TopCollections() {
-    const [loading, setLoading] = useState(false)
     const [ycs, setYcs] = useState([])
     const [sss, setSss] = useState([])
     const [nns, setNns] = useState([])
     const [bbs, setBbs] = useState([])
     const [dbbs, setDbbs] = useState([])
     const [dds, setDds] = useState([])
-    const [errors, setErrors] = useState(false)
 
     useEffect(() => {
         fetch('/nfts')
         .then(res => {
             if(res.ok){
                 res.json().then((data) => {
-                    // console.log(data)
-                    setLoading(data)
                     setBbs(data.slice(25,30))
                     setDbbs(data.slice(52,57))
                     setNns(data.slice(144,149))
                     setSss(data.slice(176,181))
                     setYcs(data.slice(225,230))
-                    setDds(data.slice(241, 246))
+                    // setDds(data.slice(241, 246))
 
                 })
             } else {
-                res.json().then(data => setErrors(data.errors))
+//Error Handling
+                res.json().then(data => alert(data.errors))
             }
         })
     }, [])
 
-    //Baby Baboons map
+//Baby Baboons map
   const bbsToDisplay = bbs.map((nft) => {
     return (
       <TopTile 
@@ -51,7 +48,7 @@ function TopCollections() {
     )
   })
 
-  //Dance Battle Bears map
+//Dance Battle Bears map
   const dbbsToDisplay = dbbs.map((nft) => {
     return (
       <TopTile 
@@ -65,7 +62,7 @@ function TopCollections() {
     )
   })
 
-   //Nunchuck Norris map
+//Nunchuck Norris map
    const nnsToDisplay = nns.map((nft) => {
     return (
       <TopTile 
@@ -80,7 +77,7 @@ function TopCollections() {
   })
 
 
-  //Silly Sloths map
+//Silly Sloths map
   const sssToDisplay = sss.map((nft) => {
     return (
       <TopTile 
@@ -94,7 +91,7 @@ function TopCollections() {
     )
   })
 
-   //Yacht Chimps map
+//Yacht Chimps map
    const ycsToDisplay = ycs.map((nft) => {
     return (
       <TopTile 
@@ -107,19 +104,19 @@ function TopCollections() {
       />
     )
   })
-   //Deryb Diaries map
-   const ddsToDisplay = dds.map((nft) => {
-    return (
-      <TopTile 
-        key={nft.id}
-        nft={nft}
-        name={nft.nft_name}
-        price={nft.nft_price}
-        description={nft.nft_description}
-        image={nft.nft_image}
-      />
-    )
-  })
+  //Deryb Diaries map
+  //  const ddsToDisplay = dds.map((nft) => {
+  //   return (
+  //     <TopTile 
+  //       key={nft.id}
+  //       nft={nft}
+  //       name={nft.nft_name}
+  //       price={nft.nft_price}
+  //       description={nft.nft_description}
+  //       image={nft.nft_image}
+  //     />
+  //   )
+  // })
   return (
     <div className='topcollection-div'>
         <div>
@@ -130,7 +127,7 @@ function TopCollections() {
         </div>
         <Container>
             <Col>
-                <Row 
+                {/* <Row 
                 sm="5"
                 data-aos="flip-left"
                 className='row'>
@@ -140,7 +137,7 @@ function TopCollections() {
                     data-aos="fade-down-right">Deryb Diaries</h3>{ddsToDisplay}
                   </Stack>
                 </Row>
-                <br/>
+                <br/> */}
                 <Row 
                 sm="5"
                 data-aos="flip-right"

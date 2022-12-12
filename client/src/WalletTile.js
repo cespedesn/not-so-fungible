@@ -1,5 +1,5 @@
-import React, { useState, useEffecft } from 'react'
-import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button, NavLink} from 'reactstrap'
+import React from 'react'
+import {Card, CardBody, CardTitle, CardSubtitle, CardText} from 'reactstrap'
 import WalletModal from './WalletModal'
 import Schmklz from './Schmklz.png'
 
@@ -7,7 +7,6 @@ function WalletTile({name, redeemed_nft}) {
 
   return (
     <div className='wallet-div'>
-          
         <Card
             className='wallet'
             color='warning'

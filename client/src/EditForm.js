@@ -9,7 +9,7 @@ function EditForm({currentUser, review, setShowEdit, reviews, setReviews}) {
     const [collections, setCollections] = useState([])
     const [rating, setRating] = useState(false)
     const [hover, setHover] = useState(false)
-    //since review was passed as a prop just plug in the keys 
+    //since review was passed as a prop just had to plug in the keys 
     const [newReview, setNewReview] = useState({
         review_title: review.review_title,
         review_description: review.review_description,
@@ -35,6 +35,7 @@ useEffect(() => {
 const handleChange = (e) => {
     setNewReview({...newReview, [e.target.name]: e.target.value})
 }
+
 //Drop down for collection options
 const handleDropDown = (e) => {
     console.log(e.target.value)
@@ -58,6 +59,7 @@ function editReview(e) {
             )
         })
         setReviews(updatedReview)
+        //toogle so once edit is submitted, the review refreshes with updated data
         setShowEdit(showEdit => !showEdit)
     })
     navigate('/collectiontable')
@@ -106,7 +108,6 @@ function editReview(e) {
                         )
                     })}
                 </Input>
-                
             </FormGroup>
             <FormGroup>
                 <Label 
@@ -145,10 +146,8 @@ function editReview(e) {
                                 size={20}
                                 color={rateValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
                             />
-                            
                         </label>
                     )
-                    
                 })}
             </div>}
             </FormGroup>

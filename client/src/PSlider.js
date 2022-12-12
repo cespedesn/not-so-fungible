@@ -8,7 +8,7 @@ function PSlider() {
   
     const autoScroll = true;
     let slideInterval;
-    let intervalTime = 5000;
+    let intervalTime = 3000;
   
     const nextSlide = () => {
       setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1)

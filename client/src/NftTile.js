@@ -18,6 +18,7 @@ function addFreeNft(addedNft){
 }
 
 //Posting free nft to wallet
+//Still need to do more work to making this come to life
 function onAddFreeNft(e) {
   e.preventDefault()
   fetch(`/nfts`, {
@@ -74,34 +75,3 @@ function onAddFreeNft(e) {
 export default NftTile
 
 
-
-
-
-
-
-// const [nft, setNft] = useState({})
-// const {id} = useParams()
-//     useEffect(() => {
-//     fetch(`/nfts/${id}`)
-//     .then((res) => {
-//       if (res.ok) {
-//         res.json()
-//         .then((data) => {
-//             // setNft(data)
-//             console.log(data)
-//         })
-//       }
-//     });
-//   }, []);
-
-  
-
-//     const nftReview = nft?.reviews?.map((review) => {
-//         return (
-//             <NftReviews 
-//                 key={review.id}
-//                 review={review}
-//             />
-//         )
-//     })
-//     console.log(nftReview)

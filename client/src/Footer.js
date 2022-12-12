@@ -15,7 +15,6 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    NavbarText,
   } from 'reactstrap'
 
 function Footer() {
