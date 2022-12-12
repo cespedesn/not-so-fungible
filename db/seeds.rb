@@ -17,25 +17,25 @@ u1 = User.create(user_admin: true, user_fullname: "Your Name Here", user_name: "
 
 puts "🪙 Seeding collections..."
 c1 = Collection.create(
-    collection_name:"Astronuts", 
+    collection_name:"Astronuts",
     collection_description:"The few remaining survivors of planet Juglandaceae or better know as Juglone, scour space to recover bits of their native land after being hit by a meteor. Help fund the recovery efforts in joining the Astronut's voyage by purchasing a one-of-one NFT.", 
     collection_rating:"⭐⭐⭐", 
     user_id: u1.id)
 
 c2 = Collection.create(
-    collection_name:"Baby Baboons", 
+    collection_name:"Baby Baboons",
     collection_description:"These baby baboons have lost their mother and need to fend for themselves. The eldest Baby Baboon Rufus, has minted these one-of-one NFTs in hopes of supporting his family. Join the community and receive the 24 pack of Baby-Boon-Beer airdrop coming in 2024.", 
     collection_rating:"⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c3 = Collection.create(
-    collection_name:"Bob Ross Flossies", 
+    collection_name:"Bob Ross Flossies",
     collection_description:"Though many may not know, Bob Ross attended NYU as a dental student but then transitioned to his true love, art. It was not until his passing that a collection dedicated to his love for dental hygiene was discovered. This archive is being shared to the public and are rare one-of-one self portraits.  being shared to the public and are rare one-of-one self portraits. Do not miss out on your chance to own a piece of history.", 
     collection_rating:"⭐⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c4 = Collection.create(
-    collection_name:"Dance Battle Bears", 
+    collection_name:"Dance Battle Bears",
     collection_description:"After completing their world renowned tour, Dance Battle Bears have decided to let their fanbase in on their journey of greatness by minting this rare collection. By joining the DBB community, NFT holders will receive discounts on future tickets and merchandise!", 
     collection_rating:"⭐⭐⭐⭐⭐", 
     user_id: u1.id)
@@ -47,13 +47,13 @@ c5 = Collection.create(
     user_id: u1.id)
 
 c6 = Collection.create(
-    collection_name:"HotDawgs", 
+    collection_name:"HotDawgs",
     collection_description:"Do you love hotdogs? Do you also love dogs? Well, you have just stumbled upon a once in a lifetime opportunity. These pretty pups are not only adorable but offer rewards from both PetCart and Franklin hotdogs. Own a one-of-one NFT and receive a lifetime 12.5% off selected items. Join our discord to learn more!", 
     collection_rating:"⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c7 = Collection.create(
-    collection_name:"Lonely Lemurs", 
+    collection_name:"Lonely Lemurs",
     collection_description:"Thought it was tough being a human? Try being a lemur for a day. These NFTs take a deep dive into the life and struggles of lonely lemurs. By purchasing this rare NFT you can impact the life of a lemur significantly. All holders will receive a plush lemur from the Lonely Lemur Foundation.", 
     collection_rating:"⭐⭐⭐⭐", 
     user_id: u1.id)
@@ -65,49 +65,49 @@ c8 = Collection.create(
     user_id: u1.id)
 
 c9 = Collection.create(
-    collection_name:"Moma Meow Meows", 
+    collection_name:"Moma Meow Meows",
     collection_description:"The Museum of Modern Art has ventured off into the digital realm by producing its first NFT collection. This collection is led by the efforts of Jazzy, who is the first graphic designing cat ever. She pays homage to not only her fellow cats but also her favorite artists like Vincent Van Gogh, Salvadore Dali, Pablo Picasso, and Frida Kahlo. Join the community and own a piece of history.", 
     collection_rating:"⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c10 = Collection.create(
-    collection_name:"Nunchuck Norris", 
+    collection_name:"Nunchuck Norris",
     collection_description:"It is said that Chuck Norris can defeat a brick wall in tennis. It is also said that Chuck Norris killed two stones with one bird. But did you also know that Chuck Norris created an NFT Collection? This collection allows holders to not only own a piece of history but will also receive an airdrop of a pair of nunchucks minted by Chuck Norris himself. A once in a lifetime opportunity awaits you. Join the community!", 
     collection_rating:"⭐⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c11 = Collection.create(
-    collection_name:"One Eyed Frens", 
+    collection_name:"One Eyed Frens",
     collection_description:"We could all use a friend that always keeps an eye on us, am I right? This collection houses the most loveable one-eyed friends a human can ask for. Those who purchase will receive a One Eyed Frens squish ball after holding for just a year. Join the community today!", 
     collection_rating:"⭐⭐⭐", 
     user_id: u1.id)
 
 c12 = Collection.create(
-    collection_name:"Silly Sloths", 
+    collection_name:"Silly Sloths",
     collection_description:"As we grow older we tend to take our lives a bit too seriously. Life can move fast if you don’t slow down and enjoy it. Silly Sloths embody that very message. Slow down and laugh a little with a Silly Sloth. Join the community today and receive sloth tokens dropping in 2024!", 
     collection_rating:"⭐⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c13 = Collection.create(
-    collection_name:"Snail Mail", 
+    collection_name:"Snail Mail",
     collection_description:"Snail Mail is an adorable collection that has partnered up with the United State Postal Service to provide holders with free stamps! Long term holders are rewarded with 365 stamps after a year of holding. You do not want to miss this limited time partnership! Join our discord for more information.", 
     collection_rating:"⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c14 = Collection.create(
-    collection_name:"Whos Wise", 
+    collection_name:"Whos Wise",
     collection_description:"Who Wise is brought to you by Motive-8, a daily motivational quote generator. This collection is filled with stoic owls who provide you with not only a daily motivational quote but a wise companion. Holders can stake their NFTs to earn Who tokens and receive future airdrops. Join the community today!", 
     collection_rating:"⭐⭐⭐", 
     user_id: u1.id)
 
 c15 = Collection.create(
-    collection_name:"Yacht Chimps", 
+    collection_name:"Yacht Chimps",
     collection_description:"Yacht Chimps have been recognized as the NFT industry most valuable item to date. With perks like exclusive club meetings, yacht parties, free bananas, and more, Yacht Chimps have separated themselves from all other collections. It may cost you a pretty penny but the lifestyle is worth it. Join the community today!", 
     collection_rating:"⭐⭐⭐⭐⭐", 
     user_id: u1.id)
 
 c16 = Collection.create(
-    collection_name:"Deryb Diaries", 
+    collection_name:"Deryb Diaries",
     collection_description:"Deryb, formerly known as Deryn has taken the crypto space by storm. Notorious for her expressive reactions, a collection was carefully crafted to highlight not only her wit but her versatility. You never know which version you will get but one thing is for certain, she will make you laugh. Join the Derby Doc community to receive a limited edition 2023 Deryb Doc Calendar. Join the waitlist today!", 
     collection_rating:"⭐⭐⭐⭐⭐", 
     user_id: u1.id)

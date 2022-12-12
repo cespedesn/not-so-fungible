@@ -4,6 +4,7 @@ import dbb12 from './Carousel/dbb12.png'
 import nn7 from './Carousel/nn7.png'
 import ss14 from './Carousel/ss14.png'
 import yc11 from './Carousel/yc11.png'
+import nsf_logo2 from './nsf_logo2.png'
 
 
 function Carousel() {
@@ -88,7 +89,7 @@ function Carousel() {
         <div>
           <img 
           className='logo'
-          src='https://previews.dropbox.com/p/thumb/ABu77kNauS5YjjRicRN3moKjKkYUeaxJ5l57xhuT95gieUAvh8VhwTyJ8iG6hkZEAf8yVJvk_EbjkXy7bT6Cc-r8YvFDYksJLUyVQgvTNuKLUEmsmQjf56LoLH5Tt-YC6n69uAUc6tyctOc-Qpj7J-mb0KEAe-ls2_g2HbCnIeB0t4coXDPqPojsQbHTHbhUjHMvg8JJms8ZxWh8FJZoOOlcR4En8rU8lt_8MekAlmuwLVINxYO7kydTplE5PvFUmxud_EB7m1gCaxNxSMuc7d9j_LJHii7hZbY_s3bS8PYZv5dU8Az4-es60fj5BB20dQzvMNIVqnAvCS5FpTOazrS0ejaDboDFJBC0Zbf_vo3fjHCeD_s1D08LzDueTvq7HFA/p.png' alt='[not so] FUNgible'/>
+          src={nsf_logo2} alt='[not so] FUNgible'/>
         </div>
     </div>
   )

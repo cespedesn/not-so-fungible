@@ -107,7 +107,7 @@ const handleDropDown = (e) => {
                             <option 
                             value={collection.id}>
                                 {collection.collection_name}
-                                {collection.collection_image}
+                                {/* {collection.collection_image} */}
                             </option>
                         )
                     })}

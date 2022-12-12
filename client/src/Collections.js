@@ -5,7 +5,6 @@ import CollectionsQuilt from './CollectionsQuilt'
 import Footer from './Footer';
 
 function Collections() {
-    const [errors, setErrors] = useState(false)
     const [ans, setAns] = useState([])
     const [bbs, setBbs] = useState([])
     const [brfs, setBrfs] = useState([])
@@ -37,7 +36,7 @@ function Collections() {
     const [showSmsCollection, setShowSmsCollection] = useState(false)
     const [showWwsCollection, setShowWwsCollection] = useState(false)
     const [showYcsCollection, setShowYcsCollection] = useState(false)
-    const [showDdsCollection, setShowDdsCollection] = useState(false)
+    // const [showDdsCollection, setShowDdsCollection] = useState(false)
     
   //To render all nfts for each collection on page load
       useEffect(() => {
@@ -64,7 +63,7 @@ function Collections() {
   
                   })
               } else {
-                  res.json().then(data => setErrors(data.errors))
+                  res.json().then(data => alert(data.errors))
               }
           })
       }, [])
@@ -270,18 +269,18 @@ function Collections() {
 
 
     //Deryb Diaries map
-   const ddsToDisplay = dds.map((nft) => {
-    return (
-      <CollectionTile 
-        key={nft.id}
-        nft={nft}
-        name={nft.nft_name}
-        price={nft.nft_price}
-        description={nft.nft_description}
-        image={nft.nft_image}
-      />
-    )
-  })
+  //  const ddsToDisplay = dds.map((nft) => {
+  //   return (
+  //     <CollectionTile 
+  //       key={nft.id}
+  //       nft={nft}
+  //       name={nft.nft_name}
+  //       price={nft.nft_price}
+  //       description={nft.nft_description}
+  //       image={nft.nft_image}
+  //     />
+  //   )
+  // })
    
     
   return (
@@ -534,7 +533,7 @@ function Collections() {
                       </div>
                       {showYcsCollection && ycsToDisplay}
                   </Row>
-                  <Row 
+                  {/* <Row 
                   color='warning'
                   outline
                   style={{ width: '73rem'}}
@@ -548,7 +547,7 @@ function Collections() {
                         </div>
                       </div>
                       {showDdsCollection && ddsToDisplay}
-                  </Row>
+                  </Row> */}
               </Col>
           </Container> 
         </div>
