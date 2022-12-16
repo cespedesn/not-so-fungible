@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import nsf_logo2 from './nsf_logo2.png'
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap'
 import { FaTrashAlt } from 'react-icons/fa'
 import { FaEdit } from 'react-icons/fa'
@@ -23,7 +24,7 @@ function ReviewList({user, title, description, rating, handleDelete, id, review,
             >
             <img
                 alt="Sample"
-                src="https://previews.dropbox.com/p/thumb/ABsDCKgmUfw8xkcCuFqP8FUm7qvemsKy1MROHuWUMczuEnv2hrH-zE0v2G39qzH1YMC2f9xyMoYuEmTKp2JuNMaA3KP_FuVbXFhncJFePxbSILDgngoUdFkfPco5gMa3CCQ6qID3YREz1dI_AqLm8YQshcq2KL2YwtQZvH3R_5-gP0fqNeBuHVIrw2Ohi0NS2ePfT1AytgciTXfs7TKDDnH8viwy1TQBLKGbIh0pc0SWq8yhibk2ysD8eN6_3EZ3cEp0SJ4tm_SBqnQgTSS86iF4DGnoCRkazIN_xBWuQqu4Tah6j3LdoRjsUuI9pBzE_sQ-4qOkCP4hpY0GZnwSrgrEwOaC0rmfeUhAnTcSfIQuXimUtzHR4dRJSiDFIRtisUh12LztHBdVQ_uJ_rB64Fdg/p.png"
+                src={nsf_logo2}
             />
             <CardBody >
                 <CardTitle tag="h5">
